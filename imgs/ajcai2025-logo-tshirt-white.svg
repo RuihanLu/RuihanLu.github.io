@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 渐变定义 - 深色版本 -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#2D1B4E;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#3D1B5E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A1B6B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景圆角矩形 -->
+  <rect x="2" y="2" width="296" height="76" rx="12" ry="12" 
+        fill="url(#mainGradient)" 
+        stroke="#2D1B4E" 
+        stroke-width="1"/>
+  
+  <!-- AI图标 -->
+  <g transform="translate(20, 20)">
+    <!-- 简化的神经网络图标 -->
+    <circle cx="15" cy="15" r="3" fill="white"/>
+    <circle cx="15" cy="25" r="3" fill="white"/>
+    <circle cx="25" cy="15" r="3" fill="white"/>
+    <circle cx="25" cy="25" r="3" fill="white"/>
+    <circle cx="35" cy="20" r="3" fill="white"/>
+    
+    <!-- 连接线 -->
+    <line x1="15" y1="15" x2="25" y2="15" stroke="white" stroke-width="1.5"/>
+    <line x1="15" y1="25" x2="25" y2="25" stroke="white" stroke-width="1.5"/>
+    <line x1="25" y1="15" x2="35" y2="20" stroke="white" stroke-width="1.5"/>
+    <line x1="25" y1="25" x2="35" y2="20" stroke="white" stroke-width="1.5"/>
+  </g>
+  
+  <!-- 文字部分 -->
+  <g transform="translate(70, 0)">
+    <!-- AJCAI 2025 主标题 -->
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">
+      AJCAI 2025
+    </text>
+    
+    <!-- 副标题 -->
+    <text x="0" y="45" font-family="Arial, sans-serif" font-size="10" fill="white" opacity="0.9">
+      Australasian Joint Conference on AI
+    </text>
+    
+    <!-- 地点和时间 -->
+    <text x="0" y="58" font-family="Arial, sans-serif" font-size="9" fill="white" opacity="0.8">
+      Canberra, Australia • Dec 1-5, 2025
+    </text>
+  </g>
+</svg> 
