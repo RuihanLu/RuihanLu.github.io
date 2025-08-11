@@ -10,23 +10,54 @@ This directory contains scripts to convert SVG files to PNG format, specifically
 
 ## Quick Start
 
-### 1. Install Dependencies
+### Option 1: Virtual Environment (Recommended)
+
+```bash
+# Make the script executable and run it
+chmod +x setup_venv_and_convert.sh
+./setup_venv_and_convert.sh
+```
+
+This will:
+- Create a virtual environment
+- Install cairosvg
+- Convert all AJCAI logos to PNG
+
+### Option 2: Manual Installation
 
 ```bash
 # Make the install script executable
-chmod +x install_dependencies.sh
+chmod +x install_dependencies_fixed.sh
 
 # Run the installation script
-./install_dependencies.sh
+./install_dependencies_fixed.sh
 ```
 
 Or manually install:
 ```bash
-pip3 install cairosvg
+# Try with --user flag
+pip3 install --user cairosvg
+
+# Or use pipx
+brew install pipx
+pipx install cairosvg
+
+# Or use Homebrew
+brew install cairosvg
 ```
 
-### 2. Convert AJCAI Logos
+### 3. Convert AJCAI Logos
 
+If using virtual environment:
+```bash
+# Activate virtual environment
+source venv/bin/activate
+
+# Convert all AJCAI logo SVGs to PNG
+python convert_ajcai_logos.py
+```
+
+If using system Python:
 ```bash
 # Convert all AJCAI logo SVGs to PNG
 python3 convert_ajcai_logos.py

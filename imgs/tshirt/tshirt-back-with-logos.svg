@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="700" viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .tshirt-outline { fill: none; stroke: #333; stroke-width: 3; }
+      .title { font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; fill: #51247A; }
+      .section-title { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #333; }
+      .logo-container { fill: white; stroke: #ddd; stroke-width: 1; }
+    </style>
+  </defs>
+  
+  <!-- T-shirt outline -->
+  <rect x="50" y="50" width="700" height="600" rx="30" ry="30" class="tshirt-outline"/>
+  
+  <!-- Title -->
+  <text x="400" y="100" text-anchor="middle" class="title">AJCAI 2025 Sponsors</text>
+  
+  <!-- Gold Sponsors Section -->
+  <text x="400" y="140" text-anchor="middle" class="section-title">Gold Sponsors</text>
+  
+  <!-- First row of Gold Sponsors -->
+  <rect x="80" y="160" width="180" height="80" rx="8" ry="8" class="logo-container"/>
+  <text x="170" y="200" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #333;">ANU</text>
+  
+  <rect x="280" y="160" width="180" height="80" rx="8" ry="8" class="logo-container"/>
+  <text x="370" y="200" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #333;">Google</text>
+  
+  <rect x="480" y="160" width="180" height="80" rx="8" ry="8" class="logo-container"/>
+  <text x="570" y="200" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #333;">Monash University</text>
+  
+  <!-- Second row of Gold Sponsors -->
+  <rect x="80" y="280" width="180" height="80" rx="8" ry="8" class="logo-container"/>
+  <text x="170" y="320" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #333;">Pioneer</text>
+  
+  <rect x="280" y="280" width="180" height="80" rx="8" ry="8" class="logo-container"/>
+  <text x="370" y="320" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #333;">YePAI</text>
+  
+  <rect x="480" y="280" width="180" height="80" rx="8" ry="8" class="logo-container"/>
+  <text x="570" y="320" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #333;">CSIRO</text>
+  
+  <!-- Silver Sponsors Section -->
+  <text x="400" y="420" text-anchor="middle" class="section-title">Silver Sponsors</text>
+  
+  <!-- Silver Sponsors -->
+  <rect x="200" y="440" width="180" height="80" rx="8" ry="8" class="logo-container"/>
+  <text x="290" y="480" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #333;">DAIRNet</text>
+  
+  <rect x="400" y="440" width="180" height="80" rx="8" ry="8" class="logo-container"/>
+  <text x="490" y="480" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #333;">Fome</text>
+  
+  <!-- Bronze Sponsors Section -->
+  <text x="400" y="580" text-anchor="middle" class="section-title">Bronze Sponsors</text>
+  
+  <!-- Bronze Sponsors -->
+  <rect x="150" y="600" width="150" height="70" rx="8" ry="8" class="logo-container"/>
+  <text x="225" y="635" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #333;">CORE</text>
+  
+  <rect x="320" y="600" width="150" height="70" rx="8" ry="8" class="logo-container"/>
+  <text x="395" y="635" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #333;">UNSW AI</text>
+  
+  <rect x="490" y="600" width="150" height="70" rx="8" ry="8" class="logo-container"/>
+  <text x="565" y="635" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #333;">Springer</text>
+</svg> 

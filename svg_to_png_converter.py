@@ -77,7 +77,7 @@ def main():
     parser.add_argument("input", help="Input SVG file or directory")
     parser.add_argument("-o", "--output", help="Output PNG file or directory")
     parser.add_argument("-w", "--width", type=int, help="Output width in pixels")
-    parser.add_argument("-h", "--height", type=int, help="Output height in pixels")
+    parser.add_argument("--height", type=int, help="Output height in pixels")
     parser.add_argument("--dpi", type=int, default=300, help="DPI for output (default: 300)")
     parser.add_argument("--batch", action="store_true", help="Batch convert all SVG files in directory")
     

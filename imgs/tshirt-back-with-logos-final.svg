@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; fill: #51247A; }
+      .circle-container { fill: white; stroke: #e0e0e0; stroke-width: 1; }
+      .placeholder-text { font-family: Arial, sans-serif; font-size: 12px; fill: #666; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="700" fill="white"/>
+  
+  <!-- Title -->
+  <text x="400" y="80" text-anchor="middle" class="title">AJCAI 2025 Sponsors</text>
+  
+  <!-- Gold Sponsors - Large circles (140x140) -->
+  <g id="gold-sponsors">
+    <!-- ANU -->
+    <circle cx="220" cy="220" r="70" class="circle-container"/>
+    <image href="logo-anu.png" x="150" y="150" width="140" height="140" preserveAspectRatio="xMidYMid meet"/>
+    
+    <!-- Google -->
+    <circle cx="470" cy="190" r="70" class="circle-container"/>
+    <image href="logo_google.png" x="400" y="120" width="140" height="140" preserveAspectRatio="xMidYMid meet"/>
+    
+    <!-- Monash -->
+    <circle cx="720" cy="220" r="70" class="circle-container"/>
+    <image href="monash-logo-mono.svg" x="650" y="150" width="140" height="140" preserveAspectRatio="xMidYMid meet"/>
+    
+    <!-- Pioneer -->
+    <circle cx="270" cy="390" r="70" class="circle-container"/>
+    <image href="pioneer.png" x="200" y="320" width="140" height="140" preserveAspectRatio="xMidYMid meet"/>
+    
+    <!-- YePAI -->
+    <circle cx="520" cy="370" r="70" class="circle-container"/>
+    <image href="yepai.png" x="450" y="300" width="140" height="140" preserveAspectRatio="xMidYMid meet"/>
+    
+    <!-- CSIRO -->
+    <circle cx="670" cy="390" r="70" class="circle-container"/>
+    <image href="CSIRO_Logo.png" x="600" y="320" width="140" height="140" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  
+  <!-- Silver Sponsors - Medium circles (100x100) -->
+  <g id="silver-sponsors">
+    <!-- DAIRNet -->
+    <circle cx="150" cy="550" r="50" class="circle-container"/>
+    <image href="dairnet-logo.png" x="100" y="500" width="100" height="100" preserveAspectRatio="xMidYMid meet"/>
+    
+    <!-- Fome -->
+    <circle cx="400" cy="530" r="50" class="circle-container"/>
+    <image href="Fomelogo.png" x="350" y="480" width="100" height="100" preserveAspectRatio="xMidYMid meet"/>
+    
+    <!-- CORE -->
+    <circle cx="600" cy="550" r="50" class="circle-container"/>
+    <image href="core.png" x="550" y="500" width="100" height="100" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  
+  <!-- Bronze Sponsors - Small circles (80x80) -->
+  <g id="bronze-sponsors">
+    <!-- UNSW AI -->
+    <circle cx="290" cy="620" r="40" class="circle-container"/>
+    <image href="unsw_ai.png" x="250" y="580" width="80" height="80" preserveAspectRatio="xMidYMid meet"/>
+    
+    <!-- Springer -->
+    <circle cx="490" cy="620" r="40" class="circle-container"/>
+    <image href="springer-logo.png" x="450" y="580" width="80" height="80" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  
+  <!-- Fallback text placeholders (in case images don't load) -->
+  <g id="fallback-texts" style="display: none;">
+    <text x="220" y="225" text-anchor="middle" class="placeholder-text">ANU</text>
+    <text x="470" y="195" text-anchor="middle" class="placeholder-text">Google</text>
+    <text x="720" y="225" text-anchor="middle" class="placeholder-text">Monash</text>
+    <text x="270" y="395" text-anchor="middle" class="placeholder-text">Pioneer</text>
+    <text x="520" y="375" text-anchor="middle" class="placeholder-text">YePAI</text>
+    <text x="670" y="395" text-anchor="middle" class="placeholder-text">CSIRO</text>
+    <text x="150" y="555" text-anchor="middle" class="placeholder-text">DAIRNet</text>
+    <text x="400" y="535" text-anchor="middle" class="placeholder-text">Fome</text>
+    <text x="600" y="555" text-anchor="middle" class="placeholder-text">CORE</text>
+    <text x="290" y="625" text-anchor="middle" class="placeholder-text">UNSW AI</text>
+    <text x="490" y="625" text-anchor="middle" class="placeholder-text">Springer</text>
+  </g>
+</svg> 

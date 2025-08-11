@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 28px; font-weight: bold; fill: #51247A; }
+      .circle-container { fill: white; stroke: #e0e0e0; stroke-width: 1; }
+      .sponsor-text { font-family: Arial, sans-serif; font-size: 14px; fill: #333; text-anchor: middle; }
+      .gold-text { font-size: 16px; font-weight: bold; }
+      .silver-text { font-size: 14px; }
+      .bronze-text { font-size: 12px; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="700" fill="white"/>
+  
+  <!-- Title -->
+  <text x="400" y="80" text-anchor="middle" class="title">AJCAI 2025 Sponsors</text>
+  
+  <!-- Gold Sponsors - Large circles (140x140) -->
+  <g id="gold-sponsors">
+    <!-- ANU -->
+    <circle cx="220" cy="220" r="70" class="circle-container"/>
+    <text x="220" y="225" class="sponsor-text gold-text">ANU</text>
+    
+    <!-- Google -->
+    <circle cx="470" cy="190" r="70" class="circle-container"/>
+    <text x="470" y="195" class="sponsor-text gold-text">Google</text>
+    
+    <!-- Monash -->
+    <circle cx="720" cy="220" r="70" class="circle-container"/>
+    <text x="720" y="225" class="sponsor-text gold-text">Monash</text>
+    
+    <!-- Pioneer -->
+    <circle cx="270" cy="390" r="70" class="circle-container"/>
+    <text x="270" y="395" class="sponsor-text gold-text">Pioneer</text>
+    
+    <!-- YePAI -->
+    <circle cx="520" cy="370" r="70" class="circle-container"/>
+    <text x="520" y="375" class="sponsor-text gold-text">YePAI</text>
+    
+    <!-- CSIRO -->
+    <circle cx="670" cy="390" r="70" class="circle-container"/>
+    <text x="670" y="395" class="sponsor-text gold-text">CSIRO</text>
+  </g>
+  
+  <!-- Silver Sponsors - Medium circles (100x100) -->
+  <g id="silver-sponsors">
+    <!-- DAIRNet -->
+    <circle cx="150" cy="550" r="50" class="circle-container"/>
+    <text x="150" y="555" class="sponsor-text silver-text">DAIRNet</text>
+    
+    <!-- Fome -->
+    <circle cx="400" cy="530" r="50" class="circle-container"/>
+    <text x="400" y="535" class="sponsor-text silver-text">Fome</text>
+    
+    <!-- CORE -->
+    <circle cx="600" cy="550" r="50" class="circle-container"/>
+    <text x="600" y="555" class="sponsor-text silver-text">CORE</text>
+  </g>
+  
+  <!-- Bronze Sponsors - Small circles (80x80) -->
+  <g id="bronze-sponsors">
+    <!-- UNSW AI -->
+    <circle cx="290" cy="620" r="40" class="circle-container"/>
+    <text x="290" y="625" class="sponsor-text bronze-text">UNSW AI</text>
+    
+    <!-- Springer -->
+    <circle cx="490" cy="620" r="40" class="circle-container"/>
+    <text x="490" y="625" class="sponsor-text bronze-text">Springer</text>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(50, 650)">
+    <text x="0" y="0" class="sponsor-text" font-size="12" fill="#666">Gold Sponsors (140px)</text>
+    <text x="200" y="0" class="sponsor-text" font-size="12" fill="#666">Silver Sponsors (100px)</text>
+    <text x="400" y="0" class="sponsor-text" font-size="12" fill="#666">Bronze Sponsors (80px)</text>
+  </g>
+</svg> 

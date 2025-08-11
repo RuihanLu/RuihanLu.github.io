@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient definitions -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9ecef;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="logoShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:1" />
+    </radialGradient>
+    
+    <style>
+      .title { 
+        font-family: 'Segoe UI', Arial, sans-serif; 
+        font-size: 32px; 
+        font-weight: 300; 
+        fill: #2c3e50; 
+        letter-spacing: 1px;
+      }
+      .subtitle {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-size: 14px;
+        fill: #7f8c8d;
+        font-weight: 300;
+      }
+      .logo-container {
+        filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+      }
+    </style>
+  </defs>
+  
+  <!-- Background with subtle gradient -->
+  <rect width="800" height="700" fill="url(#bgGradient)"/>
+  
+  <!-- Elegant title -->
+  <text x="400" y="100" text-anchor="middle" class="title">AJCAI 2025</text>
+  <text x="400" y="125" text-anchor="middle" class="subtitle">Conference Sponsors</text>
+  
+  <!-- Creative logo layout - no borders, just clean placement -->
+  <g id="sponsors">
+    <!-- Gold Sponsors - Prominent placement -->
+    <g id="gold-sponsors" class="logo-container">
+      <!-- ANU - Top left, larger -->
+      <image href="logo-anu.png" x="80" y="180" width="120" height="80" preserveAspectRatio="xMidYMid meet"/>
+      
+      <!-- Google - Top center, prominent -->
+      <image href="logo_google.png" x="320" y="160" width="160" height="100" preserveAspectRatio="xMidYMid meet"/>
+      
+      <!-- Monash - Top right -->
+      <image href="monash-logo-mono.svg" x="600" y="180" width="120" height="80" preserveAspectRatio="xMidYMid meet"/>
+      
+      <!-- Pioneer - Middle left -->
+      <image href="pioneer.png" x="120" y="320" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+      
+      <!-- YePAI - Middle center -->
+      <image href="yepai.png" x="350" y="300" width="100" height="80" preserveAspectRatio="xMidYMid meet"/>
+      
+      <!-- CSIRO - Middle right -->
+      <image href="CSIRO_Logo.png" x="580" y="320" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    </g>
+    
+    <!-- Silver Sponsors - Secondary placement -->
+    <g id="silver-sponsors" class="logo-container">
+      <!-- DAIRNet - Bottom left -->
+      <image href="dairnet-logo.png" x="100" y="450" width="80" height="50" preserveAspectRatio="xMidYMid meet"/>
+      
+      <!-- Fome - Bottom center -->
+      <image href="Fomelogo.png" x="360" y="430" width="80" height="60" preserveAspectRatio="xMidYMid meet"/>
+      
+      <!-- CORE - Bottom right -->
+      <image href="core.png" x="620" y="450" width="80" height="50" preserveAspectRatio="xMidYMid meet"/>
+    </g>
+    
+    <!-- Bronze Sponsors - Smaller, supporting -->
+    <g id="bronze-sponsors" class="logo-container">
+      <!-- UNSW AI - Very bottom left -->
+      <image href="unsw_ai.png" x="200" y="550" width="60" height="40" preserveAspectRatio="xMidYMid meet"/>
+      
+      <!-- Springer - Very bottom right -->
+      <image href="springer-logo.png" x="540" y="550" width="60" height="40" preserveAspectRatio="xMidYMid meet"/>
+    </g>
+  </g>
+  
+  <!-- Subtle decorative elements -->
+  <g id="decorations" opacity="0.1">
+    <circle cx="150" cy="150" r="3" fill="#3498db"/>
+    <circle cx="650" cy="200" r="2" fill="#e74c3c"/>
+    <circle cx="400" cy="500" r="2.5" fill="#f39c12"/>
+    <circle cx="250" cy="400" r="2" fill="#9b59b6"/>
+    <circle cx="550" cy="450" r="2" fill="#1abc9c"/>
+  </g>
+  
+  <!-- Conference info at bottom -->
+  <g id="conference-info" transform="translate(400, 650)">
+    <text x="0" y="0" text-anchor="middle" class="subtitle">Canberra, Australia • December 1-5, 2025</text>
+  </g>
+</svg> 
