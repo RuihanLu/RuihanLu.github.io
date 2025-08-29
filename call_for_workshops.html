@@ -1,168 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charSet="utf-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1"/>
 
-    <link rel = "stylesheet" type = 'text/css' href = './css/sub_common.css'/>
-    <link rel = "icon" sizes ="32x32" href = './imgs/favicons/favicon-32x32.png' />
-    <link rel = "icon" sizes ="192x192" href = './imgs/favicons/favicon-192x192.png' />
-    <link rel = "apple-touch-icon" sizes ="180x180" href = './imgs/favicons/favicon-180x180.png' />
-    
-    <meta name="generator" content="Gatsby 4.3.0"/>
-    <noscript>
-      <style>
-        .gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}
-      </style>
-    </noscript>
-    <script type="module">
-      const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;
-      e&&document.body.addEventListener("load",(function(e){if(void 0===e.target.dataset.mainImage)return;if(void 0===e.target.dataset.gatsbyImageSsr)return;const t=e.target;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);
-    </script>
-    <meta name="theme-color" content="#51247a"/>
-    <script type = "text/javascript" src = './js/common.js'></script>
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
 
-    <script type="text/javascript">
-      window.onload=function(){
-        changeMobileMenu('callForWorkshops');
+  <link rel="stylesheet" type='text/css' href='./css/sub_common.css' />
+  <link rel="icon" sizes="32x32" href='./imgs/favicons/favicon-32x32.png' />
+  <link rel="icon" sizes="192x192" href='./imgs/favicons/favicon-192x192.png' />
+  <link rel="apple-touch-icon" sizes="180x180" href='./imgs/favicons/favicon-180x180.png' />
+
+  <meta name="generator" content="Gatsby 4.3.0" />
+  <noscript>
+    <style>
+      .gatsby-image-wrapper noscript [data-main-image] {
+        opacity: 1 !important
       }
-    </script>
 
-    <title data-react-helmet="true">AJCAI 2025 - Canberra, Australia</title>
-  </head> 
-  <body>
-    <div id="___gatsby">
-      <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
-        <div class="w-full min-h-screen flex flex-col" data-is-root-path="true">
-          <header>
+      .gatsby-image-wrapper [data-placeholder-image] {
+        opacity: 0 !important
+      }
+    </style>
+  </noscript>
+  <script type="module">
+    const e = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype;
+    e && document.body.addEventListener("load", (function (e) { if (void 0 === e.target.dataset.mainImage) return; if (void 0 === e.target.dataset.gatsbyImageSsr) return; const t = e.target; let a = null, n = t; for (; null === a && n;)void 0 !== n.parentNode.dataset.gatsbyImageWrapper && (a = n.parentNode), n = n.parentNode; const o = a.querySelector("[data-placeholder-image]"), r = new Image; r.src = t.currentSrc, r.decode().catch((() => { })).then((() => { t.style.opacity = 1, o && (o.style.opacity = 0, o.style.transition = "opacity 500ms linear") })) }), !0);
+  </script>
+  <meta name="theme-color" content="#51247a" />
+  <script type="text/javascript" src='./js/common.js'></script>
 
-<!-- Nav Bar -->
-          <iframe id = 'menu' src = './top_menu.html' frameborder = '0' width = '100%' height = '64px' scrolling = 'auto' style = 'z-index: 999; position: fixed;' onmouseover="extentIframe()" onmouseleave="resetIframe()"></iframe>
-<!-- End Of Nav Bar -->
+  <script type="text/javascript">
+    window.onload = function () {
+      changeMobileMenu('callForWorkshops');
+    }
+  </script>
 
-          </header>
-          <div class="w-full h-16">
-          </div>
-          <main class="w-full">
-            <div class="global-wrapper pb-12" style="max-width:70rem" id="welcome">
-              <header class="px-0 sm:px-7">
-                
-                <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Call For Workshops </h2>
-                <p class="mb-4">
-                  The 36th Australasian Joint Conference on Artificial Intelligence (AJCAI 2025) welcomes submissions of workshop proposals on 
-                  contemporary research and applications in Artificial Intelligence (AI). Each workshop should focus on a specific topic and is 
-                  expected to provide an informal setting that facilitates active exchanges of recent or in-progress work among researchers, 
-                  developers, and end-users on the respective topic. AJCAI 2025 is scheduled to take place in Brisbane, Australia, from 28 
-                  November to 1 December, 2025.
-                </p>
+  <title data-react-helmet="true">AJCAI 2025 - Canberra, Australia</title>
+</head>
 
-                <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">
-                  Submission Requirements for Workshop Proposals
-                </h2>
-                <div class="j_ul">
-                  <ul>
-                    <li>
-                      <span class = 'j_topics_table_font ul_dot'>Title and aim of the workshop.</span>
-                    </li>
-                    <li>
-                      <span class = 'j_topics_table_font ul_dot'>Call for contributions, containing a brief introduction and list of relevant topic areas.</span>
-                    </li>
-                    <li>
-                      <span class = 'j_topics_table_font ul_dot'>A preliminary workshop format and a proposed schedule for organizing the workshop. 
-                                                                Note that workshops are limited to 0.5-day duration. Please 
-                                                                indicate if you intend to have any activities other than contributed talks 
-                                                                (e.g., invited talks, panels, or posters).</span>
-                    </li>
-                    <li>
-                      <span class = 'j_topics_table_font ul_dot'>Willingness of online workshop organization.</span>
-                    </li>
-                    <li>
-                      <span class = 'j_topics_table_font ul_dot'>Short biographies of organizing committee members.</span>
-                    </li>
-                    <li>
-                      <span class = 'j_topics_table_font ul_dot'>If available, a list of potential speakers including their brief resumes.</span>
-                    </li>
-                    <li>
-                      <span class = 'j_topics_table_font ul_dot'>Submit your workshop proposal per email to the AJCAI 2025 Workshop Co-Chairs by the <strong>deadline 30 August 2025</strong>.</span>
-                    </li>
-                  </ul>
-                </div>
+<body>
+  <div id="___gatsby">
+    <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
+      <div class="w-full min-h-screen flex flex-col" data-is-root-path="true">
+        <header>
 
-                <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">
-                  Key Days
-                </h2>
-                <div class="j_ul">
-                  <ul>
-                    <li>
-                      <span class = 'j_topics_table_font ul_dot'>Submission of Workshop Proposals Due: 30 August 2025.</span>
-                    </li>
-                    <li>
-                      <span class = 'j_topics_table_font ul_dot'>Notification of Acceptance: 15 September 2025.</span>
-                    </li>
-                  </ul>
-                </div>
+          <!-- Nav Bar -->
+          <iframe id='menu' src='./top_menu.html' frameborder='0' width='100%' height='64px' scrolling='auto'
+            style='z-index: 999; position: fixed;' onmouseover="extentIframe()" onmouseleave="resetIframe()"></iframe>
+          <!-- End Of Nav Bar -->
 
-                <p class = 'mb-4 mt-4'>Please note that all deadlines follow the Australian Eastern Standard Time, UTC+10</p>
+        </header>
+        <div class="w-full h-16">
+        </div>
+        <main class="w-full">
+          <div class="global-wrapper pb-12" style="max-width:70rem" id="welcome">
+            <header class="px-0 sm:px-7">
 
-                <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Call For Tutorial</h2>
-                <p class="mb-4">
-                  The AJCAI 2025 Organizing Committee invites proposals for tutorials.
-                  <br><br>
-                  We welcome proposals for tutorials on core Artificial Intelligence topics and on topics of emerging
-                  importance for Artificial Intelligence broadly. We encourage submission of tutorial
-                  proposals on any topic provided the tutorial is of interest to part of the AJCAI audience. Selection
-                  will take into account topic relevance and coverage, speaker experience and diversity
-                  considerations.
-                  <br><br>
-                  We plan to host a mix of invited and submitted tutorials. Each tutorial will be two hours long, and will
-                  be given by one or two presenters.
-                  Tutorial proposals should answer the following questions:
-                </p>
-  
-                <div class="j_ul">
-                  <ul>
-                    <li>
-                      <span class='j_topics_table_font ul_dot'>Title</span>
-                    </li>
-                    <li>
-                      <span class='j_topics_table_font ul_dot'>Brief description and outline: What will the tutorial be
-                        about?
-                        Please provide an outline of what you plan to cover, including
-                        references and details on how much time you will spend on each topic.
-                        We encourage the presenters to demonstrate coverage and representativeness
-                        of the chosen area of research, not to focus solely on their own results or tools.</span>
-                    </li>
-                    <li>
-                      <span class='j_topics_table_font ul_dot'>Goals: What objectives does the tutorial serve?</span>
-                    </li>
-                    <li>
-                      <span class='j_topics_table_font ul_dot'>Target audience: Who is your target audience? How many
-                        participants do
-                        you expect to see? What kind of background do you expect them to have?</span>
-                    </li>
-                    <li>
-                      <span class='j_topics_table_font ul_dot'>Presenters: Please include the names and email addresses of
-                        the presenters,
-                        along with brief bios and the description of each presenter's expertise in
-                        the tutorial area. We suggest that each tutorial is given by at most
-                        <strong>two</strong> presenters. If there is more than one presenter,
-                        please describe how time will be split. If available, please include samples
-                        of your past talks (or other relevant) slides or links to video recordings on the topic.</span>
-                    </li>
-                    <li>
-                      <span class='j_topics_table_font ul_dot'>Previous tutorials: What are the related or similar
-                        tutorials presented in the past 3
-                        years at other conference venues? Please list the dates and venues, and describe the
-                        similarities and differences to the proposal.</span>
-                    </li>
-                    <li>
-                      <span class='j_topics_table_font ul_dot'>The tutorial presenters are encouraged to present the
-                        tutorial in person.</span>
-                    </li>
-                  </ul>
-                </div>
-                <!-- <p class='mb-4 mt-4'>
+              <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Call For Workshops </h2>
+              <p class="mb-4">
+                The 36th Australasian Joint Conference on Artificial Intelligence (AJCAI 2025) welcomes submissions of
+                workshop proposals on
+                contemporary research and applications in Artificial Intelligence (AI). Each workshop should focus on a
+                specific topic and is
+                expected to provide an informal setting that facilitates active exchanges of recent or in-progress work
+                among researchers,
+                developers, and end-users on the respective topic. AJCAI 2025 is scheduled to take place in Canberra,
+                Australia, from 1st December to 5th December, 2025.
+              </p>
+
+              <h2
+                class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">
+                Submission Requirements for Workshop Proposals
+              </h2>
+              <div class="j_ul">
+                <ul>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>Title and aim of the workshop.</span>
+                  </li>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>Call for contributions, containing a brief introduction and
+                      list of relevant topic areas.</span>
+                  </li>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>A preliminary workshop format and a proposed schedule for
+                      organizing the workshop.
+                      Note that workshops are limited to 0.5-day duration. Please
+                      indicate if you intend to have any activities other than contributed talks
+                      (e.g., invited talks, panels, or posters).</span>
+                  </li>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>Willingness of online workshop organization.</span>
+                  </li>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>Short biographies of organizing committee members.</span>
+                  </li>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>If available, a list of potential speakers including their
+                      brief resumes.</span>
+                  </li>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>Submit your workshop proposal per email to the AJCAI 2025
+                      Workshop Co-Chairs by the <strong>deadline 30 August 2025</strong>.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <h2
+                class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">
+                Key Days
+              </h2>
+              <div class="j_ul">
+                <ul>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>Submission of Workshop Proposals Due: 30 August
+                      2025.</span>
+                  </li>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>Notification of Acceptance: 15 September 2025.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <p class='mb-4 mt-4'>Please note that all deadlines follow the Australian Eastern Standard Time, UTC+10
+              </p>
+
+              <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Call For Tutorial</h2>
+              <p class="mb-4">
+                The AJCAI 2025 Organizing Committee invites proposals for tutorials.
+                <br><br>
+                We welcome proposals for tutorials on core Artificial Intelligence topics and on topics of emerging
+                importance for Artificial Intelligence broadly. We encourage submission of tutorial
+                proposals on any topic provided the tutorial is of interest to part of the AJCAI audience. Selection
+                will take into account topic relevance and coverage, speaker experience and diversity
+                considerations.
+                <br><br>
+                We plan to host a mix of invited and submitted tutorials. Each tutorial will be two hours long, and will
+                be given by one or two presenters.
+                Tutorial proposals should answer the following questions:
+              </p>
+
+              <div class="j_ul">
+                <ul>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>Title</span>
+                  </li>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>Brief description and outline: What will the tutorial be
+                      about?
+                      Please provide an outline of what you plan to cover, including
+                      references and details on how much time you will spend on each topic.
+                      We encourage the presenters to demonstrate coverage and representativeness
+                      of the chosen area of research, not to focus solely on their own results or tools.</span>
+                  </li>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>Goals: What objectives does the tutorial serve?</span>
+                  </li>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>Target audience: Who is your target audience? How many
+                      participants do
+                      you expect to see? What kind of background do you expect them to have?</span>
+                  </li>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>Presenters: Please include the names and email addresses of
+                      the presenters,
+                      along with brief bios and the description of each presenter's expertise in
+                      the tutorial area. We suggest that each tutorial is given by at most
+                      <strong>two</strong> presenters. If there is more than one presenter,
+                      please describe how time will be split. If available, please include samples
+                      of your past talks (or other relevant) slides or links to video recordings on the topic.</span>
+                  </li>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>Previous tutorials: What are the related or similar
+                      tutorials presented in the past 3
+                      years at other conference venues? Please list the dates and venues, and describe the
+                      similarities and differences to the proposal.</span>
+                  </li>
+                  <li>
+                    <span class='j_topics_table_font ul_dot'>The tutorial presenters are encouraged to present the
+                      tutorial in person.</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- <p class='mb-4 mt-4'>
                   Tutorial proposals should be submitted to Tutorial Chair <strong>Jingfeng Zhang
                     <a href='mailto:jingfeng.zhang9660@gmail'
                       style='text-decoration: underline; color: blue; cursor: pointer;'>(jingfeng.zhang9660@gmail)</a>
@@ -175,23 +195,30 @@
                   decisions will be announced on <strong>September 15<sup>th</sup> 2025</strong>.
                 </p> -->
 
-                <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">
-                  Workshop and Tutorial Co-Chairs
-                </h2>
-                <p class = 'mb-4 mt-4' style = 'font-weight: bold;'>
-                  Dr Yanbin Liu<a href="mailto:csyanbin@gmail.com" style = 'text-decoration: underline; color: blue; cursor: pointer;'>(csyanbin@gmail.com)</a>, Auckland University of Technology.<br />
-                  Dr Zhen Fang <a href="mailto:zhen.fang@uts.edu.au" style = 'text-decoration: underline; color: blue; cursor: pointer;'>(zhen.fang@uts.edu.au)</a>, University of Technology Sydney, Australia.<br />
-                  
-                  Dr Ibrahim RADWAN <a href="mailto:Ibrahim.Radwan@canberra.edu.au" style = 'text-decoration: underline; color: blue; cursor: pointer;'>(Ibrahim.Radwan@canberra.edu.au)</a>, University of Canberra, Australia.
-                </p>
-              
-              </header>
-            </div>
-          </main>
-          <footer class="bg-gray-100 mt-auto bottom-0 border-t shadow-inner overflow-x-hidden">
-            <div class="global-wrapper flex sm:block flex-col items-center md:items-start">
-              <div class="flex flex-col py-2 px-6 lg:px-0">
-                <!-- <div class="flex flex-wrap items-center gap-x-12 gap-y-4 mb-4 md:mb-8">
+              <h2
+                class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">
+                Workshop and Tutorial Co-Chairs
+              </h2>
+              <p class='mb-4 mt-4' style='font-weight: bold;'>
+                Dr Yanbin Liu<a href="mailto:csyanbin@gmail.com"
+                  style='text-decoration: underline; color: blue; cursor: pointer;'>(csyanbin@gmail.com)</a>, Auckland
+                University of Technology.<br />
+                Dr Zhen Fang <a href="mailto:zhen.fang@uts.edu.au"
+                  style='text-decoration: underline; color: blue; cursor: pointer;'>(zhen.fang@uts.edu.au)</a>,
+                University of Technology Sydney, Australia.<br />
+
+                Dr Ibrahim RADWAN <a href="mailto:Ibrahim.Radwan@canberra.edu.au"
+                  style='text-decoration: underline; color: blue; cursor: pointer;'>(Ibrahim.Radwan@canberra.edu.au)</a>,
+                University of Canberra, Australia.
+              </p>
+
+            </header>
+          </div>
+        </main>
+        <footer class="bg-gray-100 mt-auto bottom-0 border-t shadow-inner overflow-x-hidden">
+          <div class="global-wrapper flex sm:block flex-col items-center md:items-start">
+            <div class="flex flex-col py-2 px-6 lg:px-0">
+              <!-- <div class="flex flex-wrap items-center gap-x-12 gap-y-4 mb-4 md:mb-8">
                   <div>
                     <p class="mb-5 font-semibold font-headingStyle tracking-semiWide">Silver Sponsors</p>
                     <div class="flex flex-wrap gap-x-12">
@@ -215,7 +242,7 @@
                     </div>
                   </div>
                 </div> -->
-                <!-- <div class="mb-4 md:mb-6">
+              <!-- <div class="mb-4 md:mb-6">
                   <p class="mb-3 font-semibold font-headingStyle tracking-semiWide">Supported by</p>
                   <div class="flex flex-wrap items-center gap-x-12">
                     <a style="width:150px" class="mb-5 lg:mb-0 flex items-center" href="https://www.acm.org/" target="_blank" rel="noreferrer">
@@ -226,56 +253,57 @@
                     </a>
                   </div>
                 </div> -->
-              </div>
-              <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
-                <small class="">AJCAI 2025 - Australasian Joint Conference on Artificial Intelligence 2025, Canberra, Australia</small>
-                <!-- <small class="mb-3 md:mb-0"><a class="hover:underline" href="https://www.springernature.com/gp/authors/book-authors-code-of-conduct#:~:text=Springer%20Nature%20Code%20of%20Conduct,of%20Conduct%20for%20Book%20Authors.&text=Results%20should%20be%20presented%20clearly,including%20image%2Dbased%20manipulation" target="_blank" rel="noreferrer">Code of Conduct</a></small> -->
-              </div>
-              <!-- <div>
+            </div>
+            <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
+              <small class="">AJCAI 2025 - Australasian Joint Conference on Artificial Intelligence 2025, Canberra,
+                Australia</small>
+              <!-- <small class="mb-3 md:mb-0"><a class="hover:underline" href="https://www.springernature.com/gp/authors/book-authors-code-of-conduct#:~:text=Springer%20Nature%20Code%20of%20Conduct,of%20Conduct%20for%20Book%20Authors.&text=Results%20should%20be%20presented%20clearly,including%20image%2Dbased%20manipulation" target="_blank" rel="noreferrer">Code of Conduct</a></small> -->
+            </div>
+            <!-- <div>
                 <small>Image credit: <a href="https://commons.wikimedia.org/wiki/File:Brisbane_Sign_and_Skyline_of_Brisbane_CBD,_Queensland_in_Feb_2020.jpg">Kgbo</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</small>
               </div> -->
-              <!-- <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
+            <!-- <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
                 <small class = "j_extra_pt">Website built by: <a href="https://github.com/JesseYang0528" style = "text-decoration: underline;">Hao Yang (Jesse Yang)</a>, <a href="https://github.com/bybeye" style = "text-decoration: underline;">Yingbin Bai (Edward Bai)</a></small>
               </div> -->
-            </div>
-          </footer>
-        </div>
-      </div>
-      <div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true">
+          </div>
+        </footer>
       </div>
     </div>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XSX58G49PD">
-    </script>
-    <script>      
-          if(true) {
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer && window.dataLayer.push(arguments);}
-            gtag('js', new Date());
+    <div id="gatsby-announcer"
+      style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0"
+      aria-live="assertive" aria-atomic="true">
+    </div>
+  </div>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XSX58G49PD">
+  </script>
+  <script>
+    if (true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer && window.dataLayer.push(arguments); }
+      gtag('js', new Date());
 
-            gtag('config', 'G-XSX58G49PD', {"send_page_view":false});
-          }
-    </script>
-    <script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/";/*]]>*/</script>
-    <script id="gatsby-chunk-mapping">
-    /*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-1c9788fca0f90abb50c3.js"],"app":["/app-a59b4b6740a68aeefd26.js"],"component---src-pages-404-js":["/component---src-pages-404-js-3d51b459a80f969a4f66.js"],"component---src-pages-gather-town-js":["/component---src-pages-gather-town-js-20a5b8eb4f529ec02e4a.js"],"component---src-pages-index-js":["/component---src-pages-index-js-8a4adfc3136c188f7d4d.js"],"component---src-pages-organisation-js":["/component---src-pages-organisation-js-d897b29f4c76da418e8b.js"],"component---src-pages-phd-school-js":["/component---src-pages-phd-school-js-342a122469920c419385.js"],"component---src-pages-program-at-a-glance-js":["/component---src-pages-program-at-a-glance-js-f09b822ffe2455eef479.js"],"component---src-pages-program-js":["/component---src-pages-program-js-3fe28d1a2f210ef0ff80.js"],"component---src-pages-sponsors-js":["/component---src-pages-sponsors-js-e9c839fba1b21aac6ebf.js"],"component---src-templates-article-js":["/component---src-templates-article-js-7fa23b91346b8acf9bb1.js"]};/*]]>*/
-    </script>
-    <script>
-      function show_mobile_nav()
-      {
-        var current_class = document.getElementById('mobile_menu').className;
-        if (current_class == 'hidden')
-        {
-          document.getElementById('mobile_menu').setAttribute('class', 'md:hidden');
-          document.getElementById('menu_icon_1').setAttribute('class', 'hidden h-6 w-6');
-          document.getElementById('menu_icon_2').setAttribute('class', 'block h-6 w-6');
-        }
-        else
-        {
-          document.getElementById('mobile_menu').setAttribute('class', 'hidden');
-          document.getElementById('menu_icon_1').setAttribute('class', 'block h-6 w-6');
-          document.getElementById('menu_icon_2').setAttribute('class', 'hidden h-6 w-6');
-        }
+      gtag('config', 'G-XSX58G49PD', { "send_page_view": false });
+    }
+  </script>
+  <script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath = "/";/*]]>*/</script>
+  <script id="gatsby-chunk-mapping">
+    /*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill-1c9788fca0f90abb50c3.js"], "app": ["/app-a59b4b6740a68aeefd26.js"], "component---src-pages-404-js": ["/component---src-pages-404-js-3d51b459a80f969a4f66.js"], "component---src-pages-gather-town-js": ["/component---src-pages-gather-town-js-20a5b8eb4f529ec02e4a.js"], "component---src-pages-index-js": ["/component---src-pages-index-js-8a4adfc3136c188f7d4d.js"], "component---src-pages-organisation-js": ["/component---src-pages-organisation-js-d897b29f4c76da418e8b.js"], "component---src-pages-phd-school-js": ["/component---src-pages-phd-school-js-342a122469920c419385.js"], "component---src-pages-program-at-a-glance-js": ["/component---src-pages-program-at-a-glance-js-f09b822ffe2455eef479.js"], "component---src-pages-program-js": ["/component---src-pages-program-js-3fe28d1a2f210ef0ff80.js"], "component---src-pages-sponsors-js": ["/component---src-pages-sponsors-js-e9c839fba1b21aac6ebf.js"], "component---src-templates-article-js": ["/component---src-templates-article-js-7fa23b91346b8acf9bb1.js"] };/*]]>*/
+  </script>
+  <script>
+    function show_mobile_nav() {
+      var current_class = document.getElementById('mobile_menu').className;
+      if (current_class == 'hidden') {
+        document.getElementById('mobile_menu').setAttribute('class', 'md:hidden');
+        document.getElementById('menu_icon_1').setAttribute('class', 'hidden h-6 w-6');
+        document.getElementById('menu_icon_2').setAttribute('class', 'block h-6 w-6');
       }
-    </script>
-  </body>
+      else {
+        document.getElementById('mobile_menu').setAttribute('class', 'hidden');
+        document.getElementById('menu_icon_1').setAttribute('class', 'block h-6 w-6');
+        document.getElementById('menu_icon_2').setAttribute('class', 'hidden h-6 w-6');
+      }
+    }
+  </script>
+</body>
+
 </html>
