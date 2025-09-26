@@ -45,7 +45,8 @@
     const slideshowImages = [
       './imgs/Canberra.jpg',
       './imgs/canberra2.avif',
-      './imgs/ANU.png.jpg'
+      './imgs/ANU.png.jpg',
+      './imgs/canberra3.png'
     ];
 
     function initSlideshow() {
@@ -320,11 +321,16 @@
                 <img src="./imgs/ANU.png.jpg" alt="ANU scenery" />
               </div>
 
+              <div class="slide">
+                <img src="./imgs/canberra3.png" alt="Canberra hot air balloon view" />
+              </div>
+
               <!-- 分页指示器 -->
               <div class="dots-container">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
               </div>
 
               <!-- 会议信息banner，保持位置不变但样式更新 -->
@@ -368,6 +374,480 @@
             <header class="px-0 sm:px-7">
               <h2 id='welcome' class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Welcome to
                 Australasian Joint Conference on Artificial Intelligence!</h2>
+
+              <!-- Quick Links Section -->
+              <div class="quick-links-section">
+                <div class="quick-links-grid">
+                  <!-- Registration Portal -->
+                  <div class="quick-link-card registration-card">
+                    <div class="quick-link-icon">🎫</div>
+                    <h3>Registration Portal Open</h3>
+                    <p>Register now for AJCAI 2025. Early bird deadline: October 31, 2025</p>
+                    <a href="https://payments.anu.edu.au/AJCAI25" target="_blank" class="btn-primary">Register Now</a>
+                  </div>
+
+                  <!-- Venue & Map -->
+                  <div class="quick-link-card">
+                    <div class="quick-link-icon">📍</div>
+                    <h3>Venue & Location</h3>
+                    <p>Australian National University, Canberra, Australia</p>
+                    <a href="./location.html" class="btn-secondary">View Venue Details</a>
+                  </div>
+
+                  <!-- Accommodation -->
+                  <div class="quick-link-card">
+                    <div class="quick-link-icon">🏨</div>
+                    <h3>Accommodation</h3>
+                    <p>Find the perfect place to stay during the conference</p>
+                    <a href="./accommodation.html" class="btn-secondary">View Hotels</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- News & Announcements Section -->
+              <div class="news-section">
+                <h3 class="section-title">Latest News & Updates</h3>
+                <div class="news-list" id="newsList">
+                  <div class="news-item">
+                    <div class="news-date">Sep 26, 2025</div>
+                    <div class="news-content">
+                      <h4>Registration Portal Now Open!</h4>
+                      <p>Registration for AJCAI 2025 is now available. Take advantage of early bird pricing until
+                        October 31, 2025.</p>
+                    </div>
+                  </div>
+                  <div class="news-item">
+                    <div class="news-date">Sep 20, 2025</div>
+                    <div class="news-content">
+                      <h4>Conference Program Ready</h4>
+                      <p>The detailed conference program has been finalized and is now available. Check out the exciting
+                        lineup of keynotes and sessions.</p>
+                    </div>
+                  </div>
+                  <div class="news-item">
+                    <div class="news-date">Sep 15, 2025</div>
+                    <div class="news-content">
+                      <h4>Early Bird Registration Deadline Approaching</h4>
+                      <p>Don't miss out on early bird pricing! Register before October 31, 2025 to save on registration
+                        fees.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Venue Map Section -->
+              <div class="venue-section">
+                <h3 class="section-title">Conference Venue</h3>
+                <div class="venue-grid">
+                  <div class="venue-info">
+                    <h4>Australian National University (ANU)</h4>
+                    <p><strong>Address:</strong> Acton ACT 2601, Australia</p>
+                    <p><strong>Main Conference:</strong> December 1-5, 2025</p>
+                    <p><strong>Conference Banquet:</strong> Old Parliament House (December 4, 2025)</p>
+                    <p>The conference will be held at the prestigious Australian National University campus in Canberra,
+                      with the banquet at the historic Old Parliament House, offering state-of-the-art facilities and
+                      elegant settings for academic exchange and networking.</p>
+                    <div class="venue-links">
+                      <a href="./location.html" class="btn-secondary">Detailed Venue Info</a>
+                    </div>
+                  </div>
+                  <div class="venue-map">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.094727842159!2d149.11454431524432!3d-35.27702678028584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b164d69b05c9021%3A0x500ea6ea7695660!2sAustralian%20National%20University!5e0!3m2!1sen!2sau!4v1632789123456!5m2!1sen!2sau"
+                      width="100%" height="300" style="border:0;border-radius:8px;" allowfullscreen="" loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Community Board (Hidden - will be activated later) -->
+              <div class="community-board-section" style="display: none;">
+                <h3 class="section-title">Community Board</h3>
+                <div class="community-board-preview">
+                  <div class="board-preview-content">
+                    <div class="board-preview-text">
+                      <h4>🌟 Opportunities & Announcements</h4>
+                      <p>Discover job opportunities, research collaborations, academic announcements, and industry
+                        partnerships shared by our community.</p>
+                      <div class="board-stats">
+                        <span class="stat-item">📋 12 Active Posts</span>
+                        <span class="stat-item">💼 5 Job Opportunities</span>
+                        <span class="stat-item">🎓 3 Academic Calls</span>
+                      </div>
+                    </div>
+                    <div class="board-preview-cards">
+                      <div class="preview-card">
+                        <div class="preview-header">
+                          <span class="preview-type sponsor">Sponsor</span>
+                          <span class="preview-date">Sep 25</span>
+                        </div>
+                        <h5>Google AI Research</h5>
+                        <p>Multiple ML positions...</p>
+                      </div>
+                      <div class="preview-card">
+                        <div class="preview-header">
+                          <span class="preview-type job">Job</span>
+                          <span class="preview-date">Sep 22</span>
+                        </div>
+                        <h5>ANU Postdoc Position</h5>
+                        <p>Reinforcement learning focus...</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="board-cta">
+                    <a href="./community-board.html" class="btn-primary board-btn">View All Posts</a>
+                    <p class="board-contact">Want to post? Email <a
+                        href="mailto:ajcai2025@anu.edu.au">chairs.ajcai2025@gmail.com</a></p>
+                  </div>
+                </div>
+              </div>
+
+              <style>
+                /* Quick Links Section */
+                .quick-links-section {
+                  margin: 2rem 0 3rem 0;
+                }
+
+                .quick-links-grid {
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                  gap: 1.5rem;
+                  margin-bottom: 2rem;
+                }
+
+                .quick-link-card {
+                  background: white;
+                  border-radius: 12px;
+                  padding: 1.5rem;
+                  box-shadow: 0 2px 8px rgba(80, 40, 120, 0.1);
+                  border: 1px solid #e5e7eb;
+                  transition: transform 0.2s ease, box-shadow 0.2s ease;
+                  text-align: center;
+                }
+
+                .quick-link-card:hover {
+                  transform: translateY(-2px);
+                  box-shadow: 0 4px 16px rgba(80, 40, 120, 0.15);
+                }
+
+                .registration-card {
+                  border: 2px solid #51247a;
+                  background: linear-gradient(135deg, #f8f6ff 0%, #fff 100%);
+                }
+
+                .quick-link-icon {
+                  font-size: 2.5rem;
+                  margin-bottom: 1rem;
+                }
+
+                .quick-link-card h3 {
+                  color: #51247a;
+                  font-size: 1.25rem;
+                  font-weight: 600;
+                  margin-bottom: 0.75rem;
+                }
+
+                .quick-link-card p {
+                  color: #6b7280;
+                  margin-bottom: 1.25rem;
+                  line-height: 1.5;
+                }
+
+                .btn-primary,
+                .btn-secondary {
+                  display: inline-block;
+                  padding: 0.75rem 1.5rem;
+                  border-radius: 6px;
+                  text-decoration: none;
+                  font-weight: 600;
+                  transition: background-color 0.2s ease;
+                  margin: 0.25rem;
+                }
+
+                .btn-primary {
+                  background-color: #51247a;
+                  color: white;
+                }
+
+                .btn-primary:hover {
+                  background-color: #3d1a5a;
+                  color: white;
+                }
+
+                .btn-secondary {
+                  background-color: #f3f4f6;
+                  color: #51247a;
+                  border: 1px solid #d1d5db;
+                }
+
+                .btn-secondary:hover {
+                  background-color: #e5e7eb;
+                  color: #51247a;
+                }
+
+                /* News Section */
+                .news-section,
+                .venue-section,
+                .admin-section {
+                  margin: 3rem 0;
+                }
+
+                .section-title {
+                  color: #51247a;
+                  font-size: 1.5rem;
+                  font-weight: 700;
+                  margin-bottom: 1.5rem;
+                  padding-bottom: 0.5rem;
+                  border-bottom: 2px solid #f3f0ff;
+                }
+
+                .news-list {
+                  background: white;
+                  border-radius: 12px;
+                  box-shadow: 0 2px 8px rgba(80, 40, 120, 0.1);
+                  overflow: hidden;
+                }
+
+                .news-item {
+                  display: flex;
+                  padding: 1.5rem;
+                  border-bottom: 1px solid #f3f4f6;
+                }
+
+                .news-item:last-child {
+                  border-bottom: none;
+                }
+
+                .news-date {
+                  flex-shrink: 0;
+                  width: 120px;
+                  color: #51247a;
+                  font-weight: 600;
+                  font-size: 0.875rem;
+                }
+
+                .news-content h4 {
+                  color: #1f2937;
+                  font-size: 1.1rem;
+                  font-weight: 600;
+                  margin-bottom: 0.5rem;
+                }
+
+                .news-content p {
+                  color: #6b7280;
+                  line-height: 1.5;
+                  margin: 0;
+                }
+
+                /* Venue Section */
+                .venue-grid {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  gap: 2rem;
+                  align-items: start;
+                }
+
+                .venue-info {
+                  background: white;
+                  border-radius: 12px;
+                  padding: 1.5rem;
+                  box-shadow: 0 2px 8px rgba(80, 40, 120, 0.1);
+                }
+
+                .venue-info h4 {
+                  color: #51247a;
+                  font-size: 1.25rem;
+                  font-weight: 600;
+                  margin-bottom: 1rem;
+                }
+
+                .venue-info p {
+                  color: #4b5563;
+                  line-height: 1.6;
+                  margin-bottom: 0.75rem;
+                }
+
+                .venue-links {
+                  margin-top: 1.5rem;
+                }
+
+                .venue-map {
+                  background: white;
+                  border-radius: 12px;
+                  padding: 1rem;
+                  box-shadow: 0 2px 8px rgba(80, 40, 120, 0.1);
+                }
+
+                /* Community Board Section */
+                .community-board-section {
+                  margin: 3rem 0;
+                }
+
+                .community-board-preview {
+                  background: white;
+                  border-radius: 12px;
+                  padding: 2rem;
+                  box-shadow: 0 2px 8px rgba(80, 40, 120, 0.1);
+                  border: 1px solid #e5e7eb;
+                }
+
+                .board-preview-content {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  gap: 2rem;
+                  margin-bottom: 2rem;
+                }
+
+                .board-preview-text h4 {
+                  color: #51247a;
+                  font-size: 1.25rem;
+                  font-weight: 700;
+                  margin-bottom: 1rem;
+                }
+
+                .board-preview-text p {
+                  color: #4b5563;
+                  line-height: 1.6;
+                  margin-bottom: 1.5rem;
+                }
+
+                .board-stats {
+                  display: flex;
+                  gap: 1rem;
+                  flex-wrap: wrap;
+                }
+
+                .stat-item {
+                  background: #f3f0ff;
+                  color: #51247a;
+                  padding: 0.5rem 1rem;
+                  border-radius: 20px;
+                  font-size: 0.875rem;
+                  font-weight: 600;
+                }
+
+                .board-preview-cards {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1rem;
+                }
+
+                .preview-card {
+                  background: #f9fafb;
+                  border-radius: 8px;
+                  padding: 1rem;
+                  border: 1px solid #e5e7eb;
+                  transition: all 0.2s ease;
+                }
+
+                .preview-card:hover {
+                  transform: translateY(-2px);
+                  box-shadow: 0 4px 12px rgba(80, 40, 120, 0.15);
+                }
+
+                .preview-header {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-bottom: 0.5rem;
+                }
+
+                .preview-type {
+                  padding: 0.25rem 0.75rem;
+                  border-radius: 12px;
+                  font-size: 0.75rem;
+                  font-weight: 600;
+                  text-transform: uppercase;
+                }
+
+                .preview-type.sponsor {
+                  background: #fef3c7;
+                  color: #92400e;
+                }
+
+                .preview-type.job {
+                  background: #dcfce7;
+                  color: #166534;
+                }
+
+                .preview-type.academic {
+                  background: #dbeafe;
+                  color: #1e40af;
+                }
+
+                .preview-date {
+                  font-size: 0.875rem;
+                  color: #6b7280;
+                  font-weight: 500;
+                }
+
+                .preview-card h5 {
+                  color: #1f2937;
+                  font-size: 1rem;
+                  font-weight: 600;
+                  margin-bottom: 0.25rem;
+                }
+
+                .preview-card p {
+                  color: #6b7280;
+                  font-size: 0.875rem;
+                  margin: 0;
+                }
+
+                .board-cta {
+                  text-align: center;
+                  padding-top: 1.5rem;
+                  border-top: 1px solid #e5e7eb;
+                }
+
+                .board-btn {
+                  display: inline-block;
+                  padding: 1rem 2rem;
+                  font-size: 1.1rem;
+                  margin-bottom: 1rem;
+                }
+
+                .board-contact {
+                  color: #6b7280;
+                  font-size: 0.9rem;
+                  margin: 0;
+                }
+
+                .board-contact a {
+                  color: #51247a;
+                  text-decoration: underline;
+                }
+
+                /* Responsive Design */
+                @media (max-width: 768px) {
+                  .quick-links-grid {
+                    grid-template-columns: 1fr;
+                  }
+
+                  .venue-grid {
+                    grid-template-columns: 1fr;
+                  }
+
+                  .news-item {
+                    flex-direction: column;
+                  }
+
+                  .news-date {
+                    width: auto;
+                    margin-bottom: 0.5rem;
+                  }
+
+                  .board-preview-content {
+                    grid-template-columns: 1fr;
+                  }
+
+                  .board-stats {
+                    justify-content: center;
+                  }
+                }
+              </style>
+
             </header>
           </div>
         </main>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charSet="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+
+    <link rel="stylesheet" type='text/css' href='./css/sub_common.css' />
+    <link rel="icon" sizes="32x32" href='./imgs/favicons/favicon-32x32.png' />
+    <link rel="icon" sizes="192x192" href='./imgs/favicons/favicon-192x192.png' />
+    <link rel="apple-touch-icon" sizes="180x180" href='./imgs/favicons/favicon-180x180.png' />
+
+    <meta name="generator" content="Gatsby 4.3.0" />
+    <noscript>
+        <style>
+            .gatsby-image-wrapper noscript [data-main-image] {
+                opacity: 1 !important
+            }
+
+            .gatsby-image-wrapper [data-placeholder-image] {
+                opacity: 0 !important
+            }
+        </style>
+    </noscript>
+    <script type="module">
+        const e = "undefined" != typeof HTMLImageElement && "loading" in HTMLImageElement.prototype;
+        e && document.body.addEventListener("load", (function (e) { if (void 0 === e.target.dataset.mainImage) return; if (void 0 === e.target.dataset.gatsbyImageSsr) return; const t = e.target; let a = null, n = t; for (; null === a && n;)void 0 !== n.parentNode.dataset.gatsbyImageWrapper && (a = n.parentNode), n = n.parentNode; const o = a.querySelector("[data-placeholder-image]"), r = new Image; r.src = t.currentSrc, r.decode().catch((() => { })).then((() => { t.style.opacity = 1, o && (o.style.opacity = 0, o.style.transition = "opacity 500ms linear") })) }), !0);
+    </script>
+    <meta name="theme-color" content="#51247a" />
+    <script type="text/javascript" src='./js/common.js'></script>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            changeMobileMenu('community-board');
+        }
+    </script>
+
+    <title data-react-helmet="true">Community Board - AJCAI 2025</title>
+</head>
+
+<body>
+    <div id="___gatsby">
+        <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
+            <div class="w-full min-h-screen flex flex-col" data-is-root-path="true">
+                <header>
+
+                    <!-- Nav Bar -->
+                    <iframe id='menu' src='./top_menu.html' frameborder='0' width='100%' height='64px' scrolling='auto'
+                        style='z-index: 999; position: fixed;' onmouseover="extentIframe()"
+                        onmouseleave="resetIframe()"></iframe>
+                    <!-- End Of Nav Bar -->
+
+                </header>
+                <div class="w-full h-16">
+                </div>
+                <main class="w-full">
+                    <div class="global-wrapper pb-12" style="max-width:70rem" id="welcome">
+                        <header class="px-0 sm:px-7">
+
+                            <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Community Board
+                            </h2>
+
+                            <!-- Board Header -->
+                            <div class="board-header">
+                                <div class="board-intro">
+                                    <h3>🌟 Opportunities & Announcements</h3>
+                                    <p>Discover and share job opportunities, research collaborations, academic
+                                        announcements, and industry partnerships within the AJCAI community.</p>
+                                </div>
+                                <div class="board-actions">
+                                    <div class="filter-tabs">
+                                        <button class="filter-tab active" data-filter="all">All Posts</button>
+                                        <button class="filter-tab" data-filter="job">Jobs</button>
+                                        <button class="filter-tab" data-filter="academic">Academic</button>
+                                        <button class="filter-tab" data-filter="sponsor">Sponsors</button>
+                                        <button class="filter-tab" data-filter="collaboration">Collaboration</button>
+                                    </div>
+                                    <div class="post-contact">
+                                        <p>Want to post? Email <a
+                                                href="mailto:ajcai2025@anu.edu.au">ajcai2025@anu.edu.au</a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Board Cards Grid -->
+                            <div class="board-grid" id="boardGrid">
+
+                                <!-- Card 1: Google AI Research -->
+                                <div class="board-card" data-category="sponsor" data-id="1">
+                                    <div class="card-header">
+                                        <div class="card-type sponsor">Sponsor</div>
+                                        <div class="card-date">Sep 25, 2025</div>
+                                    </div>
+                                    <h3 class="card-title">Google AI Research Opportunities</h3>
+                                    <p class="card-preview">Google is looking for talented AI researchers to join our
+                                        team. Multiple positions available in machine learning, natural language
+                                        processing, and computer vision...</p>
+                                    <div class="card-tags">
+                                        <span class="tag">Machine Learning</span>
+                                        <span class="tag">NLP</span>
+                                        <span class="tag">Computer Vision</span>
+                                    </div>
+                                    <button class="card-expand" onclick="toggleCard(1)">Read More</button>
+                                    <div class="card-details" id="details-1">
+                                        <div class="details-content">
+                                            <h4>Full Details</h4>
+                                            <p><strong>Company:</strong> Google Research</p>
+                                            <p><strong>Location:</strong> Mountain View, CA / Remote</p>
+                                            <p><strong>Positions Available:</strong></p>
+                                            <ul>
+                                                <li>Senior Research Scientist - Machine Learning</li>
+                                                <li>Research Scientist - Natural Language Processing</li>
+                                                <li>Principal Scientist - Computer Vision</li>
+                                            </ul>
+                                            <p><strong>Requirements:</strong></p>
+                                            <ul>
+                                                <li>PhD in Computer Science, Machine Learning, or related field</li>
+                                                <li>3+ years of research experience</li>
+                                                <li>Strong publication record in top-tier venues</li>
+                                                <li>Experience with TensorFlow, PyTorch, or similar frameworks</li>
+                                            </ul>
+                                            <p><strong>Application Deadline:</strong> December 15, 2025</p>
+                                            <div class="details-actions">
+                                                <a href="#" class="btn-primary">Apply Now</a>
+                                                <a href="#" class="btn-secondary">Learn More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 2: ANU Postdoc -->
+                                <div class="board-card" data-category="job" data-id="2">
+                                    <div class="card-header">
+                                        <div class="card-type job">Job</div>
+                                        <div class="card-date">Sep 22, 2025</div>
+                                    </div>
+                                    <h3 class="card-title">Postdoc Position - ANU Machine Learning Lab</h3>
+                                    <p class="card-preview">The Australian National University is seeking a postdoctoral
+                                        researcher in machine learning with focus on reinforcement learning and
+                                        multi-agent systems...</p>
+                                    <div class="card-tags">
+                                        <span class="tag">Reinforcement Learning</span>
+                                        <span class="tag">Multi-Agent Systems</span>
+                                        <span class="tag">Research</span>
+                                    </div>
+                                    <button class="card-expand" onclick="toggleCard(2)">Read More</button>
+                                    <div class="card-details" id="details-2">
+                                        <div class="details-content">
+                                            <h4>Position Details</h4>
+                                            <p><strong>Institution:</strong> Australian National University</p>
+                                            <p><strong>Department:</strong> School of Computing</p>
+                                            <p><strong>Duration:</strong> 2 years (with possibility of extension)</p>
+                                            <p><strong>Salary:</strong> AUD $85,000 - $95,000 per annum</p>
+                                            <p><strong>Research Focus:</strong></p>
+                                            <ul>
+                                                <li>Developing novel reinforcement learning algorithms</li>
+                                                <li>Multi-agent coordination and cooperation</li>
+                                                <li>Applications in robotics and autonomous systems</li>
+                                            </ul>
+                                            <p><strong>Requirements:</strong></p>
+                                            <ul>
+                                                <li>PhD in Computer Science, AI, or related field</li>
+                                                <li>Strong background in reinforcement learning</li>
+                                                <li>Programming experience in Python, C++</li>
+                                                <li>Publications in ICML, NeurIPS, ICLR, or similar venues</li>
+                                            </ul>
+                                            <div class="details-actions">
+                                                <a href="#" class="btn-primary">Apply Now</a>
+                                                <a href="#" class="btn-secondary">Contact PI</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3: AI in Healthcare Special Issue -->
+                                <div class="board-card" data-category="academic" data-id="3">
+                                    <div class="card-header">
+                                        <div class="card-type academic">Academic</div>
+                                        <div class="card-date">Sep 20, 2025</div>
+                                    </div>
+                                    <h3 class="card-title">Special Issue: AI in Healthcare</h3>
+                                    <p class="card-preview">Call for papers for a special issue on "Artificial
+                                        Intelligence Applications in Healthcare" - deadline December 15, 2025...</p>
+                                    <div class="card-tags">
+                                        <span class="tag">Healthcare AI</span>
+                                        <span class="tag">Medical Imaging</span>
+                                        <span class="tag">Clinical Decision Support</span>
+                                    </div>
+                                    <button class="card-expand" onclick="toggleCard(3)">Read More</button>
+                                    <div class="card-details" id="details-3">
+                                        <div class="details-content">
+                                            <h4>Call for Papers</h4>
+                                            <p><strong>Journal:</strong> AI in Medicine (Impact Factor: 7.1)</p>
+                                            <p><strong>Guest Editors:</strong> Prof. Sarah Chen (Stanford), Dr. Michael
+                                                Johnson (MIT)</p>
+                                            <p><strong>Submission Deadline:</strong> December 15, 2025</p>
+                                            <p><strong>Topics of Interest:</strong></p>
+                                            <ul>
+                                                <li>Machine learning for medical diagnosis</li>
+                                                <li>Computer vision in medical imaging</li>
+                                                <li>Natural language processing for clinical notes</li>
+                                                <li>AI-powered drug discovery</li>
+                                                <li>Ethical AI in healthcare</li>
+                                                <li>Federated learning for medical data</li>
+                                            </ul>
+                                            <p><strong>Manuscript Guidelines:</strong></p>
+                                            <ul>
+                                                <li>8-12 pages for regular papers</li>
+                                                <li>4-6 pages for short papers</li>
+                                                <li>Double-blind review process</li>
+                                                <li>LaTeX template required</li>
+                                            </ul>
+                                            <div class="details-actions">
+                                                <a href="#" class="btn-primary">Submit Paper</a>
+                                                <a href="#" class="btn-secondary">Download CFP</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 4: Research Collaboration -->
+                                <div class="board-card" data-category="collaboration" data-id="4">
+                                    <div class="card-header">
+                                        <div class="card-type collaboration">Collaboration</div>
+                                        <div class="card-date">Sep 18, 2025</div>
+                                    </div>
+                                    <h3 class="card-title">International AI Safety Research Initiative</h3>
+                                    <p class="card-preview">Seeking research partners for a multi-institutional project
+                                        on AI safety and alignment. Funded by NSF and European Research Council...</p>
+                                    <div class="card-tags">
+                                        <span class="tag">AI Safety</span>
+                                        <span class="tag">Alignment</span>
+                                        <span class="tag">Multi-institutional</span>
+                                    </div>
+                                    <button class="card-expand" onclick="toggleCard(4)">Read More</button>
+                                    <div class="card-details" id="details-4">
+                                        <div class="details-content">
+                                            <h4>Collaboration Opportunity</h4>
+                                            <p><strong>Project Title:</strong> "Towards Safe and Aligned AI Systems"</p>
+                                            <p><strong>Funding:</strong> $2.5M over 3 years (NSF + ERC)</p>
+                                            <p><strong>Lead Institution:</strong> MIT Computer Science and AI Laboratory
+                                            </p>
+                                            <p><strong>Partner Institutions:</strong> Oxford, Cambridge, ETH Zurich</p>
+                                            <p><strong>Research Areas:</strong></p>
+                                            <ul>
+                                                <li>AI alignment and value learning</li>
+                                                <li>Robustness and interpretability</li>
+                                                <li>Human-AI interaction and trust</li>
+                                                <li>Governance and policy implications</li>
+                                            </ul>
+                                            <p><strong>Seeking Partners With:</strong></p>
+                                            <ul>
+                                                <li>Expertise in AI safety research</li>
+                                                <li>Strong computational resources</li>
+                                                <li>PhD students interested in AI safety</li>
+                                                <li>Industry connections for real-world testing</li>
+                                            </ul>
+                                            <div class="details-actions">
+                                                <a href="#" class="btn-primary">Express Interest</a>
+                                                <a href="#" class="btn-secondary">Download Proposal</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 5: Workshop on Explainable AI -->
+                                <div class="board-card" data-category="academic" data-id="5">
+                                    <div class="card-header">
+                                        <div class="card-type academic">Academic</div>
+                                        <div class="card-date">Sep 15, 2025</div>
+                                    </div>
+                                    <h3 class="card-title">Workshop on Explainable AI - Call for Participation</h3>
+                                    <p class="card-preview">Join us for a workshop on Explainable AI at AAAI 2026. We
+                                        invite submissions on interpretability, transparency, and trustworthy AI
+                                        systems...</p>
+                                    <div class="card-tags">
+                                        <span class="tag">Explainable AI</span>
+                                        <span class="tag">Interpretability</span>
+                                        <span class="tag">AAAI 2026</span>
+                                    </div>
+                                    <button class="card-expand" onclick="toggleCard(5)">Read More</button>
+                                    <div class="card-details" id="details-5">
+                                        <div class="details-content">
+                                            <h4>Workshop Details</h4>
+                                            <p><strong>Event:</strong> AAAI 2026 Workshop on Explainable AI</p>
+                                            <p><strong>Date:</strong> February 12, 2026</p>
+                                            <p><strong>Location:</strong> Washington, DC</p>
+                                            <p><strong>Organizers:</strong> Dr. Lisa Wang (Google), Prof. James Miller
+                                                (CMU)</p>
+                                            <p><strong>Topics:</strong></p>
+                                            <ul>
+                                                <li>Model interpretability and transparency</li>
+                                                <li>Human-centered explainable AI</li>
+                                                <li>Evaluation metrics for explainability</li>
+                                                <li>Applications in critical domains</li>
+                                            </ul>
+                                            <p><strong>Important Dates:</strong></p>
+                                            <ul>
+                                                <li>Paper submission: November 15, 2025</li>
+                                                <li>Notification: December 20, 2025</li>
+                                                <li>Camera-ready: January 10, 2026</li>
+                                            </ul>
+                                            <div class="details-actions">
+                                                <a href="#" class="btn-primary">Submit Abstract</a>
+                                                <a href="#" class="btn-secondary">Register</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 6: Industry Partnership -->
+                                <div class="board-card" data-category="sponsor" data-id="6">
+                                    <div class="card-header">
+                                        <div class="card-type sponsor">Sponsor</div>
+                                        <div class="card-date">Sep 12, 2025</div>
+                                    </div>
+                                    <h3 class="card-title">Microsoft Research Internship Program 2026</h3>
+                                    <p class="card-preview">Microsoft Research is now accepting applications for summer
+                                        2026 internships. Work alongside world-class researchers on cutting-edge AI
+                                        projects...</p>
+                                    <div class="card-tags">
+                                        <span class="tag">Internship</span>
+                                        <span class="tag">Microsoft</span>
+                                        <span class="tag">Summer 2026</span>
+                                    </div>
+                                    <button class="card-expand" onclick="toggleCard(6)">Read More</button>
+                                    <div class="card-details" id="details-6">
+                                        <div class="details-content">
+                                            <h4>Internship Program</h4>
+                                            <p><strong>Program:</strong> Microsoft Research Internship Program</p>
+                                            <p><strong>Duration:</strong> 12 weeks (June - August 2026)</p>
+                                            <p><strong>Locations:</strong> Redmond, Cambridge, New York, Montreal</p>
+                                            <p><strong>Compensation:</strong> $8,000/month + housing + relocation</p>
+                                            <p><strong>Research Areas:</strong></p>
+                                            <ul>
+                                                <li>Large language models and foundation models</li>
+                                                <li>Computer vision and multimodal AI</li>
+                                                <li>Human-computer interaction</li>
+                                                <li>Quantum computing and AI</li>
+                                                <li>AI for science and sustainability</li>
+                                            </ul>
+                                            <p><strong>Eligibility:</strong></p>
+                                            <ul>
+                                                <li>PhD students in CS, AI, or related fields</li>
+                                                <li>Strong research background</li>
+                                                <li>Publications in top-tier conferences preferred</li>
+                                                <li>Programming skills in Python, C++, or similar</li>
+                                            </ul>
+                                            <div class="details-actions">
+                                                <a href="#" class="btn-primary">Apply Now</a>
+                                                <a href="#" class="btn-secondary">Learn More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <style>
+                                /* Board Header */
+                                .board-header {
+                                    background: white;
+                                    border-radius: 12px;
+                                    padding: 2rem;
+                                    margin-bottom: 2rem;
+                                    box-shadow: 0 2px 8px rgba(80, 40, 120, 0.1);
+                                    border: 1px solid #e5e7eb;
+                                }
+
+                                .board-intro h3 {
+                                    color: #51247a;
+                                    font-size: 1.5rem;
+                                    font-weight: 700;
+                                    margin-bottom: 1rem;
+                                }
+
+                                .board-intro p {
+                                    color: #4b5563;
+                                    line-height: 1.6;
+                                    margin-bottom: 1.5rem;
+                                }
+
+                                .board-actions {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    flex-wrap: wrap;
+                                    gap: 1rem;
+                                }
+
+                                .filter-tabs {
+                                    display: flex;
+                                    gap: 0.5rem;
+                                    flex-wrap: wrap;
+                                }
+
+                                .filter-tab {
+                                    padding: 0.5rem 1rem;
+                                    border: 1px solid #d1d5db;
+                                    background: white;
+                                    color: #4b5563;
+                                    border-radius: 20px;
+                                    font-size: 0.875rem;
+                                    font-weight: 500;
+                                    cursor: pointer;
+                                    transition: all 0.2s ease;
+                                }
+
+                                .filter-tab:hover,
+                                .filter-tab.active {
+                                    background: #51247a;
+                                    color: white;
+                                    border-color: #51247a;
+                                }
+
+                                .post-contact {
+                                    color: #6b7280;
+                                    font-size: 0.9rem;
+                                    margin: 0;
+                                }
+
+                                .post-contact a {
+                                    color: #51247a;
+                                    text-decoration: underline;
+                                }
+
+                                /* Board Grid */
+                                .board-grid {
+                                    display: grid;
+                                    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                                    gap: 1.5rem;
+                                }
+
+                                .board-card {
+                                    background: white;
+                                    border-radius: 12px;
+                                    padding: 1.5rem;
+                                    box-shadow: 0 2px 8px rgba(80, 40, 120, 0.1);
+                                    border: 1px solid #e5e7eb;
+                                    transition: all 0.3s ease;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+
+                                .board-card:hover {
+                                    transform: translateY(-2px);
+                                    box-shadow: 0 4px 16px rgba(80, 40, 120, 0.15);
+                                }
+
+                                .card-header {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    margin-bottom: 1rem;
+                                }
+
+                                .card-type {
+                                    padding: 0.25rem 0.75rem;
+                                    border-radius: 12px;
+                                    font-size: 0.75rem;
+                                    font-weight: 600;
+                                    text-transform: uppercase;
+                                }
+
+                                .card-type.sponsor {
+                                    background: #fef3c7;
+                                    color: #92400e;
+                                }
+
+                                .card-type.job {
+                                    background: #dcfce7;
+                                    color: #166534;
+                                }
+
+                                .card-type.academic {
+                                    background: #dbeafe;
+                                    color: #1e40af;
+                                }
+
+                                .card-type.collaboration {
+                                    background: #f3e8ff;
+                                    color: #7c3aed;
+                                }
+
+                                .card-date {
+                                    font-size: 0.875rem;
+                                    color: #6b7280;
+                                    font-weight: 500;
+                                }
+
+                                .card-title {
+                                    color: #1f2937;
+                                    font-size: 1.25rem;
+                                    font-weight: 700;
+                                    margin-bottom: 0.75rem;
+                                    line-height: 1.3;
+                                }
+
+                                .card-preview {
+                                    color: #4b5563;
+                                    line-height: 1.6;
+                                    margin-bottom: 1rem;
+                                }
+
+                                .card-tags {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    gap: 0.5rem;
+                                    margin-bottom: 1rem;
+                                }
+
+                                .tag {
+                                    background: #f3f4f6;
+                                    color: #374151;
+                                    padding: 0.25rem 0.75rem;
+                                    border-radius: 12px;
+                                    font-size: 0.75rem;
+                                    font-weight: 500;
+                                }
+
+                                .card-expand {
+                                    background: #51247a;
+                                    color: white;
+                                    border: none;
+                                    padding: 0.5rem 1rem;
+                                    border-radius: 6px;
+                                    font-size: 0.875rem;
+                                    font-weight: 600;
+                                    cursor: pointer;
+                                    transition: background-color 0.2s ease;
+                                }
+
+                                .card-expand:hover {
+                                    background: #3d1a5a;
+                                }
+
+                                .card-details {
+                                    max-height: 0;
+                                    overflow: hidden;
+                                    transition: max-height 0.3s ease;
+                                    margin-top: 1rem;
+                                }
+
+                                .card-details.expanded {
+                                    max-height: 1000px;
+                                }
+
+                                .details-content {
+                                    padding-top: 1rem;
+                                    border-top: 1px solid #e5e7eb;
+                                }
+
+                                .details-content h4 {
+                                    color: #51247a;
+                                    font-size: 1.1rem;
+                                    font-weight: 700;
+                                    margin-bottom: 1rem;
+                                }
+
+                                .details-content p {
+                                    color: #4b5563;
+                                    line-height: 1.6;
+                                    margin-bottom: 0.75rem;
+                                }
+
+                                .details-content ul {
+                                    color: #4b5563;
+                                    margin: 0.5rem 0 1rem 1.5rem;
+                                }
+
+                                .details-content li {
+                                    margin-bottom: 0.25rem;
+                                }
+
+                                .details-actions {
+                                    display: flex;
+                                    gap: 1rem;
+                                    margin-top: 1.5rem;
+                                    flex-wrap: wrap;
+                                }
+
+                                .btn-primary,
+                                .btn-secondary {
+                                    padding: 0.75rem 1.5rem;
+                                    border-radius: 6px;
+                                    font-size: 0.875rem;
+                                    font-weight: 600;
+                                    text-decoration: none;
+                                    transition: all 0.2s ease;
+                                    display: inline-block;
+                                }
+
+                                .btn-primary {
+                                    background: #51247a;
+                                    color: white;
+                                    border: 1px solid #51247a;
+                                }
+
+                                .btn-primary:hover {
+                                    background: #3d1a5a;
+                                    color: white;
+                                }
+
+                                .btn-secondary {
+                                    background: white;
+                                    color: #51247a;
+                                    border: 1px solid #51247a;
+                                }
+
+                                .btn-secondary:hover {
+                                    background: #51247a;
+                                    color: white;
+                                }
+
+                                /* Responsive Design */
+                                @media (max-width: 768px) {
+                                    .board-grid {
+                                        grid-template-columns: 1fr;
+                                    }
+
+                                    .board-actions {
+                                        flex-direction: column;
+                                        align-items: stretch;
+                                    }
+
+                                    .filter-tabs {
+                                        justify-content: center;
+                                    }
+
+                                    .details-actions {
+                                        flex-direction: column;
+                                    }
+
+                                    .btn-primary,
+                                    .btn-secondary {
+                                        text-align: center;
+                                    }
+                                }
+                            </style>
+
+                            <script>
+                                // Filter functionality
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    const filterTabs = document.querySelectorAll('.filter-tab');
+                                    const boardCards = document.querySelectorAll('.board-card');
+
+                                    filterTabs.forEach(tab => {
+                                        tab.addEventListener('click', function () {
+                                            // Update active tab
+                                            filterTabs.forEach(t => t.classList.remove('active'));
+                                            this.classList.add('active');
+
+                                            // Filter cards
+                                            const filter = this.dataset.filter;
+                                            boardCards.forEach(card => {
+                                                if (filter === 'all' || card.dataset.category === filter) {
+                                                    card.style.display = 'block';
+                                                } else {
+                                                    card.style.display = 'none';
+                                                }
+                                            });
+                                        });
+                                    });
+                                });
+
+                                // Toggle card details
+                                function toggleCard(cardId) {
+                                    const details = document.getElementById(`details-${cardId}`);
+                                    const button = details.previousElementSibling;
+
+                                    if (details.classList.contains('expanded')) {
+                                        details.classList.remove('expanded');
+                                        button.textContent = 'Read More';
+                                    } else {
+                                        // Close other expanded cards
+                                        document.querySelectorAll('.card-details.expanded').forEach(detail => {
+                                            detail.classList.remove('expanded');
+                                            detail.previousElementSibling.textContent = 'Read More';
+                                        });
+
+                                        // Open this card
+                                        details.classList.add('expanded');
+                                        button.textContent = 'Show Less';
+
+                                        // Smooth scroll to card
+                                        details.parentElement.scrollIntoView({
+                                            behavior: 'smooth',
+                                            block: 'nearest'
+                                        });
+                                    }
+                                }
+                            </script>
+
+                        </header>
+                    </div>
+                </main>
+                <footer class="bg-gray-100 mt-auto bottom-0 border-t shadow-inner overflow-x-hidden">
+                    <div class="global-wrapper flex sm:block flex-col items-center md:items-start">
+                        <div class="flex flex-col-reverse md:flex-row px-6 lg:px-0 items-start justify-between w-full">
+                            <small class="">AJCAI 2025 - Australasian Joint Conference on Artificial Intelligence 2025,
+                                Canberra,
+                                Australia</small>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div id="gatsby-announcer"
+            style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0"
+            aria-live="assertive" aria-atomic="true">
+        </div>
+    </div>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XSX58G49PD">
+    </script>
+    <script>
+        if (true) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { window.dataLayer && window.dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-XSX58G49PD', { "send_page_view": false });
+        }
+    </script>
+    <script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath = "/";/*]]>*/</script>
+    <script id="gatsby-chunk-mapping">
+    /*<![CDATA[*/window.___chunkMapping = { "polyfill": ["/polyfill-1c9788fca0f90abb50c3.js"], "app": ["/app-a59b4b6740a68aeefd26.js"], "component---src-pages-404-js": ["/component---src-pages-404-js-3d51b459a80f969a4f66.js"], "component---src-pages-gather-town-js": ["/component---src-pages-gather-town-js-20a5b8eb4f529ec02e4a.js"], "component---src-pages-index-js": ["/component---src-pages-index-js-8a4adfc3136c188f7d4d.js"], "component---src-pages-organisation-js": ["/component---src-pages-organisation-js-d897b29f4c76da418e8b.js"], "component---src-pages-phd-school-js": ["/component---src-pages-phd-school-js-342a122469920c419385.js"], "component---src-pages-program-at-a-glance-js": ["/component---src-pages-program-at-a-glance-js-f09b822ffe2455eef479.js"], "component---src-pages-program-js": ["/component---src-pages-program-js-3fe28d1a2f210ef0ff80.js"], "component---src-pages-sponsors-js": ["/component---src-pages-sponsors-js-e9c839fba1b21aac6ebf.js"], "component---src-templates-article-js": ["/component---src-templates-article-js-7fa23b91346b8acf9bb1.js"] };/*]]>*/
+    </script>
+    <script>
+        function show_mobile_nav() {
+            var current_class = document.getElementById('mobile_menu').className;
+            if (current_class == 'hidden') {
+                document.getElementById('mobile_menu').setAttribute('class', 'md:hidden');
+                document.getElementById('menu_icon_1').setAttribute('class', 'hidden h-6 w-6');
+                document.getElementById('menu_icon_2').setAttribute('class', 'block h-6 w-6');
+            }
+            else {
+                document.getElementById('mobile_menu').setAttribute('class', 'hidden');
+                document.getElementById('menu_icon_1').setAttribute('class', 'block h-6 w-6');
+                document.getElementById('menu_icon_2').setAttribute('class', 'hidden h-6 w-6');
+            }
+        }
+    </script>
+</body>
+
+</html>
