@@ -64,6 +64,19 @@
 
               <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Registration Options </h2>
 
+              <!-- Important Deadline Notice -->
+              <div class="deadline-notice">
+                <div class="deadline-content">
+                  <div class="deadline-icon">⚠️</div>
+                  <div class="deadline-text">
+                    <h3>Important Deadline</h3>
+                    <p><strong>Full Paper Registration Deadline: October 13, 2025</strong></p>
+                    <p>All authors with accepted papers must complete their full registration by this date to ensure
+                      their paper is included in the proceedings.</p>
+                  </div>
+                </div>
+              </div>
+
               <div class="table-responsive">
                 <table class="registration-table">
                   <thead>
@@ -164,6 +177,8 @@
               <div class="registration-section">
                 <h3>Important Notes</h3>
                 <ul>
+                  <li><strong>Full paper registration deadline: October 13, 2025</strong> - All authors with accepted
+                    papers must complete their full registration by this date</li>
                   <li>Morning tea, lunch and afternoon tea included with all registrations for days attending</li>
                   <li>All food will be halal. Options available for: vegetarian, gluten free</li>
                   <li>Early registrations must be received by 31 October 2025</li>
@@ -219,6 +234,55 @@
               </div>
 
               <style>
+                /* Deadline Notice */
+                .deadline-notice {
+                  background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%);
+                  border: 2px solid #f59e0b;
+                  border-radius: 12px;
+                  padding: 1.5rem;
+                  margin: 2rem 0;
+                  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+                }
+
+                .deadline-content {
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 1rem;
+                }
+
+                .deadline-icon {
+                  font-size: 2rem;
+                  flex-shrink: 0;
+                }
+
+                .deadline-text h3 {
+                  color: #92400e;
+                  font-size: 1.25rem;
+                  font-weight: 700;
+                  margin-bottom: 0.5rem;
+                }
+
+                .deadline-text p {
+                  color: #92400e;
+                  margin-bottom: 0.5rem;
+                  line-height: 1.5;
+                }
+
+                .deadline-text p:last-child {
+                  margin-bottom: 0;
+                }
+
+                @media (max-width: 768px) {
+                  .deadline-content {
+                    flex-direction: column;
+                    text-align: center;
+                  }
+
+                  .deadline-icon {
+                    align-self: center;
+                  }
+                }
+
                 .table-responsive {
                   overflow-x: auto;
                   border-radius: 8px;
