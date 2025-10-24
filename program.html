@@ -67,9 +67,11 @@
                   color: white;
                   text-align: center;
                 }
+
                 .schedule_break_row {
                   background-color: #f5f5f5;
                 }
+
                 .schedule_table_column_center {
                   text-align: center;
                   vertical-align: middle;
@@ -78,23 +80,64 @@
                   height: 40px;
                   line-height: 1.2;
                 }
+
                 table {
                   table-layout: fixed;
-                  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                   border-radius: 8px;
                   overflow: hidden;
                   border-collapse: collapse;
                   width: 100%;
                 }
+
                 .schedule_table_title td {
                   padding: 15px 8px;
                   font-weight: bold;
                 }
+
                 tr:hover:not(.schedule_table_title):not(.schedule_break_row) {
                   background-color: #f8f8f8;
                 }
+
                 tr:nth-child(even):not(.schedule_table_title):not(.schedule_break_row) {
                   background-color: #fafafa;
+                }
+
+                .session-long-oral {
+                  background-color: #f8f9fa;
+                  border-left: 2px solid #dee2e6;
+                }
+
+                .session-short-oral {
+                  background-color: #f8f9fa;
+                  border-left: 2px solid #dee2e6;
+                }
+
+                .session-papers {
+                  color: #6c757d;
+                  font-size: 0.9em;
+                }
+
+                .session-name {
+                  font-weight: 600;
+                }
+
+                .keynote-cell {
+                  background-color: #f8f9fa;
+                  border-left: 2px solid #dee2e6;
+                  font-weight: 600;
+                }
+
+                .industry-day {
+                  background-color: #f8f9fa;
+                  border-left: 2px solid #dee2e6;
+                  font-weight: 600;
+                }
+
+                .panel-discussion {
+                  background-color: #f8f9fa;
+                  border-left: 2px solid #dee2e6;
+                  font-weight: 600;
                 }
               </style>
 
@@ -197,7 +240,7 @@
                 </tbody>
               </table>
 
-              <br/>
+              <br />
 
               <table cellpadding='5' style="border-collapse: collapse; width: 100%;">
                 <tbody>
@@ -223,7 +266,7 @@
                     <td class='schedule_table_column_center'>09:00 - 10:00</td>
                     <td class='schedule_table_column_center'>Welcome (5 mins) + Keynote</td>
                     <td class='schedule_table_column_center' colspan="2">Keynote [Industry and Government]</td>
-                    <td class='schedule_table_column_center'>Keynote</td>
+                    <td class='schedule_table_column_center keynote-cell'>Keynote</td>
                   </tr>
                   <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>10:00 - 10:15</td>
@@ -233,10 +276,11 @@
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>10:15 - 11:15</td>
-                    <td class='schedule_table_column_center'>Keynote</td>
-                    <td class='schedule_table_column_center'>Long oral: 4 × 15 min</td>
+                    <td class='schedule_table_column_center keynote-cell'>Keynote</td>
+                    <td class='schedule_table_column_center session-long-oral'><span class='session-name'>Long Oral
+                        Session 1</span><br /><span class='session-papers'>Papers: 7, 18, 22, 32</span></td>
                     <td class='schedule_table_column_center'>Industry Day (+ AI for Health)</td>
-                    <td class='schedule_table_column_center'>Keynote</td>
+                    <td class='schedule_table_column_center keynote-cell'>Keynote</td>
                   </tr>
                   <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>11:15 - 11:30</td>
@@ -247,10 +291,13 @@
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>11:30 - 12:30</td>
-                    <td class='schedule_table_column_center'>Long oral: 4 × 15 min</td>
-                    <td class='schedule_table_column_center'>Long oral: 4 × 15 min</td>
-                    <td class='schedule_table_column_center'>Industry Day</td>
-                    <td class='schedule_table_column_center'>Long oral: 4 × 15 min</td>
+                    <td class='schedule_table_column_center session-long-oral'><span class='session-name'>Long Oral
+                        Session 2</span><br /><span class='session-papers'>Papers: 38, 46, 58, 127</span></td>
+                    <td class='schedule_table_column_center session-long-oral'><span class='session-name'>Long Oral
+                        Session 3</span><br /><span class='session-papers'>Papers: 61, 77, 88, 106</span></td>
+                    <td class='schedule_table_column_center industry-day'>Industry Day</td>
+                    <td class='schedule_table_column_center session-long-oral'><span class='session-name'>Long Oral
+                        Session 5</span><br /><span class='session-papers'>Papers: 39, 44, 108, 121</span></td>
                   </tr>
                   <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>12:30 - 14:00</td>
@@ -261,10 +308,11 @@
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>14:00 - 15:00</td>
-                    <td class='schedule_table_column_center'>Keynote</td>
-                    <td class='schedule_table_column_center'>Keynote</td>
-                    <td class='schedule_table_column_center'>Keynote</td>
-                    <td class='schedule_table_column_center'>Long oral: 4 × 15 min</td>
+                    <td class='schedule_table_column_center keynote-cell'>Keynote</td>
+                    <td class='schedule_table_column_center keynote-cell'>Keynote</td>
+                    <td class='schedule_table_column_center keynote-cell'>Keynote</td>
+                    <td class='schedule_table_column_center session-long-oral'><span class='session-name'>Long Oral
+                        Session 6</span><br /><span class='session-papers'>Papers: 8, 93, 97, 111</span></td>
                   </tr>
                   <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>15:00 - 15:10</td>
@@ -275,10 +323,19 @@
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>15:10 - 16:00</td>
-                    <td class='schedule_table_column_center'>Oral: 5 × 10 min | Oral: 5 × 10 min</td>
-                    <td class='schedule_table_column_center'>Oral: 5 × 10 min | Oral: 5 × 10 min</td>
-                    <td class='schedule_table_column_center'>Industry Day</td>
-                    <td class='schedule_table_column_center'>Oral: 5 × 10 min | Oral: 5 × 10 min</td>
+                    <td class='schedule_table_column_center session-short-oral'><span class='session-name'>Short Oral
+                        Session 1</span><br /><span class='session-papers'>Papers: 1,5,13,14</span><br /><br /><span
+                        class='session-name'>Short Oral Session 2</span><br /><span class='session-papers'>Papers:
+                        15,16,24,26</span></td>
+                    <td class='schedule_table_column_center session-short-oral'><span class='session-name'>Short Oral
+                        Session 3</span><br /><span class='session-papers'>Papers: 27,28,34,50</span><br /><br /><span
+                        class='session-name'>Short Oral Session 4</span><br /><span class='session-papers'>Papers:
+                        51,60,62,70</span></td>
+                    <td class='schedule_table_column_center industry-day'>Industry Day</td>
+                    <td class='schedule_table_column_center session-short-oral'><span class='session-name'>Short Oral
+                        Session 5</span><br /><span class='session-papers'>Papers: 71,82,84,101</span><br /><br /><span
+                        class='session-name'>Short Oral Session 6</span><br /><span class='session-papers'>Papers:
+                        103,109,113,118</span></td>
                   </tr>
                   <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>16:00 - 16:10</td>
@@ -289,18 +346,37 @@
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>16:10 - 17:00</td>
-                    <td class='schedule_table_column_center'>Oral: 5 × 10 min | Oral: 5 × 10 min</td>
-                    <td class='schedule_table_column_center' colspan="2">Panel Discussion [AI Safety/Research Funding, TranslationARC] [finishes 17:30]</td>
-                    <td class='schedule_table_column_center'>Oral: 5 × 10 min | Oral: 5 × 10 min</td>
+                    <td class='schedule_table_column_center session-short-oral'><span class='session-name'>Short Oral
+                        Session 7</span><br /><span class='session-papers'>Papers:
+                        49,133,151,152</span><br /><br /><span class='session-name'>Short Oral Session
+                        8</span><br /><span class='session-papers'>Papers: 2,25,48,65</span></td>
+                    <td class='schedule_table_column_center panel-discussion' colspan="2">Panel Discussion [AI
+                      Safety/Research Funding,
+                      TranslationARC] [finishes 17:30]</td>
+                    <td class='schedule_table_column_center session-short-oral'><span class='session-name'>Short Oral
+                        Session 9</span><br /><span class='session-papers'>Papers: 68,78,80,92</span><br /><br /><span
+                        class='session-name'>Short Oral Session 10</span><br /><span class='session-papers'>Papers:
+                        99,102,105,110,117</span></td>
                   </tr>
                   <tr>
-                    <td class='schedule_table_column_center'>17:00 - 21:30</td>
+                    <td class='schedule_table_column_center'>17:00 - 17:30</td>
+                    <td class='schedule_table_column_center session-short-oral'><span class='session-name'>Short Oral
+                        Session 11</span><br /><span class='session-papers'>Papers: 40,52,55,56</span><br /><br /><span
+                        class='session-name'>Short Oral Session 12</span><br /><span class='session-papers'>Papers:
+                        57,66,95,122</span></td>
+                    <td class='schedule_table_column_center' colspan="2">Banquet [starts at 6:30pm @ Old Parliament
+                      House] (conf info/stats; awards; thank yous - reviewers, etc)</td>
+                    <td class='schedule_table_column_center'>Closing, celebration</td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>17:30 - 21:30</td>
                     <td class='schedule_table_column_center'>Reception</td>
-                    <td class='schedule_table_column_center' colspan="2">Banquet [starts at 6:30pm @ Old Parliament House] (conf info/stats; awards; thank yous - reviewers, etc)</td>
+                    <td class='schedule_table_column_center' colspan="2">Banquet continues</td>
                     <td class='schedule_table_column_center'>Closing, celebration</td>
                   </tr>
                 </tbody>
               </table>
+
             </header>
           </div>
         </main>
