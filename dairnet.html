@@ -36,6 +36,107 @@
     }
   </script>
 
+  <style>
+    /* Speaker card visual styles */
+    .speaker-card {
+      background: transparent;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0;
+      box-shadow: none;
+      transition: box-shadow 150ms ease, transform 150ms ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .speaker-card:hover {
+      box-shadow: none;
+      transform: none;
+      text-decoration: none;
+    }
+
+    .speaker-card img {
+      border-radius: 0.5rem;
+      object-fit: cover;
+      width: 150px;
+      height: 150px;
+    }
+
+    .speaker-bio {
+      max-width: 60rem;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    .speaker-row {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      /* vertical centering */
+      width: 100%;
+      margin: 2rem 0;
+      /* more space between speakers */
+    }
+
+    .speaker-row:not(:first-of-type) {
+      border-top: 1px solid #e5e7eb;
+      padding-top: 2rem;
+    }
+
+    .speaker-left {
+      width: 170px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .speaker-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* vertical centering for text */
+    }
+
+    .speaker-right p:first-child {
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .speaker-right p {
+      margin: 0.25rem 0;
+    }
+
+    .session-entry {
+      margin-top: 0.5rem;
+    }
+
+    .session-title {
+      font-weight: 700;
+      color: #111827;
+      font-size: 0.98rem;
+    }
+
+    .session-speaker {
+      margin-top: 0.15rem;
+      color: #111827;
+      font-size: 0.95rem;
+    }
+
+    .program-table td:first-child {
+      white-space: nowrap;
+      width: 11.5rem;
+      vertical-align: top;
+    }
+
+    .program-table tr:last-child td {
+      padding-bottom: 0.0rem;
+    }
+  </style>
+
   <title data-react-helmet="true">DAIRNet Symposium - Canberra, Australia</title>
 </head>
 
@@ -68,7 +169,8 @@
                 <h1
                   class="mb-2 relative font_titleFont text-black font-extrabold tracking-wide text-titleBig leading-titleBig">
                   <span class="text-mainPurple">Save the Date</span><br /><span style='font-size: 37px;'>Defence
-                    Artificial Intelligence 2025 Symposium</span></h1>
+                    Artificial Intelligence 2025 Symposium</span>
+                </h1>
                 <p class="mb-4 font-semibold text-titleSmall">Australian National University, Canberra</p>
                 <p class="mb-1 font-bold text-mainPurple text-titleMedium tracking-semiWide" style='font-size: 20px;'>
                   8:30 - 17:00 (AEST) 1<sup>st</sup> Dec, 2025</p>
@@ -103,21 +205,30 @@
           </div>
           <div class="global-wrapper pb-12" style="max-width:70rem" id="welcome">
             <header class="px-0 sm:px-7">
-              <h2 id='welcome' class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">DAIRNet AI Symposium Program Overview</h2>
+              <h2 id='welcome' class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">DAIRNet AI
+                Symposium Program Overview</h2>
               <p class="mb-4 pt-8">
-                The Defence Artificial Intelligence Research Network (DAIRNet) is proud to host this AI symposium as part of the 38th Australasian Joint Conference on Artificial Intelligence (AJCAI) 2025. This symposium provides a valuable forum for meaningful engagement between the Australian Defence community and AI research and industry sectors.
+                The Defence Artificial Intelligence Research Network (DAIRNet) is proud to host this AI symposium as
+                part of the 38th Australasian Joint Conference on Artificial Intelligence (AJCAI) 2025. This symposium
+                provides a valuable forum for meaningful engagement between the Australian Defence community and AI
+                research and industry sectors.
               </p>
               <p class="mb-4 pt-8">
-                As Defence continues to adapt to a rapidly changing strategic and technological landscape, the adoption of AI presents both significant opportunities and complex challenges. This symposium centres on the theme "AI Adoption: From Concept to Capability", inviting discussions on how we can accelerate the responsible, effective, and secure integration of AI across Defence operations.
+                As Defence continues to adapt to a rapidly changing strategic and technological landscape, the adoption
+                of AI presents both significant opportunities and complex challenges. This symposium centres on the
+                theme "AI Adoption: From Concept to Capability", inviting discussions on how we can accelerate the
+                responsible, effective, and secure integration of AI across Defence operations.
               </p>
               <p class="mb-4 pt-8">
-                DAIRNet is an initiative of the Department of Defence and is managed in partnership with the University of South Australia. To learn more, visit <a href="https://www.dairnet.com.au" target="_blank" class="text-mainPurple hover:underline">www.dairnet.com.au</a>
+                DAIRNet is an initiative of the Department of Defence and is managed in partnership with the University
+                of South Australia. To learn more, visit <a href="https://www.dairnet.com.au" target="_blank"
+                  class="text-mainPurple hover:underline">www.dairnet.com.au</a>
               </p>
 
               <div class="flex sm:block flex-col items-center">
                 <h2 class="pt-9 mb-8 font-titleFont text-3xl text-mainPurple font-extrabold">Detailed Program</h2>
                 <div class="w-full overflow-hidden rounded-lg shadow-md border border-gray-200">
-                  <table class="w-full border-collapse bg-white">
+                  <table class="w-full border-collapse bg-white program-table">
                     <tbody>
                       <tr class="border-b border-black">
                         <td class="px-6 py-4 font-semibold text-lg text-black">8:30 – 9:00</td>
@@ -136,15 +247,18 @@
                         <td class="px-6 py-4 font-semibold text-lg text-black">9:10 – 9:50</td>
                         <td class="px-6 py-4 text-black">
                           <div class="font-semibold text-lg text-black">Keynote Address</div>
-                          <div class="text-sm mt-1 italic text-black">AI Adoption: From Concept to Capability</div>
+                          <div class="text-sm mt-1 text-black">Mr Mike Moroney, Executive Director of DAIC, Defence
+                          </div>
                         </td>
                       </tr>
                       <tr class="border-b border-black">
                         <td class="px-6 py-4 font-semibold text-lg text-black">9:50 – 10:30</td>
                         <td class="px-6 py-4 text-black">
                           <div class="font-semibold text-lg text-black">Presentation</div>
-                          <div class="text-sm mt-1 italic text-black">Assuring AI-enabled uncrewed systems</div>
-                          <div class="text-sm mt-1 text-black">Anna Knack, The Alan Turing Institute</div>
+                          <div class="session-title mt-1">Assuring AI-enabled uncrewed systems: Identifying promising
+                            practice for Defence</div>
+                          <div class="session-speaker mt-1">Dr Sacha Babuta and Anna Knack, The Alan Turing Institute
+                          </div>
                         </td>
                       </tr>
                       <tr class="border-b border-black" style="background-color: #8B7ED8;">
@@ -159,8 +273,20 @@
                           <div class="font-semibold text-lg text-black">Presentations</div>
                           <div class="text-sm mt-1 italic text-black">International Collaborations</div>
                           <div class="text-sm mt-1 text-black">
-                            • Prof Toni Erskine, ANU<br/>
-                            • Dr Damian Copeland, Article 36 Legal
+                            <div class="session-entry">
+                              <div class="session-title">Computer Says "War"? AI and Resort-to-Force Decision Making in
+                                a Context of Rapid Change and Global Uncertainty</div>
+                              <div class="session-speaker">Prof Toni Erskine, ANU</div>
+                            </div>
+                            <div class="session-entry">
+                              <div class="session-title">A functional approach to the legal review of autonomous weapon
+                                systems</div>
+                              <div class="session-speaker">Dr Damian Copeland, Article 36 Legal</div>
+                            </div>
+                            <div class="session-entry">
+                              <div class="session-title">TBC</div>
+                              <div class="session-speaker">TBC – Defence speaker</div>
+                            </div>
                           </div>
                         </td>
                       </tr>
@@ -171,376 +297,633 @@
                         </td>
                       </tr>
                       <tr class="border-b border-black">
-                        <td class="px-6 py-4 font-semibold text-lg text-black">13:00 – 14:45</td>
+                        <td class="px-6 py-4 font-semibold text-lg text-black">13:00 – 15:20</td>
                         <td class="px-6 py-4 text-black">
                           <div class="font-semibold text-lg text-black">Presentations</div>
                           <div class="text-sm mt-1 italic text-black">Human & Machine Interactions</div>
                           <div class="text-sm mt-1 text-black">
-                            • Prof Kathryn Kasmarik, UNSW Canberra<br/>
-                            • Dr Ami Drory, Defence<br/>
-                            • Prof Lexing Xie, ANU<br>
-                            • Yue Liu, ANU
+                            <div class="session-entry">
+                              <div class="session-title">Human-swarm interaction: design and evaluation</div>
+                              <div class="session-speaker">Dr Kathryn Kasmarik, UNSW Canberra</div>
+                            </div>
+                            <div class="session-entry">
+                              <div class="session-title">HMT for military adoption of AI/ML – Are we dumbing down
+                                humans?</div>
+                              <div class="session-speaker">Dr Ami Drory, Defence</div>
+                            </div>
+                            <div class="session-entry">
+                              <div class="session-title">LLM-Assisted Comparison of Complex Documents</div>
+                              <div class="session-speaker">Prof Lexing Xie and Yue Liu, ANU</div>
+                            </div>
+                            <div class="session-entry">
+                              <div class="session-title">Operationalising Trusted AI: From Algorithms to Mission Impact
+                              </div>
+                              <div class="session-speaker">Dr Phyo San, Defence</div>
+                            </div>
                           </div>
                         </td>
                       </tr>
                       <tr class="border-b border-black" style="background-color: #8B7ED8;">
-                        <td class="px-6 py-4 font-semibold text-lg text-white">14:45 – 15:00</td>
+                        <td class="px-6 py-4 font-semibold text-lg text-white">15:20 – 15:35</td>
                         <td class="px-6 py-4 text-white">
                           <div class="font-semibold text-lg text-white">Afternoon tea break</div>
                         </td>
                       </tr>
                       <tr class="border-b border-black">
-                        <td class="px-6 py-4 font-semibold text-lg text-black">15:00 – 16:00</td>
+                        <td class="px-6 py-4 font-semibold text-lg text-black">15:35 – 16:35</td>
                         <td class="px-6 py-4 text-black">
                           <div class="font-semibold text-lg text-black">Panel Discussion</div>
-                          <div class="text-sm mt-1 italic text-black">Accelerating the responsible, effective & secure integration of AI across Defence</div>
+                          <div class="text-sm mt-1 italic text-black">Accelerating the responsible, effective & secure
+                            integration of AI across Defence</div>
                           <div class="text-sm mt-1 text-black">
-                            • Facilitator: TBC<br/>
-                            • Capt Adam Allica, Defence<br/>
-                            • FLTLT Jorge Alvarino Diaz, Defence
+                            • Facilitator: Mr Mike Moroney, Defence<br />
+                            • CAPT Adam Allica, RAN, Defence<br />
+                            • LEUT Jessica Craig, Defence<br />
+                            • FLTLT Jorge Alvarino Diaz, Defence<br />
+                            • Natasha Karner, The Alan Turing Institute
                           </div>
                         </td>
                       </tr>
                       <tr class="border-b border-black">
-                        <td class="px-6 py-4 font-semibold text-lg text-black">16:00 – 16:10</td>
+                        <td class="px-6 py-4 font-semibold text-lg text-black">16:35 – 16:45</td>
                         <td class="px-6 py-4 text-black">
                           <div class="font-semibold text-lg text-black">Closing remarks</div>
                         </td>
                       </tr>
                       <tr class="border-b border-black">
-                        <td class="px-6 py-4 font-semibold text-lg text-black">16:10 – 17:00</td>
+                        <td class="px-6 py-4 font-semibold text-lg text-black">16:45 – 17:30</td>
                         <td class="px-6 py-4 text-black">
                           <div class="font-semibold text-lg text-black">Networking</div>
                         </td>
                       </tr>
                       <tr>
-                        <td class="px-6 py-4 font-semibold text-lg text-black">17:00</td>
+                        <td class="px-6 py-4 font-semibold text-lg text-black">17:30</td>
                         <td class="px-6 py-4 text-black">
                           <div class="font-semibold text-lg text-black">Offsite networking</div>
                         </td>
                       </tr>
-                  </tbody>
-                </table>
-              </div>
+                    </tbody>
+                  </table>
+                </div>
 
-              <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">DAIRNet Artificial Intelligence Symposium 2025 Speakers</h2>
+                <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">DAIRNet Artificial
+                  Intelligence Symposium 2025 Speakers</h2>
 
-              <!-- Dr Mel McDowall -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center sm:justify-start flex-wrap">
-                  <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg" style="width:100%" href="#" target="_blank" rel="noreferrer">
-                    <div style="width:150px;height:150px">
-                      <div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
-                        <div style="max-width:500px;display:block">
-                          <img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/>
+                <!-- Dr Mel McDowall -->
+                <div class="speaker-row">
+                  <div class="speaker-left">
+                    <div class="speaker-card" style="width:100%">
+                      <div style="width:150px;height:150px">
+                        <div data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                          <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                              style="max-width:100%;display:block;position:static" /></div>
+                          <img aria-hidden="true" data-placeholder-image=""
+                            style="opacity:1;transition:opacity 500ms linear" decoding="async"
+                            src="./imgs/DAIRNet/Dr Mel McDowall - profile image.jpg" alt="" />
                         </div>
-                        <img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="./imgs/portraits/david_clyde.png" alt=""/>
                       </div>
+                      <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">Dr Mel McDowall</p>
                     </div>
-                    <p class="text-xl font-bold mt-6 mb-2 text-center leading-6">
-                      Dr Mel McDowall
-                    </p>
-                    <p class="mb-2 text-orgSmall text-gray-700 leading-5 text-center">
-                      Director of DAIRNet
-                    </p>
-                  </a>
+                  </div>
+                  <div class="speaker-right">
+                    <p class="mb-2 text-orgSmall text-gray-700 leading-5">Defence Artificial Intelligence Research
+                      Network (DAIRNet) — Director</p>
+                    <p class="speaker-bio text-sm">Dr Mel McDowall is the Director of the Defence AI Research Network
+                      (DAIRNet), an initiative of the Department of Defence and hosted by the University of South
+                      Australia. This draws on her experiences in transdisciplinary research and operation roles. Having
+                      worked in many industries, such as clinical, agriculture and Defence, Dr McDowall has experience
+                      with many steps in the "bench to bedside/farm-gate/capability" journey. This includes basic and
+                      applied research, business improvement and governance, advocacy, contract management, territory
+                      management, and clinical support. Transdisciplinary teams, science communication and outreach are
+                      critical for research. Highlights of Dr McDowall’s career include receiving a Young Tall Poppy
+                      Award (2005), attending Science Meets Parliament (2014–2016) as an advocate for reproductive
+                      medicine research, and participating in the CSIRO OnPrime program (2016). More recently she was
+                      the 2023 winner of the Technology category of the Women in Technology awards and a finalist in the
+                      Defence Connect “Women in Leadership” award (2023). Dr McDowall holds a PhD in Medicine (2005) and
+                      a Master of Business Administration (2018) from the University of Adelaide.</p>
+                    <p class="text-sm italic mt-2">Welcome address and symposium introduction</p>
+                  </div>
                 </div>
-              </div>
-              <!-- Abstract and Bio -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center flex-wrap">
-                    <p class = "mb-4 text-center">
-                      Welcome address and symposium introduction
-                    </p>
-                </div>
-                <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center pl-0 sm:pl-4 pb-2 mb-6 border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
-              </div>
 
-              <!-- Anna Knack -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center sm:justify-start flex-wrap">
-                  <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg" style="width:100%" href="#" target="_blank" rel="noreferrer">
-                    <div style="width:150px;height:150px">
-                      <div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
-                        <div style="max-width:500px;display:block">
-                          <img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/>
+                <!-- Mr Mike Moroney (Keynote) - moved here to match program order -->
+                <div class="speaker-row">
+                  <div class="speaker-left">
+                    <a class="speaker-card" style="width:100%" href="#" target="_blank" rel="noreferrer">
+                      <div style="width:150px;height:150px">
+                        <div data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                          <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                              style="max-width:100%;display:block;position:static" /></div>
+                          <img aria-hidden="true" data-placeholder-image=""
+                            style="opacity:1;transition:opacity 500ms linear" decoding="async"
+                            src="./imgs/DAIRNet/Mr Mike Moroney - profile image.jpg" alt="" />
                         </div>
-                        <img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="imgs/anonymous.png" alt=""/>
                       </div>
-                    </div>
-                    <p class="text-xl font-bold mt-6 mb-2 text-center leading-6">
-                      Anna Knack
-                    </p>
-                    <p class="mb-2 text-orgSmall text-gray-700 leading-5 text-center">
-                      The Alan Turing Institute
-                    </p>
-                  </a>
+                      <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">Mr Mike Moroney</p>
+                    </a>
+                  </div>
+                  <div class="speaker-right">
+                    <p class="mb-2 text-orgSmall text-gray-700 leading-5">Defence – Executive Director of the Defence AI
+                      Centre (DAIC)</p>
+                    <p class="speaker-bio text-sm">Mike Moroney was appointed Executive Director of the Defence AI
+                      Centre in October 2025. Before joining the Australian Public Service, he served 23 years in the
+                      Royal Australian Air Force, where he led several technology and innovation teams. As a Wing
+                      Commander, Mr Moroney was the AI Lead for Jericho Disruptive Innovation, where he led AI
+                      integration into capabilities, championed Responsible AI practices and elevated AI readiness by
+                      adapting Air Force’s people, partnerships, practices, and digital infrastructure to be fit‑for‑AI.
+                      He also led the Augmented Aviation Asset Intelligence and CASG Next Generation Acquisition and
+                      Sustainment teams, implementing initiatives in AI, additive manufacturing, and Industry 4.0. Mr
+                      Moroney also led modelling and simulation activities for the E‑7A Wedgetail program. In addition
+                      to his technology leadership roles, he deployed as part of Operation ASTUTE and has led teams
+                      involved in operations coordination, supply chain management, acquisition and sustainment in
+                      support of numerous ADF aircraft fleets including the AP‑3C Orion, P‑8A Poseidon, E‑7A Wedgetail
+                      and C‑130J Hercules. Mr Moroney holds Masters degrees in Business and Systems Engineering as well
+                      as an Advanced Diploma of Aviation.</p>
+                    <p class="text-sm italic mt-2">Keynote: AI Adoption — From Concept to Capability</p>
+                  </div>
                 </div>
-              </div>
-              <!-- Abstract and Bio -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center flex-wrap">
-                    <p class = "mb-4 text-center">
-                      Assuring AI-enabled uncrewed systems
-                    </p>
-                </div>
-                <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center pl-0 sm:pl-4 pb-2 mb-6 border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
-              </div>
 
-              <!-- Prof Toni Erskine -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center sm:justify-start flex-wrap">
-                  <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg" style="width:100%" href="#" target="_blank" rel="noreferrer">
-                    <div style="width:150px;height:150px">
-                      <div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
-                        <div style="max-width:500px;display:block">
-                          <img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/>
+                <!-- Dr Sacha Babuta -->
+                <div class="speaker-row">
+                  <div class="speaker-left">
+                    <div class="speaker-card" style="width:100%">
+                      <div style="width:150px;height:150px">
+                        <div data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                          <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                              style="max-width:100%;display:block;position:static" /></div>
+                          <img aria-hidden="true" data-placeholder-image=""
+                            style="opacity:1;transition:opacity 500ms linear" decoding="async"
+                            src="./imgs/DAIRNet/Sacha Babuta - profile image.jpg" alt="" />
                         </div>
-                        <img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="imgs/anonymous.png" alt=""/>
                       </div>
+                      <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">Dr Sacha Babuta</p>
                     </div>
-                    <p class="text-xl font-bold mt-6 mb-2 text-center leading-6">
-                      Prof Toni Erskine
-                    </p>
-                    <p class="mb-2 text-orgSmall text-gray-700 leading-5 text-center">
-                      Australian National University
-                    </p>
-                  </a>
+                  </div>
+                  <div class="speaker-right">
+                    <p class="mb-2 text-orgSmall text-gray-700 leading-5">The Alan Turing Institute — Director, CETaS;
+                      Director of National Security and Policy</p>
+                    <p class="speaker-bio text-sm">Dr Sacha Babuta is Director of the Centre for Emerging Technology and
+                      Security (CETaS), and Director of National Security and Policy at The Alan Turing Institute, the
+                      UK's national institute for data science and AI. He leads a multidisciplinary research team
+                      covering a range of security and technology issues. He previously worked within the UK Government
+                      as AI Futures Lead at the Centre for Data Ethics and Innovation, and before this as Research
+                      Fellow at the Royal United Services Institute (RUSI), where he led the institute's research on
+                      digital policing, technology, and national security. He is Honorary Lecturer at University College
+                      London (UCL), and was previously Chair of the Essex Police Data Ethics Committee, Research
+                      Associate at the National Centre for Gang Research (University of West London) and Associate
+                      Fellow at the University of Bristol. He has sat on various advisory committees and provided
+                      evidence to numerous parliamentary inquiries and legislative reviews. Dr Babuta holds an
+                      undergraduate degree in Linguistics and an MSc in Crime Science from UCL, and a Doctorate in
+                      Criminology from the University of West London. His academic research focuses on data-driven
+                      approaches to violence risk management.</p>
+                    <p class="text-sm italic mt-2">Talk: Assuring AI‑enabled uncrewed systems</p>
+                  </div>
                 </div>
-              </div>
-              <!-- Abstract and Bio -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center flex-wrap">
-                    <p class = "mb-4 text-center">
-                      International Collaborations
-                    </p>
-                </div>
-                <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center pl-0 sm:pl-4 pb-2 mb-6 border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
-              </div>
 
-              <!-- Dr Damian Copeland -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center sm:justify-start flex-wrap">
-                  <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg" style="width:100%" href="#" target="_blank" rel="noreferrer">
-                    <div style="width:150px;height:150px">
-                      <div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
-                        <div style="max-width:500px;display:block">
-                          <img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/>
+                <!-- Anna Knack -->
+                <div class="speaker-row">
+                  <div class="speaker-left">
+                    <div class="speaker-card" style="width:100%">
+                      <div style="width:150px;height:150px">
+                        <div data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                          <div style="max-width:500px;display:block">
+                            <img alt="" role="presentation" aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                              style="max-width:100%;display:block;position:static" />
+                          </div>
+                          <img aria-hidden="true" data-placeholder-image=""
+                            style="opacity:1;transition:opacity 500ms linear" decoding="async"
+                            src="./imgs/DAIRNet/Anna Knack - profile image.png" alt="" />
                         </div>
-                        <img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="imgs/anonymous.png" alt=""/>
                       </div>
+                      <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">Anna Knack</p>
                     </div>
-                    <p class="text-xl font-bold mt-6 mb-2 text-center leading-6">
-                      Dr Damian Copeland
-                    </p>
-                    <p class="mb-2 text-orgSmall text-gray-700 leading-5 text-center">
-                      Article 36 Legal
-                    </p>
-                  </a>
+                  </div>
+                  <div class="speaker-right">
+                    <p class="mb-2 text-orgSmall text-gray-700 leading-5">The Alan Turing Institute — Senior Research
+                      Associate; Lead Researcher, CETaS</p>
+                    <p class="speaker-bio text-sm">Anna Knack is a Senior Research Associate in the Turing’s Defence and
+                      National Security Grand Challenge and Lead Researcher at CETaS. She leads the AI for Data‑Driven
+                      Advantage (AIDA) workstream, focusing on AI assurance, human‑machine teaming, cyber defence, and
+                      analysis and decision support in defence and national security. Previously, Ms Knack was Deputy
+                      Co‑ord Lead of the Technology, Disruption & Uncertainty research workstream at RAND, where she
+                      used futures methods to explore military innovation, cybersecurity, cybercrime and
+                      counter‑terrorism. Her research has informed strategy and policy for organisations including the
+                      UK MoD, US DoD, UK Strategic Command, UK Cabinet Office, European Commission, EDA, and Europol.
+                      She has briefed senior policymakers across national and international bodies and presented at
+                      major conferences. Ms Knack holds an MA in International Relations from the University of Utrecht
+                      and a BA in Politics and Social Policy from the University of York.</p>
+                    <p class="text-sm italic mt-2">Talk: Assuring AI-enabled uncrewed systems</p>
+                  </div>
                 </div>
-              </div>
-              <!-- Abstract and Bio -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center flex-wrap">
-                    <p class = "mb-4 text-center">
-                      International Collaborations
-                    </p>
-                </div>
-                <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center pl-0 sm:pl-4 pb-2 mb-6 border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
-              </div>
 
-              <!-- Prof Kathryn Kasmarik -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center sm:justify-start flex-wrap">
-                  <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg" style="width:100%" href="#" target="_blank" rel="noreferrer">
-                    <div style="width:150px;height:150px">
-                      <div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
-                        <div style="max-width:500px;display:block">
-                          <img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/>
+                <!-- Prof Toni Erskine -->
+                <div class="speaker-row">
+                  <div class="speaker-left">
+                    <div class="speaker-card" style="width:100%">
+                      <div style="width:150px;height:150px">
+                        <div data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                          <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                              style="max-width:100%;display:block;position:static" /></div>
+                          <img aria-hidden="true" data-placeholder-image=""
+                            style="opacity:1;transition:opacity 500ms linear" decoding="async"
+                            src="./imgs/DAIRNet/Prof Toni Erskine - profile image.jpg" alt="" />
                         </div>
-                        <img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="imgs/anonymous.png" alt=""/>
                       </div>
+                      <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">Prof Toni Erskine</p>
                     </div>
-                    <p class="text-xl font-bold mt-6 mb-2 text-center leading-6">
-                      Prof Kathryn Kasmarik
-                    </p>
-                    <p class="mb-2 text-orgSmall text-gray-700 leading-5 text-center">
-                      UNSW Canberra
-                    </p>
-                  </a>
+                  </div>
+                  <div class="speaker-right">
+                    <p class="mb-2 text-orgSmall text-gray-700 leading-5">Australian National University — Professor of
+                      International Politics</p>
+                    <p class="speaker-bio text-sm">Toni Erskine is Professor of International Politics in the Coral Bell
+                      School of Asia Pacific Affairs at the Australian National University (ANU). She is the recipient
+                      of the International Studies Association's 2024–25 Distinguished Scholar Award in International
+                      Ethics, an Associate Fellow of the Leverhulme Centre for the Future of Intelligence at Cambridge
+                      University, and Chief Investigator at the Australian Government funded project 'Anticipating the
+                      Future of War: AI, Automated Systems, and Resort‑to‑Force Decision Making'. She previously served
+                      as Director of the Coral Bell School of Asia Pacific Affairs, ANU (2018–2023), Editor of
+                      International Theory: A Journal of International Politics, Law, and Philosophy (2019–2023), and
+                      Academic Lead for the UN ESCAP/APRU project ‘AI for Social Good’ (2021–2023). Professor Erskine’s
+                      research sits at the intersection of International Relations, international security, and moral
+                      and political philosophy. Her work explores the impact of artificial intelligence on world
+                      politics and organised violence; the institutional moral agency and responsibility of formal
+                      organisations; the ethics and laws of war; human protection in the face of mass atrocity crimes
+                      and the role of joint action and informal coalitions in response to global crises and existential
+                      threats; cosmopolitan theories and their critics; and the prospect (she is sceptical) of AI‑driven
+                      systems as ‘synthetic moral agents’.</p>
+                    <p class="text-sm italic mt-2">Talk: Computer Says “War”? AI and Resort‑to‑Force Decision Making in
+                      a Context of Rapid Change and Global Uncertainty</p>
+                  </div>
                 </div>
-              </div>
-              <!-- Abstract and Bio -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center flex-wrap">
-                    <p class = "mb-4 text-center">
-                      Human & Machine Interactions
-                    </p>
-                </div>
-                <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center pl-0 sm:pl-4 pb-2 mb-6 border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
-              </div>
 
-              <!-- Dr Ami Drory -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center sm:justify-start flex-wrap">
-                  <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg" style="width:100%" href="#" target="_blank" rel="noreferrer">
-                    <div style="width:150px;height:150px">
-                      <div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
-                        <div style="max-width:500px;display:block">
-                          <img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/>
+                <!-- Dr Damian Copeland -->
+                <div class="speaker-row">
+                  <div class="speaker-left">
+                    <div class="speaker-card" style="width:100%">
+                      <div style="width:150px;height:150px">
+                        <div data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                          <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                              style="max-width:100%;display:block;position:static" /></div>
+                          <img aria-hidden="true" data-placeholder-image=""
+                            style="opacity:1;transition:opacity 500ms linear" decoding="async"
+                            src="./imgs/DAIRNet/Dr Damian Copeland - profile image.png" alt="" />
                         </div>
-                        <img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="imgs/anonymous.png" alt=""/>
                       </div>
+                      <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">Dr Damian Copeland</p>
                     </div>
-                    <p class="text-xl font-bold mt-6 mb-2 text-center leading-6">
-                      Dr Ami Drory
-                    </p>
-                    <p class="mb-2 text-orgSmall text-gray-700 leading-5 text-center">
-                      Defence
-                    </p>
-                  </a>
+                  </div>
+                  <div class="speaker-right">
+                    <p class="mb-2 text-orgSmall text-gray-700 leading-5">Article 36 Legal — Director</p>
+                    <p class="speaker-bio text-sm">Dr Damian Copeland is an internationally recognised legal scholar and
+                      practitioner with expertise in international humanitarian law and the legal review of emerging
+                      military technologies. As the Director of Article 36 Legal, he specialises in the legal review of
+                      new weapons, means, and methods of warfare, including autonomous and AI‑enhanced systems. Dr
+                      Copeland's academic background includes a Bachelor of Laws (Hons), a Master of Laws (Merit), and a
+                      Ph.D. focused on the legal review of autonomous weapon systems. His military career spanned over
+                      three decades with the Australian Army, including deployments to Iraq, Afghanistan, East Timor,
+                      Cambodia, and Somalia, providing him with extensive operational experience that complements his
+                      legal expertise. Dr Copeland's scholarly contributions, notably his book, 'A Functional Approach
+                      to the Legal Review of Autonomous Weapon Systems', have significantly shaped discussions on
+                      integrating legal and ethical considerations into the development and deployment of advanced
+                      military technologies. Since 2023, he has chaired the Australian‑led annual Expert Meetings on the
+                      Legal Review of Autonomous Weapons.</p>
+                    <p class="text-sm italic mt-2">Talk: A functional approach to the legal review of autonomous weapon
+                      systems</p>
+                  </div>
                 </div>
-              </div>
-              <!-- Abstract and Bio -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center flex-wrap">
-                    <p class = "mb-4 text-center">
-                      Human & Machine Interactions
-                    </p>
-                </div>
-                <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center pl-0 sm:pl-4 pb-2 mb-6 border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
-              </div>
 
-              <!-- Prof Lexing Xie and Yue Liu -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center sm:justify-start flex-wrap">
-                  <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg" style="width:100%" href="#" target="_blank" rel="noreferrer">
-                    <div style="width:150px;height:150px">
-                      <div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
-                        <div style="max-width:500px;display:block">
-                          <img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/>
+                <!-- Prof Kathryn Kasmarik -->
+                <div class="speaker-row">
+                  <div class="speaker-left">
+                    <div class="speaker-card" style="width:100%">
+                      <div style="width:150px;height:150px">
+                        <div data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                          <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                              style="max-width:100%;display:block;position:static" /></div>
+                          <img aria-hidden="true" data-placeholder-image=""
+                            style="opacity:1;transition:opacity 500ms linear" decoding="async"
+                            src="./imgs/DAIRNet/Dr Kathryn Kasmarik - profile image.jpg" alt="" />
                         </div>
-                        <img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="imgs/anonymous.png" alt=""/>
                       </div>
+                      <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">Prof Kathryn Kasmarik</p>
                     </div>
-                    <p class="text-xl font-bold mt-6 mb-2 text-center leading-6">
-                      Prof Lexing Xie
+                  </div>
+                  <div class="speaker-right">
+                    <p class="mb-2 text-orgSmall text-gray-700 leading-5">UNSW Canberra — Professor of Computer Science
                     </p>
-                    <p class="mb-2 text-orgSmall text-gray-700 leading-5 text-center">
-                      Australian National University
-                    </p>
-                  </a>
+                    <p class="speaker-bio text-sm">Dr Kathryn Kasmarik is a Professor of Computer Science at the
+                      University of New South Wales, Canberra at the Australian Defence Force Academy. Her current
+                      research interests lie in building swarming robots that can evolve their own collective
+                      behaviours. Dr Kasmarik completed a Bachelor of Computer Science and Technology at the University
+                      of Sydney, including a study exchange at UCLA. She graduated with First Class Honours and the
+                      University Medal in 2002, and completed a PhD in computer science through National ICT Australia
+                      and the University of Sydney in 2007. She moved to UNSW Canberra in 2008. Dr Kasmarik has
+                      published over 150 articles in peer‑reviewed conferences and journals. Her research has been
+                      funded over $4 million by the Australian Research Council and Defence Science and Technology
+                      Group, among other sources. She was the Deputy Head of School (Teaching) for the School of
+                      Engineering and IT from 2018–2021 and Head of School (Acting), establishing a new School of
+                      Systems and Computing at UNSW Canberra from 2023–2024.</p>
+                    <p class="text-sm italic mt-2">Talk: Human‑swarm interaction: design and evaluation</p>
+                  </div>
                 </div>
-              </div>
-              <!-- Abstract and Bio -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center flex-wrap">
-                    <p class = "mb-4 text-center">
-                      Human & Machine Interactions
-                    </p>
-                </div>
-                <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center pl-0 sm:pl-4 pb-2 mb-6 border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
-              </div>
 
-              <!-- Yue Liu -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center sm:justify-start flex-wrap">
-                  <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg" style="width:100%" href="#" target="_blank" rel="noreferrer">
-                    <div style="width:150px;height:150px">
-                      <div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
-                        <div style="max-width:500px;display:block">
-                          <img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/>
+                <!-- Dr Ami Drory -->
+                <div class="speaker-row">
+                  <div class="speaker-left">
+                    <div class="speaker-card" style="width:100%">
+                      <div style="width:150px;height:150px">
+                        <div data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                          <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                              style="max-width:100%;display:block;position:static" /></div>
+                          <img aria-hidden="true" data-placeholder-image=""
+                            style="opacity:1;transition:opacity 500ms linear" decoding="async"
+                            src="./imgs/DAIRNet/Dr Ami Drory - profile image.jpg" alt="" />
                         </div>
-                        <img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="imgs/anonymous.png" alt=""/>
                       </div>
+                      <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">Dr Ami Drory</p>
                     </div>
-                    <p class="text-xl font-bold mt-6 mb-2 text-center leading-6">
-                      Yue Liu
-                    </p>
-                    <p class="mb-2 text-orgSmall text-gray-700 leading-5 text-center">
-                      Australian National University
-                    </p>
-                  </a>
+                  </div>
+                  <div class="speaker-right">
+                    <p class="mb-2 text-orgSmall text-gray-700 leading-5">Defence — Senior Research Scientist in
+                      Autonomy & AI</p>
+                    <p class="speaker-bio text-sm">Dr Ami Drory is a Senior Research Scientist in Autonomy & AI at the
+                      Defence Science & Technology Group (DSTG), a member of the Defence AI Centre (DAIC), and an
+                      adjunct at the Australian National University (ANU). Before joining DSTG, he was a Senior Research
+                      Fellow in Machine Learning at UNSW’s National Facility for Human–Robot Interaction Research,
+                      focusing on cognitive load estimation for military UAV operators. He previously held a
+                      professorship in Biomechanical Engineering at the University of Nottingham, leading research in
+                      remote neuromuscular disease monitoring during a pandemic and development of autonomous vehicle
+                      systems. Earlier, at Northwestern University and the Rehabilitation Institute of Chicago, he
+                      researched machine‑learning assistive technologies for clinical prediction and diagnostics in the
+                      rehabilitation of veterans, patients with stroke, Parkinson’s disease, and infants with cerebral
+                      palsy. He also worked at the Australian Institute of Sport, enhancing athlete performance for the
+                      Olympics, and researched IMU‑based sensor networks for motion capture at the University of Sydney.
+                      Dr Drory earned his PhD in Engineering and Computer Science from ANU, developing computer‑vision
+                      and machine‑learning techniques for markerless and surface geometry estimation, recognition and
+                      tracking for biomechanics applications.</p>
+                    <p class="text-sm italic mt-2">Talk: HMT for military adoption of AI/ML – Are we dumbing down
+                      humans?</p>
+                  </div>
                 </div>
-              </div>
-              <!-- Abstract and Bio -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center flex-wrap">
-                    <p class = "mb-4 text-center">
-                      Human & Machine Interactions
-                    </p>
-                </div>
-                <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center pl-0 sm:pl-4 pb-2 mb-6 border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
-              </div>
 
-
-              <!-- Panel Discussion Participants -->
-              <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Panel Discussion</h2>
-
-              <!-- Capt Adam Allica -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center sm:justify-start flex-wrap">
-                  <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg" style="width:100%" href="#" target="_blank" rel="noreferrer">
-                    <div style="width:150px;height:150px">
-                      <div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
-                        <div style="max-width:500px;display:block">
-                          <img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/>
+                <!-- Prof Lexing Xie -->
+                <div class="speaker-row">
+                  <div class="speaker-left">
+                    <div class="speaker-card" style="width:100%">
+                      <div style="width:150px;height:150px">
+                        <div data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                          <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                              style="max-width:100%;display:block;position:static" /></div>
+                          <img aria-hidden="true" data-placeholder-image=""
+                            style="opacity:1;transition:opacity 500ms linear" decoding="async"
+                            src="./imgs/DAIRNet/Prof Lexing Xie - profile image.jpg" alt="" />
                         </div>
-                        <img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="imgs/anonymous.png" alt=""/>
                       </div>
+                      <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">Prof Lexing Xie</p>
                     </div>
-                    <p class="text-xl font-bold mt-6 mb-2 text-center leading-6">
-                      Capt Adam Allica
-                    </p>
-                    <p class="mb-2 text-orgSmall text-gray-700 leading-5 text-center">
-                      Defence
-                    </p>
-                  </a>
+                  </div>
+                  <div class="speaker-right">
+                    <p class="mb-2 text-orgSmall text-gray-700 leading-5">Australian National University — Professor of
+                      Computer Science</p>
+                    <p class="speaker-bio text-sm">Lexing Xie is a Professor of Computer Science at the Australian
+                      National University (ANU), where she leads the ANU Computational Media Lab and directs the
+                      ANU‑wide Integrated AI Network. Her research spans machine learning, computational social science,
+                      and computational economics, with a particular focus on online optimization, neural networks for
+                      sequences, human‑centered NLP, and applied problems such as distributed online markets and
+                      decision‑making by humans and machines. Prof Xie received the 2023 ARC Future Fellowship and the
+                      2018 Chris Wallace Award for Outstanding Research. Her research has garnered seven best paper and
+                      best student paper awards at ACM and IEEE conferences between 2002 and 2019. Among her editorial
+                      roles, she served as the inaugural Editor‑in‑Chief of AAAI ICWSM and was the Program Co‑Chair of
+                      ACM Multimedia 2024. Prior to joining ANU, she was a Research Staff Member at the IBM T.J. Watson
+                      Research Centre in New York. She holds a PhD in Electrical Engineering from Columbia University
+                      and a BS in Electrical Engineering from Tsinghua University.</p>
+                    <p class="text-sm italic mt-2">Talk: LLM‑Assisted Comparison of Complex Documents</p>
+                  </div>
                 </div>
-              </div>
-              <!-- Abstract and Bio -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center flex-wrap">
-                    <p class = "mb-4 text-center">
-                      Panel Discussion: Accelerating the responsible, effective & secure integration of AI across Defence
-                    </p>
-                </div>
-                <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center pl-0 sm:pl-4 pb-2 mb-6 border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
-              </div>
 
-              <!-- FLTLT Jorge Alvarino Diaz -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center sm:justify-start flex-wrap">
-                  <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg" style="width:100%" href="#" target="_blank" rel="noreferrer">
-                    <div style="width:150px;height:150px">
-                      <div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
-                        <div style="max-width:500px;display:block">
-                          <img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/>
+                <!-- Yue Liu -->
+                <div class="speaker-row">
+                  <div class="speaker-left">
+                    <div class="speaker-card" style="width:100%">
+                      <div style="width:150px;height:150px">
+                        <div data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                          <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                              style="max-width:100%;display:block;position:static" /></div>
+                          <img aria-hidden="true" data-placeholder-image=""
+                            style="opacity:1;transition:opacity 500ms linear" decoding="async"
+                            src="./imgs/DAIRNet/Yue Liu - profile image.png" alt="" />
                         </div>
-                        <img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="imgs/anonymous.png" alt=""/>
                       </div>
+                      <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">Yue Liu</p>
                     </div>
-                    <p class="text-xl font-bold mt-6 mb-2 text-center leading-6">
-                      FLTLT Jorge Alvarino Diaz
-                    </p>
-                    <p class="mb-2 text-orgSmall text-gray-700 leading-5 text-center">
-                      Defence
-                    </p>
-                  </a>
+                  </div>
+                  <div class="speaker-right">
+                    <p class="mb-2 text-orgSmall text-gray-700 leading-5">Australian National University — Research
+                      Fellow</p>
+                    <p class="speaker-bio text-sm">Yue Liu is currently a Research Fellow at the Australian National
+                      University; before that he was a Research Engineer at the Software Engineering for AI team,
+                      Data61, CSIRO. Mr Liu received the Early Career in Science Award from Data61 in 2024. His research
+                      interests include responsible AI, AI engineering, and AI for HSE. He is active in the research
+                      community, serving on program committees and editorial roles in leading AI and software
+                      engineering venues. Mr Liu holds a PhD in Computer Science and Engineering from the University of
+                      New South Wales.</p>
+                    <p class="text-sm italic mt-2">Talk: LLM‑Assisted Comparison of Complex Documents</p>
+                  </div>
                 </div>
-              </div>
-              <!-- Abstract and Bio -->
-              <div class="flex sm:block flex-col items-center">
-                <div class="flex flex-row justify-center flex-wrap">
-                    <p class = "mb-4 text-center">
-                      Panel Discussion: Accelerating the responsible, effective & secure integration of AI across Defence
-                    </p>
-                </div>
-                <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center pl-0 sm:pl-4 pb-2 mb-6 border-b border-gray-200 font-headingStyle tracking-semiWide"></h2>
-              </div>
 
-              <!-- Dr Kate Devitt -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Dr Phyo San -->
+                <div class="speaker-row">
+                  <div class="speaker-left">
+                    <div class="speaker-card" style="width:100%">
+                      <div style="width:150px;height:150px">
+                        <div data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                          <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                              style="max-width:100%;display:block;position:static" /></div>
+                          <img aria-hidden="true" data-placeholder-image=""
+                            style="opacity:1;transition:opacity 500ms linear" decoding="async"
+                            src="./imgs/DAIRNet/Dr Phyo San - profile image.jpg" alt="" />
+                        </div>
+                      </div>
+                      <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">Dr Phyo San</p>
+                    </div>
+                  </div>
+                  <div class="speaker-right">
+                    <p class="mb-2 text-orgSmall text-gray-700 leading-5">Defence — Lead Research Scientist (AI/ML),
+                      DSTG</p>
+                    <p class="speaker-bio text-sm">Dr Phyo San is a Lead Research Scientist in Artificial Intelligence
+                      and Machine Learning at the Defence Science and Technology Group (DSTG), Australia. She leads
+                      strategic initiatives to operationalise AI across Defence, focusing on the development of trusted,
+                      scalable, and data‑driven solutions for mission‑critical applications. With over 15 years of
+                      experience across academia, industry, and government, Dr San brings deep technical expertise and a
+                      strong understanding of AI governance, ethics, and deployment in complex environments. Her work
+                      bridges cutting‑edge research with real‑world implementation, advancing Defence capabilities
+                      through responsible and innovative use of AI. Dr San is passionate about fostering
+                      interdisciplinary collaboration and translating research into impact, actively engaging with
+                      Defence stakeholders and research partners to ensure AI technologies are technically robust and
+                      aligned with operational needs and ethical standards.</p>
+                    <p class="text-sm italic mt-2">Talk: Operationalising Trusted AI: From Algorithms to Mission Impact
+                    </p>
+                  </div>
+                </div>
+
+
+                <!-- Panel Discussion Participants -->
+                <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Panel Discussion</h2>
+
+                <!-- Capt Adam Allica -->
+                <div class="speaker-row">
+                  <div class="speaker-left">
+                    <div class="speaker-card" style="width:100%">
+                      <div style="width:150px;height:150px">
+                        <div data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                          <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                              style="max-width:100%;display:block;position:static" /></div>
+                          <img aria-hidden="true" data-placeholder-image=""
+                            style="opacity:1;transition:opacity 500ms linear" decoding="async"
+                            src="./imgs/DAIRNet/Captain Adam Allica, RAN- profile image.jpg" alt="" />
+                        </div>
+                      </div>
+                      <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">Capt Adam Allica, RAN</p>
+                    </div>
+                  </div>
+                  <div class="speaker-right">
+                    <p class="mb-2 text-orgSmall text-gray-700 leading-5">Defence — Director Maritime Asymmetric
+                      Capability Exploration</p>
+                    <p class="speaker-bio text-sm">Royal Australian Navy officer with extensive command and operational
+                      experience across multiple theatres. Led Navy’s AI introduction and autonomous systems
+                      experimentation, including the first Large Uncrewed Underwater Vessel and AUKUS Maritime Big Play
+                      OPEX 2024.</p>
+                    <p class="text-sm italic mt-2">Panel: Accelerating the responsible, effective & secure integration
+                      of AI across Defence</p>
+                  </div>
+                </div>
+
+                <!-- LEUT Jessica Craig (Panel) -->
+                <div class="speaker-row">
+                  <div class="speaker-left">
+                    <div class="speaker-card" style="width:100%">
+                      <div style="width:150px;height:150px">
+                        <div data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                          <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                              style="max-width:100%;display:block;position:static" /></div>
+                          <img aria-hidden="true" data-placeholder-image=""
+                            style="opacity:1;transition:opacity 500ms linear" decoding="async"
+                            src="./imgs/DAIRNet/Lieutenant Jessica Craig - profile image.jpg" alt="" />
+                        </div>
+                      </div>
+                      <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">LEUT Jessica Craig</p>
+                    </div>
+                  </div>
+                  <div class="speaker-right">
+                    <p class="mb-2 text-orgSmall text-gray-700 leading-5">Defence — Royal Australian Navy; Information
+                      Advantage Centre of Excellence (IACOE)</p>
+                    <p class="speaker-bio text-sm">Lieutenant Jessica Craig is a Royal Australian Navy officer currently
+                      serving in the Information Advantage Centre of Excellence (IACOE). Established in 2024, the IACOE
+                      is focused on scaling and optimising human‑centred Information Operations within the ADF, and
+                      integrating emerging technologies, such as artificial intelligence, to enhance situational
+                      awareness and counter adversarial influence. Lieutenant Craig holds a Master of Public Relations
+                      and Advertising from the University of New South Wales and a Bachelor of Arts from Western Sydney
+                      University. She has previously served as the Officer in Charge of Influence Activities within the
+                      Fleet Information Effects Unit and has contributed to IO cells across multiple domestic and
+                      international exercises. Her current project interests include the application of AI in IO
+                      planning, particularly in understanding and countering the spread of mis/disinformation and
+                      developing strategies to protect the cognitive resilience and will to fight of ADF personnel.</p>
+                    <p class="text-sm italic mt-2">Panel: Accelerating the responsible, effective & secure integration
+                      of AI across Defence</p>
+                  </div>
+                </div>
+
+                <!-- FLTLT Jorge Alvarino Diaz -->
+                <div class="speaker-row">
+                  <div class="speaker-left">
+                    <div class="speaker-card" style="width:100%">
+                      <div style="width:150px;height:150px">
+                        <div data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                          <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                              style="max-width:100%;display:block;position:static" /></div>
+                          <img aria-hidden="true" data-placeholder-image=""
+                            style="opacity:1;transition:opacity 500ms linear" decoding="async" src="imgs/anonymous.png"
+                            alt="" />
+                        </div>
+                      </div>
+                      <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">FLTLT Jorge Alvarino Diaz</p>
+                    </div>
+                  </div>
+                  <div class="speaker-right">
+                    <p class="mb-2 text-orgSmall text-gray-700 leading-5">Defence — Digital Technology Officer, Jericho
+                      Disruptive Innovation</p>
+                    <p class="speaker-bio text-sm">FLTLT Jorge Alvarino Diaz is a Digital Technology Officer with the
+                      Jericho AI Integration Team, contributing to AI capability integration across Defence.</p>
+                    <p class="text-sm italic mt-2">Panel: Accelerating the responsible, effective & secure integration
+                      of AI across Defence</p>
+                  </div>
+                </div>
+
+                <!-- Natasha Karner (Panel) -->
+                <div class="speaker-row">
+                  <div class="speaker-left">
+                    <div class="speaker-card" style="width:100%">
+                      <div style="width:150px;height:150px">
+                        <div data-gatsby-image-wrapper=""
+                          class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                          <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                              style="max-width:100%;display:block;position:static" /></div>
+                          <img aria-hidden="true" data-placeholder-image=""
+                            style="opacity:1;transition:opacity 500ms linear" decoding="async"
+                            src="./imgs/DAIRNet/Natasha Karner - profile image .jpg" alt="" />
+                        </div>
+                      </div>
+                      <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">Natasha Karner</p>
+                    </div>
+                  </div>
+                  <div class="speaker-right">
+                    <p class="mb-2 text-orgSmall text-gray-700 leading-5">The Alan Turing Institute — Research
+                      Associate, Defence & National Security Grand Challenge; CETaS Researcher</p>
+                    <p class="speaker-bio text-sm">Natasha Karner is a Research Associate in the Turing’s Defence and
+                      National Security Grand Challenge. She currently works in the AI for Data‑Driven Advantage (AIDA)
+                      defence policy workstream, which focuses on identifying solutions to the technical and policy
+                      challenges of defence regarding responsible AI adoption for strategic advantage. She is also a
+                      researcher in CETaS. Her recent and ongoing research projects include AI assurance in Defence and
+                      National Security, integrating AI into command decision‑making, and geospatial data safety and
+                      security. Ms Karner’s PhD dissertation explored the governance of Autonomous Weapons Systems
+                      (AWS), including deliberations under the auspices of the United Nations Convention on Certain
+                      Conventional Weapons (CCW). She is a Junior Associate Fellow at NATO Defense College and a member
+                      of BASIC’s Emerging Voices Network for nuclear weapons policy.</p>
+                    <p class="text-sm italic mt-2">Panel: Accelerating the responsible, effective & secure integration
+                      of AI across Defence</p>
+                  </div>
+                </div>
+
+                <!-- Dr Kate Devitt -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Exploring Online Social Networks: Graph Algorithms and Systems</h2> -->
                 <!-- <div class="flex flex-row justify-center sm:justify-start flex-wrap">
                   <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg"
@@ -567,8 +950,8 @@
                   </a>
                 </div>
               </div> -->
-              <!-- Abstract and Bio -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Abstract and Bio -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Abstract</h2> -->
                 <!-- <div class="flex flex-row justify-center flex-wrap">
                   <p class="mb-4 text-center">
@@ -588,8 +971,8 @@
                 </h2>
               </div> -->
 
-              <!-- Dr Zena Assaad -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Dr Zena Assaad -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Exploring Online Social Networks: Graph Algorithms and Systems</h2> -->
                 <!-- <div class="flex flex-row justify-center sm:justify-start flex-wrap">
                   <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg"
@@ -617,8 +1000,8 @@
                   </a>
                 </div>
               </div> -->
-              <!-- Abstract and Bio -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Abstract and Bio -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Abstract</h2> -->
                 <!-- <div class="flex flex-row justify-center flex-wrap">
                   <p class="mb-4 text-center">
@@ -638,8 +1021,8 @@
                 </h2>
               </div> -->
 
-              <!-- Prof Tim Miller -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Prof Tim Miller -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Exploring Online Social Networks: Graph Algorithms and Systems</h2> -->
                 <!-- <div class="flex flex-row justify-center sm:justify-start flex-wrap">
                   <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg"
@@ -666,8 +1049,8 @@
                   </a>
                 </div>
               </div>-->
-              <!-- Abstract and Bio -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Abstract and Bio -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Abstract</h2> -->
                 <!-- <div class="flex flex-row justify-center flex-wrap">
                   <p class="mb-4 text-center">
@@ -687,8 +1070,8 @@
                 </h2>
               </div> -->
 
-              <!-- Dr/Prof Liming Zhu -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Dr/Prof Liming Zhu -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Exploring Online Social Networks: Graph Algorithms and Systems</h2> -->
                 <!-- <div class="flex flex-row justify-center sm:justify-start flex-wrap">
                   <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg"
@@ -715,8 +1098,8 @@
                   </a>
                 </div>
               </div> -->
-              <!-- Abstract and Bio -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Abstract and Bio -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Abstract</h2> -->
                 <!-- <div class="flex flex-row justify-center flex-wrap">
                   <p class="mb-4 text-center">
@@ -736,8 +1119,8 @@
                 </h2>
               </div> -->
 
-              <!-- Professor Hussein Abbass -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Professor Hussein Abbass -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Exploring Online Social Networks: Graph Algorithms and Systems</h2> -->
                 <!-- <div class="flex flex-row justify-center sm:justify-start flex-wrap">
                   <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg"
@@ -765,8 +1148,8 @@
                   </a>
                 </div>
               </div> -->
-              <!-- Abstract and Bio -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Abstract and Bio -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Abstract</h2> -->
                 <!-- <div class="flex flex-row justify-center flex-wrap">
                   <p class="mb-4 text-center">
@@ -786,8 +1169,8 @@
                 </h2>
               </div> -->
 
-              <!-- Professor Flora Salim -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Professor Flora Salim -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Exploring Online Social Networks: Graph Algorithms and Systems</h2> -->
                 <!-- <div class="flex flex-row justify-center sm:justify-start flex-wrap">
                   <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg"
@@ -815,8 +1198,8 @@
                   </a>
                 </div>
               </div> -->
-              <!-- Abstract and Bio -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Abstract and Bio -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Abstract</h2> -->
                 <!-- <div class="flex flex-row justify-center flex-wrap">
                   <p class="mb-4 text-center">
@@ -836,8 +1219,8 @@
                 </h2>
               </div> -->
 
-              <!-- Dr Glennn Moy -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Dr Glennn Moy -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Exploring Online Social Networks: Graph Algorithms and Systems</h2> -->
                 <!-- <div class="flex flex-row justify-center sm:justify-start flex-wrap">
                   <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg"
@@ -865,8 +1248,8 @@
                   </a>
                 </div>
               </div> -->
-              <!-- Abstract and Bio -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Abstract and Bio -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Abstract</h2> -->
                 <!-- <div class="flex flex-row justify-center flex-wrap">
                   <p class="mb-4 text-center">
@@ -886,8 +1269,8 @@
                 </h2>
               </div> -->
 
-              <!-- Dr Sebastien Wong -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Dr Sebastien Wong -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Exploring Online Social Networks: Graph Algorithms and Systems</h2> -->
                 <!-- <div class="flex flex-row justify-center sm:justify-start flex-wrap">
                   <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg"
@@ -915,8 +1298,8 @@
                   </a>
                 </div>
               </div> -->
-              <!-- Abstract and Bio -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- Abstract and Bio -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Abstract</h2> -->
                 <!-- <div class="flex flex-row justify-center flex-wrap">
                   <p class="mb-4 text-center">
@@ -928,8 +1311,8 @@
                 </h2>
               </div> -->
 
-              <!-- WGCDR Rob Seabrook -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- WGCDR Rob Seabrook -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Exploring Online Social Networks: Graph Algorithms and Systems</h2> -->
                 <!-- <div class="flex flex-row justify-center sm:justify-start flex-wrap">
                   <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg"
@@ -956,15 +1339,15 @@
                   </a>
                 </div>
               </div> -->
-              <!-- Abstract and Bio -->
-              <!-- <div class="flex sm:block flex-col items-center">
+                <!-- Abstract and Bio -->
+                <!-- <div class="flex sm:block flex-col items-center">
                 <h2
                   class="text-xl font-bold mt-4 sm:mt-6 text-center pl-0 sm:pl-4 pb-2 mb-6 border-b border-gray-200 font-headingStyle tracking-semiWide">
                 </h2>
               </div> -->
 
-              <!-- WGCDR Michael Moroney -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- WGCDR Michael Moroney -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Exploring Online Social Networks: Graph Algorithms and Systems</h2> -->
                 <!-- <div class="flex flex-row justify-center sm:justify-start flex-wrap">
                   <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg"
@@ -991,15 +1374,15 @@
                   </a>
                 </div>
               </div> -->
-              <!-- Abstract and Bio -->
-              <!-- <div class="flex sm:block flex-col items-center">
+                <!-- Abstract and Bio -->
+                <!-- <div class="flex sm:block flex-col items-center">
                 <h2
                   class="text-xl font-bold mt-4 sm:mt-6 text-center pl-0 sm:pl-4 pb-2 mb-6 border-b border-gray-200 font-headingStyle tracking-semiWide">
                 </h2>
               </div> -->
 
-              <!-- LTCOL Adam J Hepworth, PhD -->
-              <!-- <div class="flex sm:block flex-col items-center"> -->
+                <!-- LTCOL Adam J Hepworth, PhD -->
+                <!-- <div class="flex sm:block flex-col items-center"> -->
                 <!-- <h2 class="text-2xl font-bold mt-4 sm:mt-6 text-center sm:text-left pl-0 sm:pl-4 pb-2 mb-6  text-mainPurple border-b border-gray-200 font-headingStyle tracking-semiWide">Exploring Online Social Networks: Graph Algorithms and Systems</h2> -->
                 <!-- <div class="flex flex-row justify-center sm:justify-start flex-wrap">
                   <a class="mr-0 mb-3 md:mb-0 px-0 sm:px-3 pt-3 flex flex-col items-center sm:rounded-lg"
@@ -1026,8 +1409,8 @@
                   </a>
                 </div>
               </div> -->
-              <!-- Abstract and Bio -->
-              <!-- <div class="flex sm:block flex-col items-center">
+                <!-- Abstract and Bio -->
+                <!-- <div class="flex sm:block flex-col items-center">
                 <h2
                   class="text-xl font-bold mt-4 sm:mt-6 text-center pl-0 sm:pl-4 pb-2 mb-6 font-headingStyle tracking-semiWide">
                   Biography</h2>
@@ -1045,7 +1428,7 @@
 
 
 
-              <!--                 <div class="flex sm:block flex-col items-center">
+                <!--                 <div class="flex sm:block flex-col items-center">
                   <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Detailed program</h2>
 
                 <table cellpadding = '5' style = "border-collapse: collapse;">
