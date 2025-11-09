@@ -68,6 +68,12 @@
                   text-align: center;
                 }
 
+                .schedule_table_title td {
+                  padding: 15px 8px;
+                  font-weight: bold;
+                  font-size: larger;
+                }
+
                 .schedule_break_row {
                   background-color: #f5f5f5;
                 }
@@ -81,6 +87,11 @@
                   line-height: 1.2;
                 }
 
+                .workshop-tutorial-cell {
+                  min-width: 180px;
+                  width: auto;
+                }
+
                 table {
                   table-layout: fixed;
                   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -88,11 +99,7 @@
                   overflow: hidden;
                   border-collapse: collapse;
                   width: 100%;
-                }
-
-                .schedule_table_title td {
-                  padding: 15px 8px;
-                  font-weight: bold;
+                  margin-bottom: 2rem;
                 }
 
                 tr:hover:not(.schedule_table_title):not(.schedule_break_row) {
@@ -103,16 +110,26 @@
                   background-color: #fafafa;
                 }
 
+                tr:nth-child(odd):not(.schedule_table_title):not(.schedule_break_row) {
+                  background-color: #ffffff;
+                }
+
+                .schedule_table_column_center a {
+                  text-decoration: none;
+                }
+
+                .schedule_table_column_center a:hover {
+                  text-decoration: underline;
+                }
+
                 .session-long-oral {
                   background-color: #f8f9fa;
-                  border-left: 2px solid #dee2e6;
                   font-size: 0.9em;
                   line-height: 1.4;
                 }
 
                 .session-short-oral {
                   background-color: #f8f9fa;
-                  border-left: 2px solid #dee2e6;
                   font-size: 0.9em;
                   line-height: 1.4;
                 }
@@ -131,7 +148,6 @@
 
                 .keynote-cell {
                   background-color: #f8f9fa;
-                  border-left: 2px solid #dee2e6;
                   font-weight: 600;
                   font-size: 0.9em;
                   line-height: 1.4;
@@ -139,7 +155,6 @@
 
                 .industry-day {
                   background-color: #f8f9fa;
-                  border-left: 2px solid #dee2e6;
                   font-weight: 600;
                   font-size: 0.9em;
                   line-height: 1.4;
@@ -147,7 +162,6 @@
 
                 .panel-discussion {
                   background-color: #f8f9fa;
-                  border-left: 2px solid #dee2e6;
                   font-weight: 600;
                   font-size: 0.9em;
                   line-height: 1.4;
@@ -170,93 +184,164 @@
                   <strong>Program Information:</strong> The main conference track does not include poster sessions. The
                   Doctor Forum schedule will be announced separately.
                 </p>
+                <p class="text-sm text-gray-700">
+                  <strong>Workshops and Tutorials:</strong> For detailed information about the workshops and tutorials
+                  on Tuesday, December 2nd,
+                  please visit the <a href="./workshopandtutorial.html"
+                    class="text-mainPurple hover:underline font-semibold">Workshops and Tutorials</a> page.
+                </p>
               </div>
 
               <table cellpadding='5' style="border-collapse: collapse; width: 100%;">
                 <tbody>
                   <tr class='schedule_table_title'>
                     <td class='schedule_table_column_center' style='font-size: larger;'>Time</td>
-                    <td class='schedule_table_column_center' style='font-size: larger;'>Nov. 30th</td>
                     <td class='schedule_table_column_center' style='font-size: larger;'>Dec. 1st</td>
-                    <td class='schedule_table_column_center' style='font-size: larger;' colspan="4">Dec. 2nd</td>
+                    <td class='schedule_table_column_center' style='font-size: larger;' colspan="4">
+                      Dec. 2nd</td>
                   </tr>
                   <tr>
-                    <td class='schedule_table_column_center'>08:00-08:30</td>
+                    <td class='schedule_table_column_center'>08:00</td>
                     <td class='schedule_table_column_center'></td>
-                    <td class='schedule_table_column_center'></td>
-                    <td class='schedule_table_column_center' colspan="4">Registration</td>
+                    <td class='schedule_table_column_center' colspan="4">Registration <em>(Foyer)</em></td>
                   </tr>
                   <tr class='schedule_break_row'>
-                    <td class='schedule_table_column_center'>08:30 - 09:00</td>
-                    <td class='schedule_table_column_center'></td>
-                    <td class='schedule_table_column_center'>Defence symposium Registration</td>
-                    <td class='schedule_table_column_center' colspan="4">Morning Tea</td>
+                    <td class='schedule_table_column_center'>08:30</td>
+                    <td class='schedule_table_column_center'>DAIRNet Registration <em>(2.02 MRTC, outside)</em></td>
+                    <td class='schedule_table_column_center' colspan="4">Morning Tea <em>(Foyer)</em></td>
                   </tr>
                   <tr>
-                    <td class='schedule_table_column_center'>09:00 - 10:00</td>
-                    <td class='schedule_table_column_center'></td>
-                    <td class='schedule_table_column_center' rowspan="12">Defence symposium</td>
-                    <td class='schedule_table_column_center'>W1</td>
-                    <td class='schedule_table_column_center'>W2</td>
-                    <td class='schedule_table_column_center'>W3</td>
-                    <td class='schedule_table_column_center'>W4</td>
+                    <td class='schedule_table_column_center'>09:00</td>
+                    <td class='schedule_table_column_center' rowspan="3">DAIRNet Symposium <em>(2.02 MRTC)</em></td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                        class="text-mainPurple hover:underline">Track A Workshop 1</a> <em>(Manning Clark Hall)</em>
+                    </td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                        class="text-mainPurple hover:underline">Track B Workshop 2</a> <em>(Cinema)</em></td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                        class="text-mainPurple hover:underline">Track C Workshop 3</a> <em>(Drama Theatre)</em></td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                        class="text-mainPurple hover:underline">Track D Tutorial 1</a> <em>(T2)</em></td>
                   </tr>
                   <tr class='schedule_break_row'>
-                    <td class='schedule_table_column_center'>10:00 - 10:15</td>
-                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center'>10:00</td>
                     <td class='schedule_table_column_center' colspan="4">Break</td>
                   </tr>
                   <tr>
-                    <td class='schedule_table_column_center'>10:15 - 11:15</td>
-                    <td class='schedule_table_column_center'></td>
-                    <td class='schedule_table_column_center'>W1</td>
-                    <td class='schedule_table_column_center'>W2</td>
-                    <td class='schedule_table_column_center'>W3</td>
-                    <td class='schedule_table_column_center'>W4</td>
+                    <td class='schedule_table_column_center'>10:15</td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
+                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track A Workshop 1</a>
+                      <em>(Manning Clark
+                        Hall)</em>
+                    </td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
+                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track B Workshop 2</a>
+                      <em>(Cinema)</em>
+                    </td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
+                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track C Workshop 3</a>
+                      <em>(Drama Theatre)</em>
+                    </td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
+                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track D Tutorial 1</a>
+                      <em>(T2)</em>
+                    </td>
                   </tr>
                   <tr class='schedule_break_row'>
-                    <td class='schedule_table_column_center'>11:15 - 11:30</td>
-                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center'>10:30</td>
+                    <td class='schedule_table_column_center'>Morning Tea <em>(MRTC)</em></td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>11:00</td>
+                    <td class='schedule_table_column_center' rowspan="3">DAIRNet Symposium <em>(2.02 MRTC)</em></td>
+                  </tr>
+                  <tr class='schedule_break_row'>
+                    <td class='schedule_table_column_center'>11:15</td>
+
                     <td class='schedule_table_column_center' colspan="4">Break</td>
                   </tr>
                   <tr>
-                    <td class='schedule_table_column_center'>11:30 - 12:30</td>
-                    <td class='schedule_table_column_center'></td>
-                    <td class='schedule_table_column_center'>W1</td>
-                    <td class='schedule_table_column_center'>W2</td>
-                    <td class='schedule_table_column_center'>W3</td>
-                    <td class='schedule_table_column_center'>W4</td>
+                    <td class='schedule_table_column_center'>11:30</td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                        class="text-mainPurple hover:underline">Track A Workshop 1</a> <em>(Manning Clark Hall)</em>
+                    </td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                        class="text-mainPurple hover:underline">Track B Workshop 2</a> <em>(Cinema)</em></td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                        class="text-mainPurple hover:underline">Track C Workshop 3</a> <em>(Drama Theatre)</em></td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                        class="text-mainPurple hover:underline">Track D Tutorial 1</a> <em>(T2)</em></td>
                   </tr>
                   <tr class='schedule_break_row'>
-                    <td class='schedule_table_column_center'>12:30 - 14:00</td>
-                    <td class='schedule_table_column_center' rowspan="7">Registration</td>
-                    <td class='schedule_table_column_center' colspan="4">Lunch</td>
+                    <td class='schedule_table_column_center'>12:30</td>
+                    <td class='schedule_table_column_center'>Lunch <em>(MRTC)</em></td>
+                    <td class='schedule_table_column_center' rowspan="2" colspan="4">Lunch <em>(Foyer)</em></td>
                   </tr>
                   <tr>
-                    <td class='schedule_table_column_center'>14:00 - 15:00</td>
-                    <td class='schedule_table_column_center'>T1</td>
-                    <td class='schedule_table_column_center'>T2</td>
-                    <td class='schedule_table_column_center'>T3</td>
-                    <td class='schedule_table_column_center'>PhD Forum poster</td>
+                    <td class='schedule_table_column_center'>13:00</td>
+                    <td class='schedule_table_column_center' rowspan="4">DAIRNet Symposium <em>(2.02 MRTC)</em></td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>13:45</td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                        class="text-mainPurple hover:underline">Track A Tutorial 2</a> <em>(Manning Clark Hall)</em>
+                    </td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                        class="text-mainPurple hover:underline">Track B Tutorial 3</a> <em>(Cinema)</em></td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                        class="text-mainPurple hover:underline">Track C Tutorial 4</a> <em>(Drama Theatre)</em></td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                        class="text-mainPurple hover:underline">Track D Tutorial 5</a> <em>(T2)</em><br />Track E —
+                      PhD Forum
+                      Poster Session <em>(Gallery)</em></td>
                   </tr>
                   <tr class='schedule_break_row'>
-                    <td class='schedule_table_column_center'>15:00 - 15:10</td>
+                    <td class='schedule_table_column_center'>14:45</td>
                     <td class='schedule_table_column_center' colspan="4">Break</td>
                   </tr>
                   <tr>
-                    <td class='schedule_table_column_center'>15:10 - 16:00</td>
-                    <td class='schedule_table_column_center'>T1</td>
-                    <td class='schedule_table_column_center'>T2</td>
-                    <td class='schedule_table_column_center'>T3</td>
-                    <td class='schedule_table_column_center'>PhD Forum poster</td>
+                    <td class='schedule_table_column_center'>15:00</td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
+                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track A Tutorial 2</a>
+                      <em>(Manning Clark
+                        Hall)</em>
+                    </td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
+                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track B Tutorial 3</a>
+                      <em>(Cinema)</em>
+                    </td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
+                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track C Tutorial 4</a>
+                      <em>(Drama Theatre)</em>
+                    </td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
+                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track D Tutorial 5</a>
+                      <em>(T2)</em><br />Track E
+                      — PhD Forum
+                      Poster Session <em>(Gallery)</em>
+                    </td>
                   </tr>
                   <tr class='schedule_break_row'>
-                    <td class='schedule_table_column_center'>16:00 - 16:10</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
+                    <td class='schedule_table_column_center'>15:15</td>
+                    <td class='schedule_table_column_center'>Afternoon Tea <em>(MRTC)</em></td>
                   </tr>
                   <tr>
-                    <td class='schedule_table_column_center'>16:10 - 17:00</td>
-                    <td class='schedule_table_column_center' colspan="4">PhD Forum Panel</td>
+                    <td class='schedule_table_column_center'>15:30</td>
+                    <td class='schedule_table_column_center' rowspan="4">DAIRNet Symposium <em>(2.02 MRTC)</em></td>
+                  </tr>
+                  <tr class='schedule_break_row'>
+                    <td class='schedule_table_column_center'>16:00</td>
+                    <td class='schedule_table_column_center' colspan="4">Afternoon Tea <em>(Foyer)</em></td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>16:15</td>
+                    <td class='schedule_table_column_center' rowspan="2" colspan="4">PhD Forum — Panel Discussion
+                      <em>(Manning Clark
+                        Hall)</em>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>17:00</td>
                   </tr>
                 </tbody>
               </table>
@@ -268,142 +353,199 @@
                   <tr class='schedule_table_title'>
                     <td class='schedule_table_column_center' style='font-size: larger;'>Time</td>
                     <td class='schedule_table_column_center' style='font-size: larger;'>Dec. 3rd</td>
-                    <td class='schedule_table_column_center' style='font-size: larger; width: calc(50% + 20px);'
-                      colspan="2">Dec. 4th</td>
+                    <td class='schedule_table_column_center' style='font-size: larger;' colspan="2">Dec. 4th</td>
                     <td class='schedule_table_column_center' style='font-size: larger;'>Dec. 5th</td>
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>08:00</td>
-                    <td class='schedule_table_column_center'>Registration</td>
-                    <td class='schedule_table_column_center' colspan="2">Registration</td>
-                    <td class='schedule_table_column_center'>Registration</td>
+                    <td class='schedule_table_column_center'>Registration <em>(Foyer)</em></td>
+                    <td class='schedule_table_column_center' colspan="2">Registration <em>(Foyer)</em></td>
+                    <td class='schedule_table_column_center'>Registration <em>(Foyer)</em></td>
                   </tr>
                   <tr class='schedule_break_row'>
-                    <td class='schedule_table_column_center'>08:30 - 09:00</td>
-                    <td class='schedule_table_column_center'>Morning Tea</td>
-                    <td class='schedule_table_column_center' colspan="2">Morning Tea</td>
-                    <td class='schedule_table_column_center'>Morning Tea</td>
+                    <td class='schedule_table_column_center'>08:30</td>
+                    <td class='schedule_table_column_center'>Morning Tea <em>(Foyer)</em></td>
+                    <td class='schedule_table_column_center' colspan="2">Morning Tea <em>(Foyer)</em></td>
+                    <td class='schedule_table_column_center'>Morning Tea <em>(Foyer)</em></td>
                   </tr>
                   <tr>
-                    <td class='schedule_table_column_center'>09:00 - 10:00</td>
-                    <td class='schedule_table_column_center keynote-cell'>Welcome (5 mins) + Keynote (Marcus Hutter,
-                      DeepMind)</td>
-                    <td class='schedule_table_column_center keynote-cell' colspan="2">Keynote (Navinda Kottege, Data61)
+                    <td class='schedule_table_column_center'>09:00</td>
+                    <td class='schedule_table_column_center keynote-cell'>Welcome (5m) + Keynote — Marcus Hutter
+                      (DeepMind) <em>(Manning Clark Hall)</em></td>
+                    <td class='schedule_table_column_center keynote-cell' colspan="2">Keynote — Navinda Kottege (Data61)
+                      <em>(Manning Clark Hall)</em>
                     </td>
-                    <td class='schedule_table_column_center keynote-cell'>Keynote (Ling Chen, UTS)</td>
+                    <td class='schedule_table_column_center keynote-cell'>Keynote — Ling Chen (UTS) <em>(Manning Clark
+                        Hall)</em></td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>09:30</td>
+                    <td class='schedule_table_column_center keynote-cell'>Keynote — Jing Jiang (ANU) <em>(Manning Clark
+                        Hall)</em></td>
+                    <td class='schedule_table_column_center session-short-oral'><strong>Track A — Short Oral Session
+                        6</strong> <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 71, 82, 84,
+                        101</span><br /><br /><strong>Track B — Short Oral Session 7</strong>
+                      <em>(Cinema)</em><br /><span class='session-papers'>Papers: 103, 109, 113,
+                        118</span>
+                    </td>
+                    <td class='schedule_table_column_center session-short-oral'><strong>Track C — AI4Health
+                        Symposium</strong> <em>(Drama
+                        Theatre)</em><br /><br /><strong>Track D — Government & Industry Day</strong> <em>(T2)</em></td>
+                    <td class='schedule_table_column_center keynote-cell'>Keynote — Mengjie Zhang (VUW) <em>(Manning
+                        Clark Hall)</em></td>
                   </tr>
                   <tr class='schedule_break_row'>
-                    <td class='schedule_table_column_center'>10:00 - 10:15</td>
+                    <td class='schedule_table_column_center'>10:00</td>
                     <td class='schedule_table_column_center'>Break</td>
                     <td class='schedule_table_column_center' colspan="2">Break</td>
                     <td class='schedule_table_column_center'>Break</td>
                   </tr>
                   <tr>
-                    <td class='schedule_table_column_center'>10:15 - 11:15</td>
-                    <td class='schedule_table_column_center keynote-cell'>Keynote (Jing Jiang, ANU)</td>
-                    <td class='schedule_table_column_center session-short-oral'><strong>Track A:</strong><br /><span
-                        class='session-name'>Short Oral Session 5</span><br /><span class='session-papers'>Papers: 71,
-                        82, 84, 101</span><br /><br /><strong>Track B:</strong><br /><span class='session-name'>Short
-                        Oral Session 6</span><br /><span class='session-papers'>Papers: 103, 109, 113, 118</span></td>
-                    <td class='schedule_table_column_center'>Industry day [AI for Health Symposium]</td>
-                    <td class='schedule_table_column_center keynote-cell'>Keynote (Mengjie Zhang, VUW)</td>
-                  </tr>
-                  <tr class='schedule_break_row'>
-                    <td class='schedule_table_column_center'>11:15 - 11:30</td>
-                    <td class='schedule_table_column_center'>Break</td>
-                    <td class='schedule_table_column_center'>Break</td>
-                    <td class='schedule_table_column_center'>Break</td>
-                    <td class='schedule_table_column_center'>Break</td>
-                  </tr>
-                  <tr>
-                    <td class='schedule_table_column_center'>11:30 - 12:30</td>
-                    <td class='schedule_table_column_center session-long-oral'><strong>Track A:</strong><br /><span
-                        class='session-name'>Long Oral Session 1</span><br /><span class='session-papers'>Papers: 7, 18,
-                        22, 32</span><br /><br /><strong>Track B:</strong><br /><span class='session-name'>Long Oral
-                        Session 2</span><br /><span class='session-papers'>Papers: 38, 46, 58, 127</span></td>
-                    <td class='schedule_table_column_center session-long-oral'><strong>Track A:</strong><br /><span
-                        class='session-name'>Long Oral Session 3</span><br /><span class='session-papers'>Papers: 61,
-                        77, 88, 106</span><br /><br /><strong>Track B:</strong><br /><span class='session-name'>Long
-                        Oral Session 4</span><br /><span class='session-papers'>Papers: 112, 114, 120, 132</span></td>
-                    <td class='schedule_table_column_center'>Industry day</td>
-                    <td class='schedule_table_column_center session-long-oral'><strong>Track A:</strong><br /><span
-                        class='session-name'>Long Oral Session 5</span><br /><span class='session-papers'>Papers: 39,
-                        44, 108, 121</span><br /><br /><strong>Track B:</strong><br /><span class='session-name'>Long
-                        Oral Session 6</span><br /><span class='session-papers'>Papers: 8, 93, 97, 111</span></td>
-                  </tr>
-                  <tr class='schedule_break_row'>
-                    <td class='schedule_table_column_center'>12:30 - 14:00</td>
-                    <td class='schedule_table_column_center'>Lunch</td>
-                    <td class='schedule_table_column_center'>Lunch</td>
-                    <td class='schedule_table_column_center'>Lunch</td>
-                    <td class='schedule_table_column_center'>Lunch</td>
-                  </tr>
-                  <tr>
-                    <td class='schedule_table_column_center'>14:00 - 15:00</td>
-                    <td class='schedule_table_column_center keynote-cell'>Keynote (tentative: Geoff Webb, Monash)</td>
-                    <td class='schedule_table_column_center keynote-cell' colspan="2">Keynote (Toby Walsh, UNSW)</td>
-                    <td class='schedule_table_column_center keynote-cell'>Keynote (Nicholas Mattei, Tulane University)
+                    <td class='schedule_table_column_center'>10:15</td>
+                    <td class='schedule_table_column_center session-long-oral'><strong>Track A — Long Oral Session
+                        1</strong> <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 7, 18, 22,
+                        32</span><br /><br /><strong>Track B — Long Oral Session 2</strong> <em>(Cinema)</em><br /><span
+                        class='session-papers'>Papers: 38, 46, 58, 127</span></td>
+                    <td class='schedule_table_column_center session-long-oral'><strong>Track A — Long Oral Session
+                        3</strong> <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 61, 77, 88,
+                        106</span><br /><br /><strong>Track B — Long Oral Session 4</strong>
+                      <em>(Cinema)</em><br /><span class='session-papers'>Papers: 112, 114, 120,
+                        132</span>
                     </td>
-
-                  </tr>
-                  <tr class='schedule_break_row'>
-                    <td class='schedule_table_column_center'>15:00 - 15:10</td>
-                    <td class='schedule_table_column_center'>Break</td>
-                    <td class='schedule_table_column_center'>Break</td>
-                    <td class='schedule_table_column_center'>Break</td>
-                    <td class='schedule_table_column_center'>Break</td>
-                  </tr>
-                  <tr>
-                    <td class='schedule_table_column_center'>15:10 - 16:00</td>
-                    <td class='schedule_table_column_center session-short-oral'><strong>Track A:</strong><br /><span
-                        class='session-name'>Short Oral Session 1</span><br /><span class='session-papers'>Papers: 1, 5,
-                        13, 14</span><br /><br /><strong>Track B:</strong><br /><span class='session-name'>Short Oral
-                        Session 2</span><br /><span class='session-papers'>Papers: 15, 16, 24, 26</span></td>
-                    <td class='schedule_table_column_center session-short-oral'><strong>Track A:</strong><br /><span
-                        class='session-name'>Short Oral Session 7</span><br /><span class='session-papers'>Papers: 49,
-                        133, 151, 152</span><br /><br /><strong>Track B:</strong><br /><span class='session-name'>Short
-                        Oral Session 8</span><br /><span class='session-papers'>Papers: 2, 25, 48, 65</span></td>
-                    <td class='schedule_table_column_center'>Industry day</td>
-                    <td class='schedule_table_column_center session-short-oral'><strong>Track A:</strong><br /><span
-                        class='session-name'>Short Oral Session 9</span><br /><span class='session-papers'>Papers: 68,
-                        78, 80, 92</span><br /><br /><strong>Track B:</strong><br /><span class='session-name'>Short
-                        Oral Session 10</span><br /><span class='session-papers'>Papers: 99, 102, 105, 110, 117</span>
+                    <td class='schedule_table_column_center session-long-oral'><strong>Track C — AI4Health
+                        Symposium</strong> <em>(Drama
+                        Theatre)</em><br /><br /><strong>Track D — Government & Industry Day</strong> <em>(T2)</em></td>
+                    <td class='schedule_table_column_center session-long-oral'><strong>Track A — Long Oral Session
+                        5</strong> <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 39, 44, 108,
+                        121</span><br /><br /><strong>Track B — Long Oral Session 6</strong>
+                      <em>(Cinema)</em><br /><span class='session-papers'>Papers: 8, 93, 97, 111</span>
                     </td>
                   </tr>
                   <tr class='schedule_break_row'>
-                    <td class='schedule_table_column_center'>16:00 - 16:10</td>
+                    <td class='schedule_table_column_center'>11:15</td>
                     <td class='schedule_table_column_center'>Break</td>
-                    <td class='schedule_table_column_center'>Break</td>
-                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center' colspan="2">Break</td>
                     <td class='schedule_table_column_center'>Break</td>
                   </tr>
                   <tr>
-                    <td class='schedule_table_column_center'>16:10 - 17:00</td>
-                    <td class='schedule_table_column_center session-short-oral'><strong>Track A:</strong><br /><span
-                        class='session-name'>Short Oral Session 3</span><br /><span class='session-papers'>Papers: 27,
-                        28, 34, 50</span><br /><br /><strong>Track B:</strong><br /><span class='session-name'>Short
-                        Oral Session 4</span><br /><span class='session-papers'>Papers: 51, 60, 62, 70</span></td>
-                    <td class='schedule_table_column_center panel-discussion' colspan="2">Panel Discussion (finishes
-                      17:30)</td>
-                    <td class='schedule_table_column_center session-short-oral'><strong>Track A:</strong><br /><span
-                        class='session-name'>Short Oral Session 11</span><br /><span class='session-papers'>Papers: 40,
-                        52, 55, 56</span><br /><br /><strong>Track B:</strong><br /><span class='session-name'>Short
-                        Oral Session 12</span><br /><span class='session-papers'>Papers: 57, 66, 95, 122</span></td>
+                    <td class='schedule_table_column_center'>11:30</td>
+                    <td class='schedule_table_column_center session-long-oral'><strong>Track A — Long Oral Session
+                        1</strong> <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 7, 18, 22,
+                        32</span><br /><br /><strong>Track B — Long Oral Session 2</strong> <em>(Cinema)</em><br /><span
+                        class='session-papers'>Papers: 38, 46, 58, 127</span></td>
+                    <td class='schedule_table_column_center session-long-oral'><strong>Track A — Long Oral Session
+                        3</strong> <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 61, 77, 88,
+                        106</span><br /><br /><strong>Track B — Long Oral Session 4</strong>
+                      <em>(Cinema)</em><br /><span class='session-papers'>Papers: 112, 114, 120,
+                        132</span>
+                    </td>
+                    <td class='schedule_table_column_center session-long-oral'><strong>Track C — AI4Health
+                        Symposium</strong> <em>(Drama
+                        Theatre)</em><br /><br /><strong>Track D — Government & Industry Day</strong> <em>(T2)</em></td>
+                    <td class='schedule_table_column_center session-long-oral'><strong>Track A — Long Oral Session
+                        5</strong> <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 39, 44, 108,
+                        121</span><br /><br /><strong>Track B — Long Oral Session 6</strong>
+                      <em>(Cinema)</em><br /><span class='session-papers'>Papers: 8, 93, 97, 111</span>
+                    </td>
+                  </tr>
+                  <tr class='schedule_break_row'>
+                    <td class='schedule_table_column_center'>12:30</td>
+                    <td class='schedule_table_column_center'>Lunch <em>(Foyer)</em></td>
+                    <td class='schedule_table_column_center' colspan="2">Lunch <em>(Foyer)</em></td>
+                    <td class='schedule_table_column_center'>Lunch <em>(Foyer)</em></td>
                   </tr>
                   <tr>
-                    <td class='schedule_table_column_center'>17:00 - 17:30</td>
-                    <td class='schedule_table_column_center'>Reception (17:30-19:30)</td>
-                    <td class='schedule_table_column_center' colspan="2">Banquet (18:30-21:30)<br /><span
-                        style="font-size: 0.85em; color: #6b7280;">Bus is available
-                        to the banquet venue, first bus leaves for Old Parliament House at 18:00</span></td>
-                    <td class='schedule_table_column_center'>Closing/Celebration (17:00-17:30)</td>
+                    <td class='schedule_table_column_center'>13:45</td>
+                    <td class='schedule_table_column_center keynote-cell'>Keynote — Geoff Webb (Monash) <em>(Manning
+                        Clark Hall)</em></td>
+                    <td class='schedule_table_column_center keynote-cell' colspan="2">Keynote — Toby Walsh (UNSW)
+                      <em>(Manning Clark Hall)</em>
+                    </td>
+                    <td class='schedule_table_column_center keynote-cell'>Keynote — Nicholas Mattei (Tulane University)
+                      <em>(Manning Clark Hall)</em>
+                    </td>
                   </tr>
-                  <!-- <tr>
-                    <td class='schedule_table_column_center'>17:30 - 21:30</td>
-                    <td class='schedule_table_column_center'></td>
-                    <td class='schedule_table_column_center' colspan="2">Banquet continues</td>
-                    <td class='schedule_table_column_center'></td>
-                  </tr> -->
+                  <tr class='schedule_break_row'>
+                    <td class='schedule_table_column_center'>14:45</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center' colspan="2">Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>15:00</td>
+                    <td class='schedule_table_column_center session-short-oral'><strong>Short Oral Session 1</strong>
+                      <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 1, 5, 13,
+                        14</span><br /><br /><strong>Short Oral Session 2</strong> <em>(Cinema)</em><br /><span
+                        class='session-papers'>Papers: 15, 16, 24, 26</span>
+                    </td>
+                    <td class='schedule_table_column_center session-short-oral'><strong>Short Oral Session 8</strong>
+                      <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 49, 133, 151,
+                        152</span><br /><br /><strong>Short Oral Session 9</strong> <em>(Cinema)</em><br /><span
+                        class='session-papers'>Papers: 2, 25, 48, 65</span>
+                    </td>
+                    <td class='schedule_table_column_center session-short-oral'><strong>AI4Health
+                        Symposium</strong> <em>(Drama Theatre)</em><br /><br /><strong>Government & Industry
+                        Day</strong> <em>(T2)</em></td>
+                    <td class='schedule_table_column_center session-short-oral'><strong>Short Oral Session 10</strong>
+                      <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 68, 78, 80,
+                        92</span><br /><br /><strong>Short Oral Session 11</strong> <em>(Cinema)</em><br /><span
+                        class='session-papers'>Papers: 99, 102, 105, 110, 117</span>
+                    </td>
+                  </tr>
+                  <tr class='schedule_break_row'>
+                    <td class='schedule_table_column_center'>16:00</td>
+                    <td class='schedule_table_column_center'>Afternoon Tea <em>(Foyer)</em></td>
+                    <td class='schedule_table_column_center' colspan="2">Afternoon Tea <em>(Foyer)</em></td>
+                    <td class='schedule_table_column_center'>Afternoon Tea <em>(Foyer)</em></td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>16:15</td>
+                    <td class='schedule_table_column_center session-short-oral'><strong>Short Oral Session 3</strong>
+                      <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 27, 28, 34,
+                        50</span><br /><br /><strong>Short Oral Session 4</strong> <em>(Cinema)</em><br /><span
+                        class='session-papers'>Papers: 51, 60, 62, 70</span><br /><br /><strong>Short Oral Session
+                        5</strong> <em>(Drama Theatre)</em>
+                    </td>
+                    <td class='schedule_table_column_center panel-discussion' rowspan="2" colspan="2">Panel Discussion
+                      <em>(Manning
+                        Clark Hall)</em>
+                    </td>
+                    <td class='schedule_table_column_center session-short-oral'><strong>Short Oral Session 12</strong>
+                      <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 40, 52, 55,
+                        56</span><br /><br /><strong>Short Oral Session 13</strong> <em>(Cinema)</em><br /><span
+                        class='session-papers'>Papers: 57, 66, 95, 122</span>
+                    </td>
+                  </tr>
+                  <tr class='schedule_break_row'>
+                    <td class='schedule_table_column_center'>17:15</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center'>Closing / Celebration <em>(Manning Clark Hall)</em></td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>17:30</td>
+                    <td class='schedule_table_column_center' rowspan="3">Reception <em>(Gallery)</em></td>
+                    <td class='schedule_table_column_center' colspan="2">Break</td>
+                    <td class='schedule_table_column_center' rowspan="5"></td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>18:00</td>
+                    <td class='schedule_table_column_center' colspan="2">Buses (×3) leave for Old Parliament House
+                      <em>(from Kingsley St)</em>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>18:30</td>
+                    <td class='schedule_table_column_center' rowspan="2" colspan="2">Banquet — Old Parliament House</td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>21:00</td>
+                    <td class='schedule_table_column_center' rowspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>21:30</td>
+                    <td class='schedule_table_column_center' colspan="2">Buses (×3) return <em>(Old Parliament House →
+                        Kingsley St)</em></td>
+                  </tr>
                 </tbody>
               </table>
 
