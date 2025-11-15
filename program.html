@@ -84,7 +84,7 @@
                   padding: 12px 8px;
                   border: 1px solid #e0e0e0;
                   height: 40px;
-                  line-height: 1.2;
+                  line-height: 1.3;
                 }
 
                 .workshop-tutorial-cell {
@@ -166,6 +166,66 @@
                   font-size: 0.9em;
                   line-height: 1.4;
                 }
+
+                .track-cell {
+                  padding: 0;
+                }
+
+                .track-inner {
+                  width: 100%;
+                  border-collapse: collapse;
+                  table-layout: fixed;
+                  box-shadow: none;
+                  border-radius: 0;
+                  margin-bottom: 0;
+                  border: none;
+                  background: transparent;
+                }
+
+                .track-inner td {
+                  padding: 12px 8px;
+                  border-left: 1px solid #e0e0e0;
+                  border-top: none;
+                  border-bottom: none;
+                  vertical-align: middle;
+                  text-align: center;
+                  line-height: 1.3;
+                }
+
+                .track-inner td:first-child {
+                  border-left: none;
+                }
+
+                .track-inner tr,
+                .track-inner td {
+                  background-color: inherit !important;
+                }
+
+                .track-label {
+                  display: inline-block;
+                  font-weight: 600;
+                  color: #51247a;
+                }
+
+                .track-inner.track-4 td {
+                  width: 25%;
+                }
+
+                .track-inner.track-5 td {
+                  width: 20%;
+                }
+
+                .time-column {
+                  width: 25%;
+                }
+
+                .dec1-column {
+                  width: 50%;
+                }
+
+                .dec2-column {
+                  width: 25%;
+                }
               </style>
 
               <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Program overview</h2>
@@ -193,58 +253,69 @@
               </div>
 
               <table cellpadding='5' style="border-collapse: collapse; width: 100%;">
+                <colgroup>
+                  <col class="time-column" />
+                  <col class="dec1-column" />
+                  <col class="dec2-column" span="5" />
+                </colgroup>
                 <tbody>
                   <tr class='schedule_table_title'>
                     <td class='schedule_table_column_center' style='font-size: larger;'>Time</td>
                     <td class='schedule_table_column_center' style='font-size: larger;'>Dec. 1st</td>
-                    <td class='schedule_table_column_center' style='font-size: larger;' colspan="4">
+                    <td class='schedule_table_column_center' style='font-size: larger;' colspan="5">
                       Dec. 2nd</td>
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>08:00</td>
                     <td class='schedule_table_column_center'></td>
-                    <td class='schedule_table_column_center' colspan="4">Registration <em>(Foyer)</em></td>
+                    <td class='schedule_table_column_center' colspan="5">Registration <em>(Foyer)</em></td>
                   </tr>
                   <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>08:30</td>
                     <td class='schedule_table_column_center'>DAIRNet Registration <em>(2.02 MRTC, outside)</em></td>
-                    <td class='schedule_table_column_center' colspan="4">Morning Tea <em>(Foyer)</em></td>
+                    <td class='schedule_table_column_center' colspan="5">Morning Tea <em>(Foyer)</em></td>
                   </tr>
-                  <tr>
+                  <tr class='morning-session'>
                     <td class='schedule_table_column_center'>09:00</td>
                     <td class='schedule_table_column_center' rowspan="3">DAIRNet Symposium <em>(2.02 MRTC)</em></td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track A Workshop 1</a> <em>(Manning Clark Hall)</em>
+                    <td class='schedule_table_column_center track-cell' colspan="5">
+                      <table class="track-inner track-4">
+                        <tr>
+                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                              class="text-mainPurple hover:underline">Track A Workshop 1</a> <em>(Manning Clark Hall)</em>
+                          </td>
+                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                              class="text-mainPurple hover:underline">Track B Workshop 2</a> <em>(Cinema)</em></td>
+                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                              class="text-mainPurple hover:underline">Track C Workshop 3</a> <em>(Drama Theatre)</em>
+                          </td>
+                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                              class="text-mainPurple hover:underline">Track D Tutorial 1</a> <em>(T2)</em></td>
+                        </tr>
+                      </table>
                     </td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track B Workshop 2</a> <em>(Cinema)</em></td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track C Workshop 3</a> <em>(Drama Theatre)</em></td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track D Tutorial 1</a> <em>(T2)</em></td>
                   </tr>
-                  <tr class='schedule_break_row'>
+                  <tr class='schedule_break_row morning-session'>
                     <td class='schedule_table_column_center'>10:00</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
+                    <td class='schedule_table_column_center' colspan="5">Break</td>
                   </tr>
-                  <tr>
+                  <tr class='morning-session'>
                     <td class='schedule_table_column_center'>10:15</td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
-                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track A Workshop 1</a>
-                      <em>(Manning Clark
-                        Hall)</em>
-                    </td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
-                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track B Workshop 2</a>
-                      <em>(Cinema)</em>
-                    </td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
-                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track C Workshop 3</a>
-                      <em>(Drama Theatre)</em>
-                    </td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
-                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track D Tutorial 1</a>
-                      <em>(T2)</em>
+                    <td class='schedule_table_column_center track-cell' colspan="5" rowspan="3">
+                      <table class="track-inner track-4">
+                        <tr>
+                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                              class="text-mainPurple hover:underline">Track A Workshop 1</a> <em>(Manning Clark Hall)</em>
+                          </td>
+                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                              class="text-mainPurple hover:underline">Track B Workshop 2</a> <em>(Cinema)</em></td>
+                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                              class="text-mainPurple hover:underline">Track C Workshop 3</a> <em>(Drama Theatre)</em>
+                          </td>
+                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                              class="text-mainPurple hover:underline">Track D Tutorial 1</a> <em>(T2)</em></td>
+                        </tr>
+                      </table>
                     </td>
                   </tr>
                   <tr class='schedule_break_row'>
@@ -255,27 +326,34 @@
                     <td class='schedule_table_column_center'>11:00</td>
                     <td class='schedule_table_column_center' rowspan="3">DAIRNet Symposium <em>(2.02 MRTC)</em></td>
                   </tr>
-                  <tr class='schedule_break_row'>
+                  <tr class='schedule_break_row morning-session'>
                     <td class='schedule_table_column_center'>11:15</td>
 
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
+                    <td class='schedule_table_column_center' colspan="5">Break</td>
                   </tr>
-                  <tr>
+                  <tr class='morning-session'>
                     <td class='schedule_table_column_center'>11:30</td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track A Workshop 1</a> <em>(Manning Clark Hall)</em>
+                    <td class='schedule_table_column_center track-cell' colspan="5">
+                      <table class="track-inner track-4">
+                        <tr>
+                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                              class="text-mainPurple hover:underline">Track A Workshop 1</a> <em>(Manning Clark Hall)</em>
+                          </td>
+                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                              class="text-mainPurple hover:underline">Track B Workshop 2</a> <em>(Cinema)</em></td>
+                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                              class="text-mainPurple hover:underline">Track C Workshop 3</a> <em>(Drama Theatre)</em>
+                          </td>
+                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
+                              class="text-mainPurple hover:underline">Track D Tutorial 1</a> <em>(T2)</em></td>
+                        </tr>
+                      </table>
                     </td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track B Workshop 2</a> <em>(Cinema)</em></td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track C Workshop 3</a> <em>(Drama Theatre)</em></td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track D Tutorial 1</a> <em>(T2)</em></td>
                   </tr>
-                  <tr class='schedule_break_row'>
+                  <tr class='schedule_break_row morning-session'>
                     <td class='schedule_table_column_center'>12:30</td>
                     <td class='schedule_table_column_center'>Lunch <em>(MRTC)</em></td>
-                    <td class='schedule_table_column_center' rowspan="2" colspan="4">Lunch <em>(Foyer)</em></td>
+                    <td class='schedule_table_column_center' rowspan="2" colspan="5">Lunch <em>(Foyer)</em></td>
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>13:00</td>
@@ -284,20 +362,20 @@
                   <tr>
                     <td class='schedule_table_column_center'>13:45</td>
                     <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track A Tutorial 2</a> <em>(Manning Clark Hall)</em>
+                        class="text-mainPurple hover:underline">Track A <br> Tutorial 2</a> <em>(Manning Clark Hall)</em>
                     </td>
                     <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track B Tutorial 3</a> <em>(Cinema)</em></td>
+                        class="text-mainPurple hover:underline">Track B <br> Tutorial 3</a> <em>(Cinema)</em></td>
                     <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track C Tutorial 4</a> <em>(Drama Theatre)</em></td>
+                        class="text-mainPurple hover:underline">Track C <br> Tutorial 4</a> <em>(Drama Theatre)</em></td>
                     <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track D Tutorial 5</a> <em>(T2)</em><br />Track E —
-                      PhD Forum
-                      Poster Session <em>(Gallery)</em></td>
+                        class="text-mainPurple hover:underline">Track D <br> Tutorial 5</a> <em>(T2)</em></td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'><span class="track-label">Track E
+                        <br> PhD Forum Poster Session</span> <em>(Gallery)</em></td>
                   </tr>
                   <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>14:45</td>
-                    <td class='schedule_table_column_center' colspan="4">Break</td>
+                    <td class='schedule_table_column_center' colspan="5">Break</td>
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>15:00</td>
@@ -316,9 +394,10 @@
                     </td>
                     <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
                         href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track D Tutorial 5</a>
-                      <em>(T2)</em><br />Track E
-                      — PhD Forum
-                      Poster Session <em>(Gallery)</em>
+                      <em>(T2)</em>
+                    </td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><span
+                        class="track-label">Track E <br> PhD Forum Poster Session</span> <em>(Gallery)</em>
                     </td>
                   </tr>
                   <tr class='schedule_break_row'>
@@ -331,11 +410,11 @@
                   </tr>
                   <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>16:00</td>
-                    <td class='schedule_table_column_center' colspan="4">Afternoon Tea <em>(Foyer)</em></td>
+                    <td class='schedule_table_column_center' colspan="5">Afternoon Tea <em>(Foyer)</em></td>
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>16:15</td>
-                    <td class='schedule_table_column_center' rowspan="2" colspan="4">PhD Forum — Panel Discussion
+                    <td class='schedule_table_column_center' rowspan="2" colspan="5">PhD Forum — Panel Discussion
                       <em>(Manning Clark
                         Hall)</em>
                     </td>
@@ -378,8 +457,14 @@
                     <td class='schedule_table_column_center keynote-cell'>Keynote — Ling Chen (UTS) <em>(Manning Clark
                         Hall)</em></td>
                   </tr>
+                  <tr class='schedule_break_row'>
+                    <td class='schedule_table_column_center'>10:00</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <td class='schedule_table_column_center' colspan="2">Break</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                  </tr>
                   <tr>
-                    <td class='schedule_table_column_center'>09:30</td>
+                    <td class='schedule_table_column_center'>10:15</td>
                     <td class='schedule_table_column_center keynote-cell'>Keynote — Jing Jiang (ANU) <em>(Manning Clark
                         Hall)</em></td>
                     <td class='schedule_table_column_center session-short-oral'><strong>Track A — Short Oral Session
@@ -394,13 +479,7 @@
                     <td class='schedule_table_column_center keynote-cell'>Keynote — Mengjie Zhang (VUW) <em>(Manning
                         Clark Hall)</em></td>
                   </tr>
-                  <tr class='schedule_break_row'>
-                    <td class='schedule_table_column_center'>10:00</td>
-                    <td class='schedule_table_column_center'>Break</td>
-                    <td class='schedule_table_column_center' colspan="2">Break</td>
-                    <td class='schedule_table_column_center'>Break</td>
-                  </tr>
-                  <tr>
+                  <!-- <tr>
                     <td class='schedule_table_column_center'>10:15</td>
                     <td class='schedule_table_column_center session-long-oral'><strong>Track A — Long Oral Session
                         1</strong> <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 7, 18, 22,
@@ -420,7 +499,7 @@
                         121</span><br /><br /><strong>Track B — Long Oral Session 6</strong>
                       <em>(Cinema)</em><br /><span class='session-papers'>Papers: 8, 93, 97, 111</span>
                     </td>
-                  </tr>
+                  </tr> -->
                   <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>11:15</td>
                     <td class='schedule_table_column_center'>Break</td>
