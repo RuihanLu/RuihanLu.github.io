@@ -182,9 +182,10 @@
                   background: transparent;
                 }
 
-                .track-inner td {
+                .track-inner td,
+                .session-grid > div {
                   padding: 12px 8px;
-                  border-left: 1px solid #e0e0e0;
+                  border-left: none;
                   border-top: none;
                   border-bottom: none;
                   vertical-align: middle;
@@ -192,7 +193,8 @@
                   line-height: 1.3;
                 }
 
-                .track-inner td:first-child {
+                .track-inner td:first-child,
+                .session-grid > div:first-child {
                   border-left: none;
                 }
 
@@ -201,10 +203,45 @@
                   background-color: inherit !important;
                 }
 
-                .track-label {
-                  display: inline-block;
-                  font-weight: 600;
+                .session-grid {
+                  display: flex;
+                  flex-direction: column;
+                  width: 100%;
+                  border-left: none;
+                }
+
+                .track-link {
+                  display: block;
+                  text-decoration: none;
+                  color: inherit;
+                }
+
+                .track-info {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 0.1rem;
+                }
+
+                .track-name {
+                  font-weight: 700;
                   color: #51247a;
+                }
+
+                .track-session {
+                  font-weight: 600;
+                  color: #1f2937;
+                }
+
+                .track-location {
+                  color: #4b5563;
+                  font-style: italic;
+                }
+
+                .session-note {
+                  display: block;
+                  margin-top: 0.35rem;
+                  font-size: 0.85em;
+                  color: #6b7280;
                 }
 
                 .track-inner.track-4 td {
@@ -272,7 +309,7 @@
                   </tr>
                   <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>08:30</td>
-                    <td class='schedule_table_column_center'>DAIRNet Registration <em>(2.02 MRTC, outside)</em></td>
+                    <td class='schedule_table_column_center'>DAIRNet Registration <em>(outside 2.02 MRTC)</em></td>
                     <td class='schedule_table_column_center' colspan="5">Morning Tea <em>(Foyer)</em></td>
                   </tr>
                   <tr class='morning-session'>
@@ -281,16 +318,42 @@
                     <td class='schedule_table_column_center track-cell' colspan="5">
                       <table class="track-inner track-4">
                         <tr>
-                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                              class="text-mainPurple hover:underline">Track A Workshop 1</a> <em>(Manning Clark Hall)</em>
+                          <td class='workshop-tutorial-cell'>
+                            <a href="./workshopandtutorial.html" class="track-link">
+                              <div class="track-info">
+                                <div class="track-name">Track A</div>
+                                <div class="track-session">Workshop 1</div>
+                                <div class="track-location"><em>Manning Clark Hall</em></div>
+                              </div>
+                            </a>
                           </td>
-                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                              class="text-mainPurple hover:underline">Track B Workshop 2</a> <em>(Cinema)</em></td>
-                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                              class="text-mainPurple hover:underline">Track C Workshop 3</a> <em>(Drama Theatre)</em>
+                          <td class='workshop-tutorial-cell'>
+                            <a href="./workshopandtutorial.html" class="track-link">
+                              <div class="track-info">
+                                <div class="track-name">Track B</div>
+                                <div class="track-session">Workshop 2</div>
+                                <div class="track-location"><em>Cinema</em></div>
+                              </div>
+                            </a>
                           </td>
-                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                              class="text-mainPurple hover:underline">Track D Tutorial 1</a> <em>(T2)</em></td>
+                          <td class='workshop-tutorial-cell'>
+                            <a href="./workshopandtutorial.html" class="track-link">
+                              <div class="track-info">
+                                <div class="track-name">Track C</div>
+                                <div class="track-session">Workshop 3</div>
+                                <div class="track-location"><em>Drama Theatre</em></div>
+                              </div>
+                            </a>
+                          </td>
+                          <td class='workshop-tutorial-cell'>
+                            <a href="./workshopandtutorial.html" class="track-link">
+                              <div class="track-info">
+                                <div class="track-name">Track D</div>
+                                <div class="track-session">Tutorial 1</div>
+                                <div class="track-location"><em>T2</em></div>
+                              </div>
+                            </a>
+                          </td>
                         </tr>
                       </table>
                     </td>
@@ -304,16 +367,42 @@
                     <td class='schedule_table_column_center track-cell' colspan="5" rowspan="3">
                       <table class="track-inner track-4">
                         <tr>
-                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                              class="text-mainPurple hover:underline">Track A Workshop 1</a> <em>(Manning Clark Hall)</em>
+                          <td class='workshop-tutorial-cell'>
+                            <a href="./workshopandtutorial.html" class="track-link">
+                              <div class="track-info">
+                                <div class="track-name">Track A</div>
+                                <div class="track-session">Workshop 1</div>
+                                <div class="track-location"><em>Manning Clark Hall</em></div>
+                              </div>
+                            </a>
                           </td>
-                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                              class="text-mainPurple hover:underline">Track B Workshop 2</a> <em>(Cinema)</em></td>
-                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                              class="text-mainPurple hover:underline">Track C Workshop 3</a> <em>(Drama Theatre)</em>
+                          <td class='workshop-tutorial-cell'>
+                            <a href="./workshopandtutorial.html" class="track-link">
+                              <div class="track-info">
+                                <div class="track-name">Track B</div>
+                                <div class="track-session">Workshop 2</div>
+                                <div class="track-location"><em>Cinema</em></div>
+                              </div>
+                            </a>
                           </td>
-                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                              class="text-mainPurple hover:underline">Track D Tutorial 1</a> <em>(T2)</em></td>
+                          <td class='workshop-tutorial-cell'>
+                            <a href="./workshopandtutorial.html" class="track-link">
+                              <div class="track-info">
+                                <div class="track-name">Track C</div>
+                                <div class="track-session">Workshop 3</div>
+                                <div class="track-location"><em>Drama Theatre</em></div>
+                              </div>
+                            </a>
+                          </td>
+                          <td class='workshop-tutorial-cell'>
+                            <a href="./workshopandtutorial.html" class="track-link">
+                              <div class="track-info">
+                                <div class="track-name">Track D</div>
+                                <div class="track-session">Tutorial 1</div>
+                                <div class="track-location"><em>T2</em></div>
+                              </div>
+                            </a>
+                          </td>
                         </tr>
                       </table>
                     </td>
@@ -336,16 +425,42 @@
                     <td class='schedule_table_column_center track-cell' colspan="5">
                       <table class="track-inner track-4">
                         <tr>
-                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                              class="text-mainPurple hover:underline">Track A Workshop 1</a> <em>(Manning Clark Hall)</em>
+                          <td class='workshop-tutorial-cell'>
+                            <a href="./workshopandtutorial.html" class="track-link">
+                              <div class="track-info">
+                                <div class="track-name">Track A</div>
+                                <div class="track-session">Workshop 1</div>
+                                <div class="track-location"><em>Manning Clark Hall</em></div>
+                              </div>
+                            </a>
                           </td>
-                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                              class="text-mainPurple hover:underline">Track B Workshop 2</a> <em>(Cinema)</em></td>
-                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                              class="text-mainPurple hover:underline">Track C Workshop 3</a> <em>(Drama Theatre)</em>
+                          <td class='workshop-tutorial-cell'>
+                            <a href="./workshopandtutorial.html" class="track-link">
+                              <div class="track-info">
+                                <div class="track-name">Track B</div>
+                                <div class="track-session">Workshop 2</div>
+                                <div class="track-location"><em>Cinema</em></div>
+                              </div>
+                            </a>
                           </td>
-                          <td class='workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                              class="text-mainPurple hover:underline">Track D Tutorial 1</a> <em>(T2)</em></td>
+                          <td class='workshop-tutorial-cell'>
+                            <a href="./workshopandtutorial.html" class="track-link">
+                              <div class="track-info">
+                                <div class="track-name">Track C</div>
+                                <div class="track-session">Workshop 3</div>
+                                <div class="track-location"><em>Drama Theatre</em></div>
+                              </div>
+                            </a>
+                          </td>
+                          <td class='workshop-tutorial-cell'>
+                            <a href="./workshopandtutorial.html" class="track-link">
+                              <div class="track-info">
+                                <div class="track-name">Track D</div>
+                                <div class="track-session">Tutorial 1</div>
+                                <div class="track-location"><em>T2</em></div>
+                              </div>
+                            </a>
+                          </td>
                         </tr>
                       </table>
                     </td>
@@ -361,17 +476,49 @@
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>13:45</td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track A <br> Tutorial 2</a> <em>(Manning Clark Hall)</em>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'>
+                      <a href="./workshopandtutorial.html" class="track-link">
+                        <div class="track-info">
+                          <div class="track-name">Track A</div>
+                          <div class="track-session">Tutorial 2</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                        </div>
+                      </a>
                     </td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track B <br> Tutorial 3</a> <em>(Cinema)</em></td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track C <br> Tutorial 4</a> <em>(Drama Theatre)</em></td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell'><a href="./workshopandtutorial.html"
-                        class="text-mainPurple hover:underline">Track D <br> Tutorial 5</a> <em>(T2)</em></td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell'><span class="track-label">Track E
-                        <br> PhD Forum Poster Session</span> <em>(Gallery)</em></td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'>
+                      <a href="./workshopandtutorial.html" class="track-link">
+                        <div class="track-info">
+                          <div class="track-name">Track B</div>
+                          <div class="track-session">Tutorial 3</div>
+                          <div class="track-location"><em>Cinema</em></div>
+                        </div>
+                      </a>
+                    </td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'>
+                      <a href="./workshopandtutorial.html" class="track-link">
+                        <div class="track-info">
+                          <div class="track-name">Track C</div>
+                          <div class="track-session">Tutorial 4</div>
+                          <div class="track-location"><em>Drama Theatre</em></div>
+                        </div>
+                      </a>
+                    </td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'>
+                      <a href="./workshopandtutorial.html" class="track-link">
+                        <div class="track-info">
+                          <div class="track-name">Track D</div>
+                          <div class="track-session">Tutorial 5</div>
+                          <div class="track-location"><em>T2</em></div>
+                        </div>
+                      </a>
+                    </td>
+                    <td class='schedule_table_column_center workshop-tutorial-cell'>
+                      <div class="track-info">
+                        <div class="track-name">Track E</div>
+                        <div class="track-session">PhD Forum Poster Session</div>
+                        <div class="track-location"><em>Gallery</em></div>
+                      </div>
+                    </td>
                   </tr>
                   <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>14:45</td>
@@ -379,25 +526,48 @@
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>15:00</td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
-                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track A Tutorial 2</a>
-                      <em>(Manning Clark
-                        Hall)</em>
+                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3">
+                      <a href="./workshopandtutorial.html" class="track-link">
+                        <div class="track-info">
+                          <div class="track-name">Track A</div>
+                          <div class="track-session">Tutorial 2</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                        </div>
+                      </a>
                     </td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
-                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track B Tutorial 3</a>
-                      <em>(Cinema)</em>
+                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3">
+                      <a href="./workshopandtutorial.html" class="track-link">
+                        <div class="track-info">
+                          <div class="track-name">Track B</div>
+                          <div class="track-session">Tutorial 3</div>
+                          <div class="track-location"><em>Cinema</em></div>
+                        </div>
+                      </a>
                     </td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
-                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track C Tutorial 4</a>
-                      <em>(Drama Theatre)</em>
+                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3">
+                      <a href="./workshopandtutorial.html" class="track-link">
+                        <div class="track-info">
+                          <div class="track-name">Track C</div>
+                          <div class="track-session">Tutorial 4</div>
+                          <div class="track-location"><em>Drama Theatre</em></div>
+                        </div>
+                      </a>
                     </td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><a
-                        href="./workshopandtutorial.html" class="text-mainPurple hover:underline">Track D Tutorial 5</a>
-                      <em>(T2)</em>
+                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3">
+                      <a href="./workshopandtutorial.html" class="track-link">
+                        <div class="track-info">
+                          <div class="track-name">Track D</div>
+                          <div class="track-session">Tutorial 5</div>
+                          <div class="track-location"><em>T2</em></div>
+                        </div>
+                      </a>
                     </td>
-                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3"><span
-                        class="track-label">Track E <br> PhD Forum Poster Session</span> <em>(Gallery)</em>
+                    <td class='schedule_table_column_center workshop-tutorial-cell' rowspan="3">
+                      <div class="track-info">
+                        <div class="track-name">Track E</div>
+                        <div class="track-session">PhD Forum Poster Session</div>
+                        <div class="track-location"><em>Gallery</em></div>
+                      </div>
                     </td>
                   </tr>
                   <tr class='schedule_break_row'>
@@ -416,7 +586,7 @@
                     <td class='schedule_table_column_center'>16:15</td>
                     <td class='schedule_table_column_center' rowspan="2" colspan="5">PhD Forum — Panel Discussion
                       <em>(Manning Clark
-                        Hall)</em>
+                        Hall)</em><span class="session-note">Ends 17:30</span>
                     </td>
                   </tr>
                   <tr>
@@ -449,13 +619,33 @@
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>09:00</td>
-                    <td class='schedule_table_column_center keynote-cell'>Welcome (5m) + Keynote — Marcus Hutter
-                      (DeepMind) <em>(Manning Clark Hall)</em></td>
-                    <td class='schedule_table_column_center keynote-cell' colspan="2">Keynote — Navinda Kottege (Data61)
-                      <em>(Manning Clark Hall)</em>
+                    <td class='schedule_table_column_center keynote-cell'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Keynote</div>
+                          <div class="track-session">Welcome (5m) + Marcus Hutter (DeepMind)</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                        </div>
+                      </div>
                     </td>
-                    <td class='schedule_table_column_center keynote-cell'>Keynote — Ling Chen (UTS) <em>(Manning Clark
-                        Hall)</em></td>
+                    <td class='schedule_table_column_center keynote-cell' colspan="2">
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Keynote</div>
+                          <div class="track-session">Navinda Kottege (Data61)</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class='schedule_table_column_center keynote-cell'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Keynote</div>
+                          <div class="track-session">Ling Chen (UTS)</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                        </div>
+                      </div>
+                    </td>
                   </tr>
                   <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>10:00</td>
@@ -465,41 +655,55 @@
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>10:15</td>
-                    <td class='schedule_table_column_center keynote-cell'>Keynote — Jing Jiang (ANU) <em>(Manning Clark
-                        Hall)</em></td>
-                    <td class='schedule_table_column_center session-short-oral'><strong>Track A — Short Oral Session
-                        6</strong> <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 71, 82, 84,
-                        101</span><br /><br /><strong>Track B — Short Oral Session 7</strong>
-                      <em>(Cinema)</em><br /><span class='session-papers'>Papers: 103, 109, 113,
-                        118</span>
+                    <td class='schedule_table_column_center keynote-cell'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Keynote</div>
+                          <div class="track-session">Jing Jiang (ANU)</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                        </div>
+                      </div>
                     </td>
-                    <td class='schedule_table_column_center session-short-oral'><strong>Track C — AI4Health
-                        Symposium</strong> <em>(Drama
-                        Theatre)</em><br /><br /><strong>Track D — Government & Industry Day</strong> <em>(T2)</em></td>
-                    <td class='schedule_table_column_center keynote-cell'>Keynote — Mengjie Zhang (VUW) <em>(Manning
-                        Clark Hall)</em></td>
+                    <td class='schedule_table_column_center session-short-oral'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Track A</div>
+                          <div class="track-session">Short Oral Session 6</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                          <div class='session-papers'>Papers: 71, 82, 84, 101</div>
+                        </div>
+                        <div class="track-info">
+                          <div class="track-name">Track B</div>
+                          <div class="track-session">Short Oral Session 7</div>
+                          <div class="track-location"><em>Cinema</em></div>
+                          <div class='session-papers'>Papers: 103, 109, 113, 118</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class='schedule_table_column_center session-short-oral'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Track C</div>
+                          <div class="track-session">AI4Health Symposium</div>
+                          <div class="track-location"><em>Drama Theatre</em></div>
+                        </div>
+                        <div class="track-info">
+                          <div class="track-name">Track D</div>
+                          <div class="track-session">Government &amp; Industry Day</div>
+                          <div class="track-location"><em>T2</em></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class='schedule_table_column_center keynote-cell'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Keynote</div>
+                          <div class="track-session">Mengjie Zhang (VUW)</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                        </div>
+                      </div>
+                    </td>
                   </tr>
-                  <!-- <tr>
-                    <td class='schedule_table_column_center'>10:15</td>
-                    <td class='schedule_table_column_center session-long-oral'><strong>Track A — Long Oral Session
-                        1</strong> <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 7, 18, 22,
-                        32</span><br /><br /><strong>Track B — Long Oral Session 2</strong> <em>(Cinema)</em><br /><span
-                        class='session-papers'>Papers: 38, 46, 58, 127</span></td>
-                    <td class='schedule_table_column_center session-long-oral'><strong>Track A — Long Oral Session
-                        3</strong> <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 61, 77, 88,
-                        106</span><br /><br /><strong>Track B — Long Oral Session 4</strong>
-                      <em>(Cinema)</em><br /><span class='session-papers'>Papers: 112, 114, 120,
-                        132</span>
-                    </td>
-                    <td class='schedule_table_column_center session-long-oral'><strong>Track C — AI4Health
-                        Symposium</strong> <em>(Drama
-                        Theatre)</em><br /><br /><strong>Track D — Government & Industry Day</strong> <em>(T2)</em></td>
-                    <td class='schedule_table_column_center session-long-oral'><strong>Track A — Long Oral Session
-                        5</strong> <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 39, 44, 108,
-                        121</span><br /><br /><strong>Track B — Long Oral Session 6</strong>
-                      <em>(Cinema)</em><br /><span class='session-papers'>Papers: 8, 93, 97, 111</span>
-                    </td>
-                  </tr> -->
                   <tr class='schedule_break_row'>
                     <td class='schedule_table_column_center'>11:15</td>
                     <td class='schedule_table_column_center'>Break</td>
@@ -508,23 +712,67 @@
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>11:30</td>
-                    <td class='schedule_table_column_center session-long-oral'><strong>Track A — Long Oral Session
-                        1</strong> <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 7, 18, 22,
-                        32</span><br /><br /><strong>Track B — Long Oral Session 2</strong> <em>(Cinema)</em><br /><span
-                        class='session-papers'>Papers: 38, 46, 58, 127</span></td>
-                    <td class='schedule_table_column_center session-long-oral'><strong>Track A — Long Oral Session
-                        3</strong> <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 61, 77, 88,
-                        106</span><br /><br /><strong>Track B — Long Oral Session 4</strong>
-                      <em>(Cinema)</em><br /><span class='session-papers'>Papers: 112, 114, 120,
-                        132</span>
+                    <td class='schedule_table_column_center session-long-oral'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Track A</div>
+                          <div class="track-session">Long Oral Session 1</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                          <div class='session-papers'>Papers: 7, 18, 22, 32</div>
+                        </div>
+                        <div class="track-info">
+                          <div class="track-name">Track B</div>
+                          <div class="track-session">Long Oral Session 2</div>
+                          <div class="track-location"><em>Cinema</em></div>
+                          <div class='session-papers'>Papers: 38, 46, 58, 127</div>
+                        </div>
+                      </div>
                     </td>
-                    <td class='schedule_table_column_center session-long-oral'><strong>Track C — AI4Health
-                        Symposium</strong> <em>(Drama
-                        Theatre)</em><br /><br /><strong>Track D — Government & Industry Day</strong> <em>(T2)</em></td>
-                    <td class='schedule_table_column_center session-long-oral'><strong>Track A — Long Oral Session
-                        5</strong> <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 39, 44, 108,
-                        121</span><br /><br /><strong>Track B — Long Oral Session 6</strong>
-                      <em>(Cinema)</em><br /><span class='session-papers'>Papers: 8, 93, 97, 111</span>
+                    <td class='schedule_table_column_center session-long-oral'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Track A</div>
+                          <div class="track-session">Long Oral Session 3</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                          <div class='session-papers'>Papers: 61, 77, 88, 106</div>
+                        </div>
+                        <div class="track-info">
+                          <div class="track-name">Track B</div>
+                          <div class="track-session">Long Oral Session 4</div>
+                          <div class="track-location"><em>Cinema</em></div>
+                          <div class='session-papers'>Papers: 112, 114, 120, 132</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class='schedule_table_column_center session-long-oral'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Track C</div>
+                          <div class="track-session">AI4Health Symposium</div>
+                          <div class="track-location"><em>Drama Theatre</em></div>
+                        </div>
+                        <div class="track-info">
+                          <div class="track-name">Track D</div>
+                          <div class="track-session">Government &amp; Industry Day</div>
+                          <div class="track-location"><em>T2</em></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class='schedule_table_column_center session-long-oral'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Track A</div>
+                          <div class="track-session">Long Oral Session 5</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                          <div class='session-papers'>Papers: 39, 44, 108, 121</div>
+                        </div>
+                        <div class="track-info">
+                          <div class="track-name">Track B</div>
+                          <div class="track-session">Long Oral Session 6</div>
+                          <div class="track-location"><em>Cinema</em></div>
+                          <div class='session-papers'>Papers: 8, 93, 97, 111</div>
+                        </div>
+                      </div>
                     </td>
                   </tr>
                   <tr class='schedule_break_row'>
@@ -535,13 +783,32 @@
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>13:45</td>
-                    <td class='schedule_table_column_center keynote-cell'>Keynote — Geoff Webb (Monash) <em>(Manning
-                        Clark Hall)</em></td>
-                    <td class='schedule_table_column_center keynote-cell' colspan="2">Keynote — Toby Walsh (UNSW)
-                      <em>(Manning Clark Hall)</em>
+                    <td class='schedule_table_column_center keynote-cell'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Keynote</div>
+                          <div class="track-session">Geoff Webb (Monash)</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                        </div>
+                      </div>
                     </td>
-                    <td class='schedule_table_column_center keynote-cell'>Keynote — Nicholas Mattei (Tulane University)
-                      <em>(Manning Clark Hall)</em>
+                    <td class='schedule_table_column_center keynote-cell' colspan="2">
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Keynote</div>
+                          <div class="track-session">Toby Walsh (UNSW)</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class='schedule_table_column_center keynote-cell'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Keynote</div>
+                          <div class="track-session">Nicholas Mattei (Tulane University)</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                        </div>
+                      </div>
                     </td>
                   </tr>
                   <tr class='schedule_break_row'>
@@ -552,23 +819,67 @@
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>15:00</td>
-                    <td class='schedule_table_column_center session-short-oral'><strong>Short Oral Session 1</strong>
-                      <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 1, 5, 13,
-                        14</span><br /><br /><strong>Short Oral Session 2</strong> <em>(Cinema)</em><br /><span
-                        class='session-papers'>Papers: 15, 16, 24, 26</span>
+                    <td class='schedule_table_column_center session-short-oral'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Track A</div>
+                          <div class="track-session">Short Oral Session 1</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                          <div class='session-papers'>Papers: 1, 5, 13, 14</div>
+                        </div>
+                        <div class="track-info">
+                          <div class="track-name">Track B</div>
+                          <div class="track-session">Short Oral Session 2</div>
+                          <div class="track-location"><em>Cinema</em></div>
+                          <div class='session-papers'>Papers: 15, 16, 24, 26</div>
+                        </div>
+                      </div>
                     </td>
-                    <td class='schedule_table_column_center session-short-oral'><strong>Short Oral Session 8</strong>
-                      <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 49, 133, 151,
-                        152</span><br /><br /><strong>Short Oral Session 9</strong> <em>(Cinema)</em><br /><span
-                        class='session-papers'>Papers: 2, 25, 48, 65</span>
+                    <td class='schedule_table_column_center session-short-oral'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Track A</div>
+                          <div class="track-session">Short Oral Session 8</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                          <div class='session-papers'>Papers: 49, 133, 151, 152</div>
+                        </div>
+                        <div class="track-info">
+                          <div class="track-name">Track B</div>
+                          <div class="track-session">Short Oral Session 9</div>
+                          <div class="track-location"><em>Cinema</em></div>
+                          <div class='session-papers'>Papers: 2, 25, 48, 65</div>
+                        </div>
+                      </div>
                     </td>
-                    <td class='schedule_table_column_center session-short-oral'><strong>AI4Health
-                        Symposium</strong> <em>(Drama Theatre)</em><br /><br /><strong>Government & Industry
-                        Day</strong> <em>(T2)</em></td>
-                    <td class='schedule_table_column_center session-short-oral'><strong>Short Oral Session 10</strong>
-                      <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 68, 78, 80,
-                        92</span><br /><br /><strong>Short Oral Session 11</strong> <em>(Cinema)</em><br /><span
-                        class='session-papers'>Papers: 99, 102, 105, 110, 117</span>
+                    <td class='schedule_table_column_center session-short-oral'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Track C</div>
+                          <div class="track-session">AI4Health Symposium</div>
+                          <div class="track-location"><em>Drama Theatre</em></div>
+                        </div>
+                        <div class="track-info">
+                          <div class="track-name">Track D</div>
+                          <div class="track-session">Government &amp; Industry Day</div>
+                          <div class="track-location"><em>T2</em></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class='schedule_table_column_center session-short-oral'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Track A</div>
+                          <div class="track-session">Short Oral Session 10</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                          <div class='session-papers'>Papers: 68, 78, 80, 92</div>
+                        </div>
+                        <div class="track-info">
+                          <div class="track-name">Track B</div>
+                          <div class="track-session">Short Oral Session 11</div>
+                          <div class="track-location"><em>Cinema</em></div>
+                          <div class='session-papers'>Papers: 99, 102, 105, 110, 117</div>
+                        </div>
+                      </div>
                     </td>
                   </tr>
                   <tr class='schedule_break_row'>
@@ -579,20 +890,51 @@
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>16:15</td>
-                    <td class='schedule_table_column_center session-short-oral'><strong>Short Oral Session 3</strong>
-                      <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 27, 28, 34,
-                        50</span><br /><br /><strong>Short Oral Session 4</strong> <em>(Cinema)</em><br /><span
-                        class='session-papers'>Papers: 51, 60, 62, 70</span><br /><br /><strong>Short Oral Session
-                        5</strong> <em>(Drama Theatre)</em>
+                    <td class='schedule_table_column_center session-short-oral'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Track A</div>
+                          <div class="track-session">Short Oral Session 3</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                          <div class='session-papers'>Papers: 27, 28, 34, 50</div>
+                        </div>
+                        <div class="track-info">
+                          <div class="track-name">Track B</div>
+                          <div class="track-session">Short Oral Session 4</div>
+                          <div class="track-location"><em>Cinema</em></div>
+                          <div class='session-papers'>Papers: 51, 60, 62, 70</div>
+                        </div>
+                        <div class="track-info">
+                          <div class="track-name">Track C</div>
+                          <div class="track-session">Short Oral Session 5</div>
+                          <div class="track-location"><em>Drama Theatre</em></div>
+                        </div>
+                      </div>
                     </td>
-                    <td class='schedule_table_column_center panel-discussion' rowspan="2" colspan="2">Panel Discussion
-                      <em>(Manning
-                        Clark Hall)</em>
+                    <td class='schedule_table_column_center panel-discussion' rowspan="2" colspan="2'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Panel</div>
+                          <div class="track-session">Discussion</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                        </div>
+                      </div>
                     </td>
-                    <td class='schedule_table_column_center session-short-oral'><strong>Short Oral Session 12</strong>
-                      <em>(Manning Clark Hall)</em><br /><span class='session-papers'>Papers: 40, 52, 55,
-                        56</span><br /><br /><strong>Short Oral Session 13</strong> <em>(Cinema)</em><br /><span
-                        class='session-papers'>Papers: 57, 66, 95, 122</span>
+                    <td class='schedule_table_column_center session-short-oral'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Track A</div>
+                          <div class="track-session">Short Oral Session 12</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                          <div class='session-papers'>Papers: 40, 52, 55, 56</div>
+                        </div>
+                        <div class="track-info">
+                          <div class="track-name">Track B</div>
+                          <div class="track-session">Short Oral Session 13</div>
+                          <div class="track-location"><em>Cinema</em></div>
+                          <div class='session-papers'>Papers: 57, 66, 95, 122</div>
+                        </div>
+                      </div>
                     </td>
                   </tr>
                   <tr class='schedule_break_row'>
@@ -602,7 +944,8 @@
                   </tr>
                   <tr>
                     <td class='schedule_table_column_center'>17:30</td>
-                    <td class='schedule_table_column_center' rowspan="3">Reception <em>(Gallery)</em></td>
+                    <td class='schedule_table_column_center' rowspan="3">Reception <em>(Gallery)</em><span
+                        class="session-note">Ends 19:30</span></td>
                     <td class='schedule_table_column_center' colspan="2">Break</td>
                     <td class='schedule_table_column_center' rowspan="5"></td>
                   </tr>
