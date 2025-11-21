@@ -76,21 +76,324 @@
               <p>Whether your organisation is just beginning its AI journey or is at the forefront of deployment, the
                 program offers invaluable opportunities to connect with thought leaders, technology innovators,
                 academics, and research specialists.</p>
+              <p><strong>Location:</strong> Manning Clark Hall &amp; T2<br />
+                <strong>Date:</strong> 4 December 2025<br />
+                <strong>Time:</strong> 9:00 - 17:30<br />
+                <strong>Registration:</strong> <a href="./registration.html"
+                  class="text-mainPurple hover:underline">Click here for Registration.</a>
+              </p>
 
               <hr class="my-8 border-gray-200">
 
-              <h4 class="text-xl font-bold text-mainPurple mb-3 mt-6">Key Topics</h4>
-              <ul>
-                <li>Emerging opportunities and case studies</li>
-                <li>Automation, robotics, and AI embodiment</li>
-                <li>Intellectual property and data governance</li>
-                <li>Resilient and secure service delivery</li>
-                <li>Regulation: from agile experimentation to robust frameworks</li>
-                <li>Cybersecurity, identity management, and trust</li>
-                <li>Ethics, transparency, and harm mitigation</li>
-              </ul>
+              <style>
+                /* Speaker card visual styles */
+                .speaker-card {
+                  background: transparent;
+                  border: none;
+                  border-radius: 0.5rem;
+                  padding: 0;
+                  box-shadow: none;
+                  transition: box-shadow 150ms ease, transform 150ms ease;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  text-align: center;
+                  pointer-events: none;
+                  cursor: default;
+                }
+
+                .speaker-card:hover {
+                  box-shadow: none;
+                  transform: none;
+                  text-decoration: none;
+                }
+
+                .speaker-card img {
+                  border-radius: 0.5rem;
+                  object-fit: cover;
+                  width: 150px;
+                  height: 150px;
+                }
+
+                .speaker-bio {
+                  max-width: 60rem;
+                  color: #374151;
+                  line-height: 1.6;
+                }
+
+                .speaker-row {
+                  display: flex;
+                  gap: 2rem;
+                  align-items: center;
+                  /* vertical centering */
+                  width: 100%;
+                  margin: 2rem 0;
+                  /* more space between speakers */
+                }
+
+                .speaker-row:not(:first-of-type) {
+                  border-top: 1px solid #e5e7eb;
+                  padding-top: 2rem;
+                }
+
+                .speaker-left {
+                  width: 170px;
+                  display: flex;
+                  justify-content: center;
+                }
+
+                .speaker-right {
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  /* vertical centering for text */
+                }
+
+                .speaker-right p:first-child {
+                  font-weight: 700;
+                  font-size: 1.05rem;
+                }
+
+                .speaker-right p {
+                  margin: 0.25rem 0;
+                }
+
+                .session-entry {
+                  margin-top: 0.5rem;
+                }
+
+                .session-title {
+                  font-weight: 700;
+                  color: #111827;
+                  font-size: 0.98rem;
+                }
+
+                .session-speaker {
+                  margin-top: 0.15rem;
+                  color: #111827;
+                  font-size: 0.95rem;
+                }
+
+                .program-table td:first-child {
+                  white-space: nowrap;
+                  width: 11.5rem;
+                  vertical-align: top;
+                }
+
+                .program-table tr:last-child td {
+                  padding-bottom: 0.0rem;
+                }
+              </style>
+
+              <h4 class="text-xl font-bold text-mainPurple mb-4 mt-6">Keynotes</h4>
+
+              <!-- Navinda Kottege -->
+              <div class="speaker-row">
+                <div class="speaker-left">
+                  <div class="speaker-card" style="width:100%">
+                    <div style="width:150px;height:150px">
+                      <div data-gatsby-image-wrapper=""
+                        class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                        <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                            src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                            style="max-width:100%;display:block;position:static" /></div>
+                        <img aria-hidden="true" data-placeholder-image=""
+                          style="opacity:1;transition:opacity 500ms linear" decoding="async" src="./imgs/navinda.png"
+                          alt="" />
+                      </div>
+                    </div>
+                    <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">Navinda Kottege</p>
+                  </div>
+                </div>
+                <div class="speaker-right">
+                  <p class="mb-2 text-orgSmall text-gray-700 leading-5">CSIRO Data61 — Research Director of the
+                    Cyber-Physical Systems Research Program</p>
+                  <p class="speaker-bio text-sm">Navinda is the Research Director of the Cyber-Physical Systems Research
+                    Program (Robotics, Computer Vision and Distributed Sensing Systems) at CSIRO's Data61. He initiated
+                    and led legged robot research within CSIRO since 2011 and previously led the Robotics and Autonomous
+                    Systems group. His work focuses on navigation, perception, and control in complex unstructured
+                    environments.</p>
+                  <p class="text-sm italic mt-2">Keynote: Human-Robot Teaming in Extreme Environments</p>
+                </div>
+              </div>
+
+              <!-- Toby Walsh -->
+              <div class="speaker-row">
+                <div class="speaker-left">
+                  <div class="speaker-card" style="width:100%">
+                    <div style="width:150px;height:150px">
+                      <div data-gatsby-image-wrapper=""
+                        class="gatsby-image-wrapper gatsby-image-wrapper-constrained rounded-lg">
+                        <div style="max-width:500px;display:block"><img alt="" role="presentation" aria-hidden="true"
+                            src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;500&#x27; width=&#x27;500&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E"
+                            style="max-width:100%;display:block;position:static" /></div>
+                        <img aria-hidden="true" data-placeholder-image=""
+                          style="opacity:1;transition:opacity 500ms linear" decoding="async" src="./imgs/toby.png"
+                          alt="" />
+                      </div>
+                    </div>
+                    <p class="text-xl font-bold mt-4 mb-1 text-center leading-6">Toby Walsh</p>
+                  </div>
+                </div>
+                <div class="speaker-right">
+                  <p class="mb-2 text-orgSmall text-gray-700 leading-5">UNSW — Laureate Fellow and Scientia Professor of
+                    Artificial Intelligence</p>
+                  <p class="speaker-bio text-sm">Toby Walsh is Laureate Fellow and Scientia Professor of Artificial
+                    Intelligence at UNSW, a research group leader at Data61, adjunct professor at QUT, external
+                    professor at Uppsala University, honorary fellow at Edinburgh University, and Associate Member of
+                    the Australian Human Rights Institute at UNSW. He has received awards including the NSW Premier's
+                    Prize for Excellence in Engineering and ICT, the Humboldt Award, the ACP Research Excellence Award,
+                    and the IJCAI Donald E. Walker Distinguished Service Award.</p>
+                  <p class="text-sm italic mt-2">Keynote: Title TBC</p>
+                </div>
+              </div>
+
+              <h4 class="text-xl font-bold text-mainPurple mb-3 mt-8">Panel Discussion</h4>
+              <div
+                style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.25rem;box-shadow:0 2px 8px rgba(80,40,120,0.08);">
+                <p class="mb-2"><strong>Topic:</strong> AI Safety, Research Funding</p>
+                <p class="mb-0"><strong>Panellists:</strong> Hanna Kurniawati, Lexin Xie</p>
+              </div>
 
               <hr class="my-8 border-gray-200">
+
+              <div class="flex sm:block flex-col items-center">
+                <h2 class="pt-9 mb-8 font-titleFont text-3xl text-mainPurple font-extrabold">Detailed Program</h2>
+                <div class="w-full overflow-hidden rounded-lg shadow-md border border-gray-200">
+                  <table class="w-full border-collapse bg-white program-table">
+                    <tbody>
+                      <tr class="border-b border-black">
+                        <td class="px-6 py-4 font-semibold text-lg text-black">08:30 – 09:00</td>
+                        <td class="px-6 py-4 text-black">
+                          <div class="font-semibold text-lg text-black">Morning Tea</div>
+                        </td>
+                      </tr>
+                      <tr class="border-b border-black">
+                        <td class="px-6 py-4 font-semibold text-lg text-black">09:00 – 10:00</td>
+                        <td class="px-6 py-4 text-black">
+                          <div class="font-semibold text-lg text-black">Keynote</div>
+                          <div class="text-sm mt-1 text-black">Navinda Kottege</div>
+                          <div class="text-sm mt-1 text-black">Location: Manning Clark Hall</div>
+                        </td>
+                      </tr>
+                      <tr class="border-b border-black" style="background-color: #8B7ED8;">
+                        <td class="px-6 py-4 font-semibold text-lg text-white">10:00 – 10:15</td>
+                        <td class="px-6 py-4 text-white">
+                          <div class="font-semibold text-lg text-white">Break</div>
+                        </td>
+                      </tr>
+                      <tr class="border-b border-black">
+                        <td class="px-6 py-4 font-semibold text-lg text-black">10:15 – 11:15</td>
+                        <td class="px-6 py-4 text-black">
+                          <div class="font-semibold text-lg text-black">Paper presentation</div>
+                          <div class="text-sm mt-1 text-black">
+                            <div class="session-entry">
+                              <div class="session-title">From Pilot to Policy: Why Government AI Projects Fail to
+                                Scale—and What We Can Do About It</div>
+                            </div>
+                            <div class="session-entry">
+                              <div class="session-title">From Pilots to Policy: Public-Private-Academic Partnerships
+                                that Scale Responsible AI Across Australasia</div>
+                            </div>
+                            <div class="session-entry">
+                              <div class="session-title">AI Adoption and Governance at Scale</div>
+                            </div>
+                          </div>
+                          <div class="text-sm mt-1 text-black">Location: T2</div>
+                        </td>
+                      </tr>
+                      <tr class="border-b border-black" style="background-color: #8B7ED8;">
+                        <td class="px-6 py-4 font-semibold text-lg text-white">11:15 – 11:30</td>
+                        <td class="px-6 py-4 text-white">
+                          <div class="font-semibold text-lg text-white">Break</div>
+                        </td>
+                      </tr>
+                      <tr class="border-b border-black">
+                        <td class="px-6 py-4 font-semibold text-lg text-black">11:30 – 12:30</td>
+                        <td class="px-6 py-4 text-black">
+                          <div class="font-semibold text-lg text-black">Paper presentation</div>
+                          <div class="text-sm mt-1 text-black">
+                            <div class="session-entry">
+                              <div class="session-title">Adapt or Perish: An AI-enabled Strategy for Enhancing Emergency
+                                Response Networks Adaptation in Australia</div>
+                            </div>
+                            <div class="session-entry">
+                              <div class="session-title">AI & Cybercrime</div>
+                            </div>
+                            <div class="session-entry">
+                              <div class="session-title">Avatar Conversational Training Simulations</div>
+                            </div>
+                          </div>
+                          <div class="text-sm mt-1 text-black">Location: T2</div>
+                        </td>
+                      </tr>
+                      <tr class="border-b border-black" style="background-color: #8B7ED8;">
+                        <td class="px-6 py-4 font-semibold text-lg text-white">12:30 – 13:45</td>
+                        <td class="px-6 py-4 text-white">
+                          <div class="font-semibold text-lg text-white">Lunch & Learn - Tutorial on Privacy and
+                            Sovereign Data in AI Systems</div>
+                        </td>
+                      </tr>
+                      <tr class="border-b border-black">
+                        <td class="px-6 py-4 font-semibold text-lg text-black">13:45 – 14:45</td>
+                        <td class="px-6 py-4 text-black">
+                          <div class="font-semibold text-lg text-black">Keynote</div>
+                          <div class="text-sm mt-1 text-black">Toby Walsh</div>
+                          <div class="text-sm mt-1 text-black">Location: Manning Clark Hall</div>
+                        </td>
+                      </tr>
+                      <tr class="border-b border-black" style="background-color: #8B7ED8;">
+                        <td class="px-6 py-4 font-semibold text-lg text-white">14:45 – 15:00</td>
+                        <td class="px-6 py-4 text-white">
+                          <div class="font-semibold text-lg text-white">Break</div>
+                        </td>
+                      </tr>
+                      <tr class="border-b border-black">
+                        <td class="px-6 py-4 font-semibold text-lg text-black">15:00 – 16:00</td>
+                        <td class="px-6 py-4 text-black">
+                          <div class="font-semibold text-lg text-black">Paper presentation</div>
+                          <div class="text-sm mt-1 text-black">
+                            <div class="session-entry">
+                              <div class="session-title">AI in ACT Government</div>
+                            </div>
+                            <div class="session-entry">
+                              <div class="session-title">The road to real-world results with AI in government</div>
+                            </div>
+                          </div>
+                          <div class="text-sm mt-1 text-black">Location: T2</div>
+                        </td>
+                      </tr>
+                      <tr class="border-b border-black" style="background-color: #8B7ED8;">
+                        <td class="px-6 py-4 font-semibold text-lg text-white">16:00 – 16:15</td>
+                        <td class="px-6 py-4 text-white">
+                          <div class="font-semibold text-lg text-white">Break</div>
+                        </td>
+                      </tr>
+                      <tr class="border-b border-black">
+                        <td class="px-6 py-4 font-semibold text-lg text-black">16:15 – 17:30</td>
+                        <td class="px-6 py-4 text-black">
+                          <div class="font-semibold text-lg text-black">Panel Discussion</div>
+                          <div class="text-sm mt-1 text-black">AI Safety, Research Funding, TranslationARC, etc</div>
+                          <div class="text-sm mt-1 text-black">Location: Manning Clark Hall</div>
+                        </td>
+                      </tr>
+                      <tr class="border-b border-black" style="background-color: #8B7ED8;">
+                        <td class="px-6 py-4 font-semibold text-lg text-white">17:30 – 18:30</td>
+                        <td class="px-6 py-4 text-white">
+                          <div class="font-semibold text-lg text-white">Break and travel to Old Parliament House</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="px-6 py-4 font-semibold text-lg text-black">18:30 – 21:30</td>
+                        <td class="px-6 py-4 text-black">
+                          <div class="font-semibold text-lg text-black">Banquet</div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
 
               <h4 class="text-xl font-bold text-mainPurple mb-3 mt-6">Attendance Modes</h4>
               <ul>
@@ -120,186 +423,6 @@
               <p class="mt-4"><b>Note:</b> All the attendees need to register for the 1-Day Industry & Government
                 Session or the full
                 conference.</p>
-
-              <hr class="my-8 border-gray-200">
-
-              <!-- <h4>Call for Interest</h4>
-              <p>If you are interested in participating or contributing to the Government and Industry Day, please
-                express your interest by filling out our form:
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSckI_yVfBgnvszUSXY4DsNAiet-ywxWk9Rp67Iz1NPzGelbWg/viewform?usp=sharing&ouid=102526343570274569425"
-                  target="_blank" rel="noopener noreferrer">Call for Interest Form</a>.
-              </p> -->
-
-              <!-- <p>More information coming soon.</p> -->
-
-              <!-- Original content starts here (commented out)
-              <b>LOCATION: Sir Llew Edwards Building (14)-116， The University of Queensland St Lucia campus, Brisbane,
-                QLD</b><br />
-              <b>DATE: 30 November 2025</b><br />
-              <b>TIME: 10:15 am – 5:00 pm</b><br /><br />
-
-              The Australasian Joint Conference on Artificial Intelligence is a flagship conference for Australasian AI
-              community. It is an annual event to advance communication between academic researchers and industry AI
-              practitioners. It promotes cutting-edge works contributing to the theory and practice of AI. This year's
-              Industry Day, sponsored by The University of Adelaide, invited AI leaders from across Australian Industry
-              and institutions to present and discuss the current and future of AI in industry. <br /> <br />
-
-              Join us for a range of thought-provoking discussions about real-world practices and impacts and gain
-              insights on the effective uptake of AI. <br /> <br />
-
-              Click <a href="./registration.html">here</a> for Industry Day Registration. <br /> <br />
-
-              <h3>Keynote – What Australian Businesses are Hoping AI will Deliver?</h3>
-              <img src="./imgs/Dawid.jpg" width="200">
-              <b>Speaker:Dawid Naude, Managing Director @ Accenture | GenAI Technology ANZ</b> <br />
-              Dawid, AI and innovation lead at Accenture, with a rich background in cloud and Generative AI, is
-              presenting real-world AI applications in healthcare and their outcomes. His emphasis on "practical
-              innovation" simplifies complex AI ideas into actionable insights. Drawing from his and Accenture's
-              extensive experience, attendees will gain a clear perspective on AI's tangible impact on healthcare, ready
-              to explore its transformative potential.<br /><br /><br />
-
-
-              <h3>Data Alchemy: Transforming Raw Assets into AI Gold – A Journey in Managing Data for Intelligent
-                Insights</h3>
-              <img src="./imgs/Jian.jpg" width="150">
-              <b>Speaker: Jian Yang Director @ Centre for Applied Artificial Intelligence | DataX Research
-                Centre</b><br />
-              Prof. Jian Yang is the co-director of Macquarie University DataX research centre, and the deputy director
-              of Applied AI research centre. Before she joined Macquarie University, she worked as an associate
-              professor at Tilburg University, Netherlands, a senior research scientist at CSIRO, and a lecturer at The
-              Australian Defence Force Academy. Her research interests include: big data analytics, machine learning,
-              social networks, data integration, service computing, business process management.<br /><br /><br />
-
-              <h3>Practical Usage of AI in Financial Services Industry</h3>
-              <img src="./imgs/Arun.jpg" width="200">
-              <b>Speaker: Arun Kannan, Head of Innovation @ Tata Consultancy Services</b> <br />
-              Arun is the Head of Innovation for banking and financial services industry in Tata Consultancy Services.
-              With 20 years of industry experience, he is skilled in driving innovation strategies and implementing new
-              technologies to achieve business objectives. With expertise in AI, Data Science, Emerging Technologies,
-              and Innovation Management, he specialises in simplifying complex business processes and improving customer
-              experience through digital transformation. Arun has been recognised as a finalist in the ARN Innovation
-              Awards for three consecutive years. He is a Senior Member and NSW Branch Executive Member of Australian
-              Computer Society.<br /><br /><br />
-
-
-              <h3>Bridging the Cyber and Physical Worlds with AI</h3>
-              <img src="./imgs/Jiajun.jpg" width="300">
-              <b>Speaker: A/Pro. Jiajun Liu, Principal Research Scientist | Science Leader, @ CSIRO</b><br />
-              A/Pro. Jiajun Liu is a Principal Research Scientist and Science Leader for the Distributed Sensing Systems
-              Group in Data61. He received his PhD/BEng from the University of Queensland, Australia, and Nanjing
-              University, China, in 2013 and 2006, respectively. He worked as an Associate Professor in AI with the
-              Renmin University of China before joining CSIRO. HIs research interest include efficient neural networks,
-              multimedia analytics and sensing Systems.<br /><br /><br />
-
-              <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Agenda</h2>
-
-              <table cellpadding='8' style="border-collapse: collapse;">
-                <tbody>
-                  <tr class='j_program_table_title_row'>
-                    <td class='schedule_table_column_center' style='font-size: larger;'>Time</td>
-                    <td class='schedule_table_column_center' style='font-size: larger;' colspan="7"> Content</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>10: 15 - 11:15</td>
-                    <td class='schedule_table_column_center' colspan="7">
-                      Keynote (Accenture) <br />
-                      Title: What Australian Businesses are Hoping AI will Deliver? <br />
-                      Speaker:Dawid Naude, Managing Director @ Accenture <br />
-                      Chair: Dr Wei Zhang
-                    </td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>11:15 - 11:30</td>
-                    <td class='schedule_table_column_center' colspan="7">Break</td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>11:30 - 12:00</td>
-                    <td class='schedule_table_column_center' colspan="7">
-                      Presentation (CAAI|DataX, MQ) <br />
-                      Title: Transforming Raw Assets into AI Gold – A Journey in Managing Data for Intelligent Insights
-                      <br />
-                      Speaker: Jian Yang Director @ Centre for Applied Artificial Intelligence <br />
-                      Chair: Dr Wei Zhang <br />
-                    </td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>12:00 – 12: 30</td>
-                    <td class='schedule_table_column_center' colspan="7">
-                      Presentation (TCS) <br />
-                      Title: Practical Usage of AI in Financial Services Industry <br />
-                      Speaker: Arun Kannan, Head of Innovation @ Tata Consultancy Services <br />
-                      Chair: Dr Wei Zhang
-                    </td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'> 12:30 – 14: 20</td>
-                    <td class='schedule_table_column_center' colspan="7">Lunch and networking</td>
-                  </tr>
-
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>14:20 – 14:50</td>
-                    <td class='schedule_table_column_center' colspan="7">
-                      Presentation (CSIRO) <br />
-                      Title: Bridging the Cyber and Physical Worlds with AI <br />
-                      Speaker: A/Pro. Jiajun Liu, Principal Research Scientist | Science Leader <br />
-                      Chair: Dr Wei Zhang
-                    </td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'> 14:50 – 15:50</td>
-                    <td class='schedule_table_column_center' colspan="7">Panel discussion 1 – Redefining Boundaries: The
-                      Transformative Power of Generative AI<br />
-                      Chair: Prof Xue Li<br />
-                      Attendees: Speakers
-                    </td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row_1'>
-                    <td class='schedule_table_column_center'>15:50 – 16:00</td>
-                    <td class='schedule_table_column_center' colspan="7">Break
-                    </td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column_center'>16:00 – 17:00</td>
-                    <td class='schedule_table_column_center' colspan="7">Panel discussion 2 – Navigating the Moral
-                      Compass: Ethics and Responsibility in AI<br />
-                      Chair: Dr Wei Zhang<br />
-                      Attendees: Anton Van Der Vegt @ UQ Medical AI, Alexander Long,@ Amazon, Simon Tang @Emushroom)
-                    </td>
-                  </tr>
-
-                  <tr class='j_price_table_content_row'>
-                    <td class='schedule_table_column'></td>
-                    <td class='schedule_table_column'></td>
-                    <td class='schedule_table_column'></td>
-                    <td class='schedule_table_column'></td>
-                    <td class='schedule_table_column'></td>
-                    <td class='schedule_table_column'></td>
-                    <td class='schedule_table_column'></td>
-                    <td class='schedule_table_column'></td>
-                    <td class='schedule_table_column'></td>
-                    <td class='schedule_table_column'></td>
-                    <td class='schedule_table_column'></td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <h3 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Point of Contact</h3>
-              <b>Dr Wei Zhang</b><br />
-              AI 2025 Industry Day Co-chair<br />
-              Associate Head of People & Culture, <br />
-              The School of Computer and Mathematical Sciences | Australian Institute for Machine Learning<br />
-              The University of Adelaide<br />
-              wei.e.zhang@adelaide.edu.au<br />
-Original content ends here -->
             </header>
           </div>
         </main>
