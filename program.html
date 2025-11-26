@@ -263,6 +263,109 @@
                 .dec2-column {
                   width: 25%;
                 }
+
+                .mobile-schedule {
+                  display: none;
+                  margin-bottom: 2rem;
+                }
+
+                .day-tabs {
+                  display: flex;
+                  gap: 0.5rem;
+                  overflow-x: auto;
+                  padding: 0.25rem 0 0.75rem;
+                  margin-bottom: 0.5rem;
+                }
+
+                .day-tab {
+                  border: 1px solid #d1d5db;
+                  background: #f9fafb;
+                  color: #1f2937;
+                  border-radius: 999px;
+                  padding: 0.5rem 0.9rem;
+                  font-weight: 600;
+                  white-space: nowrap;
+                  cursor: pointer;
+                  transition: all 0.2s ease;
+                }
+
+                .day-tab.active {
+                  background: #51247a;
+                  color: #ffffff;
+                  border-color: #51247a;
+                  box-shadow: 0 6px 14px rgba(81, 36, 122, 0.18);
+                }
+
+                .mobile-day-panel {
+                  display: none;
+                  background: #ffffff;
+                  border: 1px solid #e5e7eb;
+                  border-radius: 12px;
+                  padding: 1rem;
+                  box-shadow: 0 12px 26px rgba(17, 24, 39, 0.08);
+                }
+
+                .mobile-day-panel.active {
+                  display: block;
+                }
+
+                .mobile-slot {
+                  display: flex;
+                  gap: 0.75rem;
+                  padding: 0.75rem 0;
+                  border-bottom: 1px solid #f1f5f9;
+                }
+
+                .mobile-slot:last-child {
+                  border-bottom: none;
+                }
+
+                .mobile-time {
+                  min-width: 64px;
+                  font-weight: 800;
+                  color: #51247a;
+                }
+
+                .mobile-details {
+                  flex: 1;
+                }
+
+                .slot-title {
+                  font-weight: 700;
+                  color: #111827;
+                }
+
+                .slot-meta {
+                  color: #4b5563;
+                  font-size: 0.95em;
+                  margin-top: 0.1rem;
+                }
+
+                .slot-note {
+                  display: block;
+                  margin-top: 0.25rem;
+                  color: #6b7280;
+                  font-size: 0.85em;
+                }
+
+                .slot-papers {
+                  color: #374151;
+                  font-size: 0.9em;
+                }
+
+                @media (max-width: 960px) {
+                  .desktop-schedule {
+                    display: none;
+                  }
+
+                  .mobile-schedule {
+                    display: block;
+                  }
+
+                  table {
+                    box-shadow: none;
+                  }
+                }
               </style>
 
               <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Program overview</h2>
@@ -289,6 +392,531 @@
                 </p>
               </div>
 
+              <div class="mobile-schedule">
+                <div class="day-tabs" role="tablist" aria-label="Program day selector">
+                  <button class="day-tab active" data-day-tab="dec1">Dec 1 (Mon)</button>
+                  <button class="day-tab" data-day-tab="dec2">Dec 2 (Tue)</button>
+                  <button class="day-tab" data-day-tab="dec3">Dec 3 (Wed)</button>
+                  <button class="day-tab" data-day-tab="dec4">Dec 4 (Thu)</button>
+                  <button class="day-tab" data-day-tab="dec5">Dec 5 (Fri)</button>
+                </div>
+
+                <div class="mobile-day-panel active" data-day-panel="dec1">
+                  <div class="mobile-slot">
+                    <div class="mobile-time">08:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">DAIRNet Registration</div>
+                      <div class="slot-meta">Outside 2.02 MRTC</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">09:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">DAIRNet Symposium</div>
+                      <div class="slot-meta">2.02 MRTC</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">10:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Morning Tea</div>
+                      <div class="slot-meta">MRTC</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">11:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">DAIRNet Symposium</div>
+                      <div class="slot-meta">2.02 MRTC</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">12:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Lunch</div>
+                      <div class="slot-meta">MRTC</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">13:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">DAIRNet Symposium</div>
+                      <div class="slot-meta">2.02 MRTC</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">15:15</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Afternoon Tea</div>
+                      <div class="slot-meta">MRTC</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">15:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">DAIRNet Symposium</div>
+                      <div class="slot-meta">2.02 MRTC</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mobile-day-panel" data-day-panel="dec2">
+                  <div class="mobile-slot">
+                    <div class="mobile-time">08:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Registration</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">08:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Morning Tea</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">09:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Workshops & Tutorials</div>
+                      <div class="slot-meta">Track A — Workshop 1 (Manning Clark Hall)</div>
+                      <div class="slot-meta">Track B — Workshop 2 (Cinema)</div>
+                      <div class="slot-meta">Track C — Workshop 3 (Drama Theatre)</div>
+                      <div class="slot-meta">Track D — Tutorial 1 (T2)</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">10:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Break</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">10:15</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Workshops & Tutorials Continue</div>
+                      <div class="slot-meta">Tracks A–D</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">11:15</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Break</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">11:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Workshops & Tutorials Continue</div>
+                      <div class="slot-meta">Tracks A–D</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">12:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Lunch</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">13:45</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Tutorials & PhD Forum</div>
+                      <div class="slot-meta">Track A — Tutorial 2 (Manning Clark Hall)</div>
+                      <div class="slot-meta">Track B — Tutorial 3 (Cinema)</div>
+                      <div class="slot-meta">Track C — Tutorial 4 (Drama Theatre)</div>
+                      <div class="slot-meta">Track D — Tutorial 5 (T2)</div>
+                      <div class="slot-meta">Track E — PhD Forum Poster Session (Gallery)</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">14:45</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Break</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">15:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Tutorials & PhD Forum Continue</div>
+                      <div class="slot-meta">Tracks A–E</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">16:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Afternoon Tea</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">16:15</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">PhD Forum — Panel Discussion</div>
+                      <div class="slot-meta">Manning Clark Hall</div>
+                      <span class="slot-note">Ends 17:30</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mobile-day-panel" data-day-panel="dec3">
+                  <div class="mobile-slot">
+                    <div class="mobile-time">08:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Registration</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">08:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Morning Tea</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">09:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Welcome + Keynote — Marcus Hutter (DeepMind)</div>
+                      <div class="slot-meta">Manning Clark Hall</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">10:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Break</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">10:15</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Keynote — Jing Jiang (ANU)</div>
+                      <div class="slot-meta">Manning Clark Hall</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">11:15</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Break</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">11:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Long Oral Sessions</div>
+                      <div class="slot-meta">Track A — Long Oral Session 1 (Manning Clark Hall)</div>
+                      <div class="slot-papers">Papers: 7, 18, 22, 32</div>
+                      <div class="slot-meta">Track B — Long Oral Session 2 (Cinema)</div>
+                      <div class="slot-papers">Papers: 38, 46, 58, 127</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">12:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Lunch</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">13:45</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Keynote — Geoff Webb (Monash)</div>
+                      <div class="slot-meta">Manning Clark Hall</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">14:45</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Break</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">15:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Short Oral Sessions</div>
+                      <div class="slot-meta">Short Oral Session 1 (Manning Clark Hall)</div>
+                      <div class="slot-papers">Papers: 1, 5, 13, 14, E16</div>
+                      <div class="slot-meta">Short Oral Session 2 (Cinema)</div>
+                      <div class="slot-papers">Papers: 15, 16, 24, 26, E2</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">16:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Afternoon Tea</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">16:15</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Short Oral Sessions</div>
+                      <div class="slot-meta">Short Oral Session 3 (Manning Clark Hall)</div>
+                      <div class="slot-papers">Papers: 27, 34, 50, E9, E10, E15</div>
+                      <div class="slot-meta">Short Oral Session 4 (Cinema)</div>
+                      <div class="slot-papers">Papers: 51, 62, 70, E8, E12, E17</div>
+                      <div class="slot-meta">Short Oral Session 5 (Drama Theatre)</div>
+                      <div class="slot-papers">Papers: 28, 60, E3, E5, E13, E18</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">17:15</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Break</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">17:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Reception</div>
+                      <div class="slot-meta">Gallery</div>
+                      <span class="slot-note">Ends 19:30</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mobile-day-panel" data-day-panel="dec4">
+                  <div class="mobile-slot">
+                    <div class="mobile-time">08:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Registration</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">08:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Morning Tea</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">09:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Keynote — Navinda Kottege (Data61)</div>
+                      <div class="slot-meta">Manning Clark Hall</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">10:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Break</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">10:15</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Parallel Sessions</div>
+                      <div class="slot-meta">Track A — Short Oral Session 6 (Manning Clark Hall)</div>
+                      <div class="slot-papers">Papers: 71, 78, 82, 84, 101, E4</div>
+                      <div class="slot-meta">Track B — Short Oral Session 7 (Cinema)</div>
+                      <div class="slot-papers">Papers: 103, 109, 113, 118, E14</div>
+                      <div class="slot-meta">Track C — AI4Health Symposium (Drama Theatre)</div>
+                      <div class="slot-meta">Track D — Government & Industry Day (T2)</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">11:15</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Break</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">11:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Parallel Sessions Continue</div>
+                      <div class="slot-meta">Track A — Long Oral Session 3 (Manning Clark Hall)</div>
+                      <div class="slot-papers">Papers: 61, 77, 88, 106</div>
+                      <div class="slot-meta">Track B — Long Oral Session 4 (Cinema)</div>
+                      <div class="slot-papers">Papers: 112, 114, 120, 132</div>
+                      <div class="slot-meta">Track C — AI4Health Symposium (Drama Theatre)</div>
+                      <div class="slot-meta">Track D — Government & Industry Day (T2)</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">12:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Lunch</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">13:45</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Keynote — Toby Walsh (UNSW)</div>
+                      <div class="slot-meta">Manning Clark Hall</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">14:45</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Break</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">15:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Parallel Sessions</div>
+                      <div class="slot-meta">Short Oral Session 8 (Manning Clark Hall)</div>
+                      <div class="slot-papers">Papers: 49, 133, 151, 152, E7</div>
+                      <div class="slot-meta">Short Oral Session 9 (Cinema)</div>
+                      <div class="slot-papers">Papers: 2, 25, 48, 65, E6</div>
+                      <div class="slot-meta">AI4Health Symposium (Drama Theatre)</div>
+                      <div class="slot-meta">Government & Industry Day (T2)</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">16:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Afternoon Tea</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">16:15</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Panel Discussion</div>
+                      <div class="slot-meta">Manning Clark Hall</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">17:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Break</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">17:45</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Buses (×3) leave for Old Parliament House</div>
+                      <div class="slot-meta">From Kingsley St</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">18:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Banquet</div>
+                      <div class="slot-meta">Old Parliament House</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">21:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Buses (×3) return</div>
+                      <div class="slot-meta">Old Parliament House → Kingsley St</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mobile-day-panel" data-day-panel="dec5">
+                  <div class="mobile-slot">
+                    <div class="mobile-time">08:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Registration</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">08:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Morning Tea</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">09:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Keynote — Ling Chen (UTS)</div>
+                      <div class="slot-meta">Manning Clark Hall</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">10:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Break</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">10:15</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Keynote — Mengjie Zhang (VUW)</div>
+                      <div class="slot-meta">Manning Clark Hall</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">11:15</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Break</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">11:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Long Oral Sessions</div>
+                      <div class="slot-meta">Track A — Long Oral Session 5 (Manning Clark Hall)</div>
+                      <div class="slot-papers">Papers: 39, 44, 108, 121</div>
+                      <div class="slot-meta">Track B — Long Oral Session 6 (Cinema)</div>
+                      <div class="slot-papers">Papers: 8, 93, 97, 111</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">12:30</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Lunch</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">13:45</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Keynote — Nicholas Mattei (Tulane University)</div>
+                      <div class="slot-meta">Manning Clark Hall</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">14:45</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Break</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">15:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Short Oral Sessions</div>
+                      <div class="slot-meta">Short Oral Session 10 (Manning Clark Hall)</div>
+                      <div class="slot-papers">Papers: 68, 80, 92, E11, E19</div>
+                      <div class="slot-meta">Short Oral Session 11 (Cinema)</div>
+                      <div class="slot-papers">Papers: 99, 102, 105, 110, 117</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">16:00</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Afternoon Tea</div>
+                      <div class="slot-meta">Foyer</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">16:15</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Short Oral Sessions</div>
+                      <div class="slot-meta">Short Oral Session 12 (Manning Clark Hall)</div>
+                      <div class="slot-papers">Papers: 40, 52, 55, 56, E1</div>
+                      <div class="slot-meta">Short Oral Session 13 (Cinema)</div>
+                      <div class="slot-papers">Papers: 57, 66, 95, 122</div>
+                    </div>
+                  </div>
+                  <div class="mobile-slot">
+                    <div class="mobile-time">17:15</div>
+                    <div class="mobile-details">
+                      <div class="slot-title">Closing / Celebration</div>
+                      <div class="slot-meta">Manning Clark Hall</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="desktop-schedule">
               <table cellpadding='5' style="border-collapse: collapse; width: 100%;">
                 <colgroup>
                   <col class="time-column" />
@@ -918,64 +1546,68 @@
                         </div>
                       </div>
                     </td>
-                    <td class='schedule_table_column_center panel-discussion' rowspan="2" colspan="2'>
-                      <div class=" session-grid">
-                      <div class="track-info">
-                        <div class="track-name">Panel Discussion</div>
-                        <div class="track-location"><em>Manning Clark Hall</em></div>
+                    <td class='schedule_table_column_center panel-discussion' rowspan="2" colspan="2">
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Panel Discussion</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                        </div>
                       </div>
-          </div>
-          </td>
-          <td class='schedule_table_column_center session-short-oral'>
-            <div class="session-grid">
-              <div class="track-info">
-                <div class="track-name">Track A</div>
-                <div class="track-session">Short Oral Session 12</div>
-                <div class="track-location"><em>Manning Clark Hall</em></div>
-                <div class='session-papers'>Papers: 40, 52, 55, 56, E1</div>
-              </div>
-              <div class="track-info">
-                <div class="track-name">Track B</div>
-                <div class="track-session">Short Oral Session 13</div>
-                <div class="track-location"><em>Cinema</em></div>
-                <div class='session-papers'>Papers: 57, 66, 95, 122</div>
-              </div>
-            </div>
-          </td>
-          </tr>
-          <tr class='schedule_break_row'>
-            <td class='schedule_table_column_center'>17:15</td>
-            <td class='schedule_table_column_center'>Break</td>
-            <td class='schedule_table_column_center'>Closing / Celebration <em>(Manning Clark Hall)</em></td>
-          </tr>
-          <tr>
-            <td class='schedule_table_column_center'>17:30</td>
-            <td class='schedule_table_column_center' rowspan="3">Reception <em>(Gallery)</em><span
-                class="session-note">Ends 19:30</span></td>
-            <td class='schedule_table_column_center' colspan="2">Break</td>
-            <td class='schedule_table_column_center' rowspan="5"></td>
-          </tr>
-          <tr>
-            <td class='schedule_table_column_center'>18:00</td>
-            <td class='schedule_table_column_center' colspan="2">Buses (×3) leave for Old Parliament House
-              <em>(from Kingsley St)</em>
-            </td>
-          </tr>
-          <tr>
-            <td class='schedule_table_column_center'>18:30</td>
-            <td class='schedule_table_column_center' rowspan="2" colspan="2">Banquet — Old Parliament House</td>
-          </tr>
-          <tr>
-            <td class='schedule_table_column_center'>21:00</td>
-            <td class='schedule_table_column_center' rowspan="2"></td>
-          </tr>
-          <tr>
-            <td class='schedule_table_column_center'>21:30</td>
-            <td class='schedule_table_column_center' colspan="2">Buses (×3) return <em>(Old Parliament House →
-                Kingsley St)</em></td>
-          </tr>
+                    </td>
+                    <td class='schedule_table_column_center session-short-oral'>
+                      <div class="session-grid">
+                        <div class="track-info">
+                          <div class="track-name">Track A</div>
+                          <div class="track-session">Short Oral Session 12</div>
+                          <div class="track-location"><em>Manning Clark Hall</em></div>
+                          <div class='session-papers'>Papers: 40, 52, 55, 56, E1</div>
+                        </div>
+                        <div class="track-info">
+                          <div class="track-name">Track B</div>
+                          <div class="track-session">Short Oral Session 13</div>
+                          <div class="track-location"><em>Cinema</em></div>
+                          <div class='session-papers'>Papers: 57, 66, 95, 122</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class='schedule_break_row'>
+                    <td class='schedule_table_column_center'>17:15</td>
+                    <td class='schedule_table_column_center'>Break</td>
+                    <!-- <td class='schedule_table_column_center' colspan="2"></td> -->
+                    <td class='schedule_table_column_center'>Closing / Celebration <em>(Manning Clark Hall)</em></td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>17:30</td>
+                    <td class='schedule_table_column_center'>Reception <em>(Gallery)</em><span
+                        class="session-note">Ends 19:30</span></td>
+                    <td class='schedule_table_column_center' colspan="2">Break</td>
+                    <td class='schedule_table_column_center'></td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>17:45</td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center' colspan="2">Buses (×3) leave for Old Parliament House
+                      <em>(from Kingsley St)</em>
+                    </td>
+                    <td class='schedule_table_column_center'></td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>18:00</td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center' colspan="2">Banquet — Old Parliament House</td>
+                    <td class='schedule_table_column_center'></td>
+                  </tr>
+                  <tr>
+                    <td class='schedule_table_column_center'>21:00</td>
+                    <td class='schedule_table_column_center'></td>
+                    <td class='schedule_table_column_center' colspan="2">Buses (×3) return <em>(Old Parliament House →
+                        Kingsley St)</em></td>
+                    <td class='schedule_table_column_center'></td>
+                  </tr>
           </tbody>
           </table>
+          </div>
 
           <br />
           <h2 class="pt-9 mb-5 font-titleFont text-3xl text-mainPurple font-extrabold">Session Details</h2>
@@ -1210,6 +1842,20 @@
     aria-live="assertive" aria-atomic="true">
   </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.day-tab');
+      const panels = document.querySelectorAll('.mobile-day-panel');
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const target = tab.dataset.dayTab;
+          tabs.forEach((t) => t.classList.toggle('active', t === tab));
+          panels.forEach((panel) => panel.classList.toggle('active', panel.dataset.dayPanel === target));
+        });
+      });
+    });
+  </script>
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XSX58G49PD">
   </script>
   <script>
